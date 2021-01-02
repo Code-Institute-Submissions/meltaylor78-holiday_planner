@@ -4,8 +4,8 @@
 .container-fluid{
     border-top: solid 2px black;
     padding-top: 20px;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
@@ -37,6 +37,14 @@ h1{
 .intro-text{
     margin-left: 5%;
     margin-right: 5%;
+}
+
+/* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
+.interactive-map {
+    padding-bottom: 20px;
+}
+#map {
+    min-height: 600px;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 .formrow{
