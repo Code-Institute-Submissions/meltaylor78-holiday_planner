@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holiday_Planner</title>
+    <title>Holiday Planner</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
@@ -18,13 +18,51 @@
                 </p>
             </div>
         </div>
-        <div class="ontainer-fluid intro-text"> <!-- Intro Paragraph & information-->
-            <h2>
-                Holiday in Ireland
-            </h2>
-            <p>Welcome to the Ireland holiday planner, here you can find your ideal holiday destination in Ireland. 
-            You can use the interactive Map below to look for your destination nased on what you want from a holiday. 
-            </p>
+        <div class="container-fluid"> <!-- Intro Paragraph & information-->
+            <div class="intro-text">
+                <h2>
+                    Holiday in Ireland
+                </h2>
+                <p>
+                    Welcome to the Ireland holiday planner, here you can find your ideal holiday destination in Ireland. 
+                    You can use the interactive Map below to look for your destination nased on what you want from a holiday. 
+                </p>
+            </div> 
+        </div>
+        <div class="container-fluid"> <!-- Interactive Map Section -->
+            <div class="interactive-map">
+                <div class="row">
+                    <div class="col">
+                        <p>Select your holiday</p>
+                    </div>
+                </div>
+                <h1>Cascading Dropdown Example</h1>
+
+<form name="form1" id="form1" action="/action_page.php">
+Subjects: <select name="subject" id="subject">
+    <option value="" selected="selected">Select subject</option>
+  </select>
+  <br><br>
+Topics: <select name="topic" id="topic">
+    <option value="" selected="selected">Please select subject first</option>
+  </select>
+  <br><br>
+Chapters: <select name="chapter" id="chapter">
+    <option value="" selected="selected">Please select topic first</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">  
+</form>
+                <div class="row">
+                    <div class="col-md-6" id="map">
+
+                    </div>
+                    <div class="col-md-6" id="map_addtional_info">
+                        <P> Place holder for addtionla info
+                    </P>
+                    </div>
+                </div>
+            </div> 
         </div>
          <div class="container-fluid"> <!-- Page section for contact form-->
                 <div class="row-md-8 formrow">
@@ -46,7 +84,7 @@
                 </div>
             </div>
     </article>
-    <footer class="container-fluid">
+    <footer class="container-fluid"> <!-- Page footer section-->
             <div class="row footer">
                 <div class="col left-footer-col">
                     <h5>Holiday Planner</h5>
@@ -73,5 +111,8 @@
                 </div>
             </div>
         </footer>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&callback=initMap"></script>
+        <script src="assets/js/interactive_map.js"></script>
 </body>
 </html>
