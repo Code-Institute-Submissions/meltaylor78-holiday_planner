@@ -46,11 +46,27 @@ h1{
 #map {
     min-height: 600px;
 }
+.dropDown{
+   background-color: lightblue;
+}
+.dropDown_col, .button_col{
+    border: solid 1px black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #E8E8E8;
+}
+.button_col{
+    border-top: none;
+}
+.btn-success{
+    width: 200px;
+}
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 .formrow{
     margin-left: 20%;
     margin-right: 20%;
-    background-color: grey;
+    background-color: #E8E8E8;
     margin-bottom: 20px;
 }
 .btn-primary{

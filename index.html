@@ -37,17 +37,28 @@
                     </div>
                 </div>
                 <form name="mapForm" id="mapForm" action="/action_page.php"> <!-- Map selector meues-->
-                    Accommodation: <select name="accommodation" id="accommodation">
-                        <option value="" selected="selected">Select</option>
-                    </select>
-                    Province: <select name="province" id="province">
-                        <option value="" selected="selected">Select</option>
-                    </select>
-                    County: <select name="county" id="county">
-                        <option value="" selected="selected">Select</option>
-                    </select>
-                    <br>
-                    <input class="btn btn-success" type="submit" value="Update Map">  
+                    <div class="row">
+                        <div class="col-md-2 dropDown_col">
+                            Accommodation: <select name="accommodation" id="accommodation" class="dropDown">
+                            <option value="" selected="selected">Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 dropDown_col">
+                            Province: <select name="province" id="province" class="dropDown">
+                                <option value="" selected="selected">Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 dropDown_col">
+                            County: <select name="county" id="county" class="dropDown">
+                                <option value="" selected="selected">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 button_col">
+                            <input class="btn btn-success" type="submit" value="Update Map">
+                        </div>
+                    </div>  
                 </form>
                 <div class="row">
                     <div class="col-md-6" id="map">
