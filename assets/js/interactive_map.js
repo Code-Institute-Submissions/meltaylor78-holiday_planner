@@ -31,12 +31,20 @@ window.onload = function () {
 };
 
 
-
-
-
 var counties = {
-    "Connacht": ["Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"],
-    "Leinster": ["Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow" ],
+    "Connacht": ["Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
+    "Leinster": ["Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
     "Munster": ["Clare", "Cork", "Kerry", "Limerick", "Tipperary", "Waterford"],
-    "Ulster": ["Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]
-}
+    "Ulster": ["Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]}
+
+document.getElementById("province").addEventListener("change", function(){
+    var prov_arr = eval("counties." + this.value)
+    var county_lst = document.getElementById("county");
+    for(var c = 0; c < prov_arr.length;++c){ 
+        console.log(c) 
+        var cnty = document.createElement('option');
+        cnty.text = prov_arr[c];
+        cnty.value = prov_arr[c];
+        county_lst.add(cnty)
+    }
+});
