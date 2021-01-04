@@ -7,6 +7,12 @@
     margin-left: 2%;
     margin-right: 2%;
 }
+.hide {
+    visibility: hidden
+}
+.show {
+    visibility: visible
+}
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
     text-transform: uppercase;
@@ -55,9 +61,10 @@ h1{
     padding-bottom: 2px;
     text-align: center;
     background-color: #E8E8E8;
+    border-bottom: none;
 }
 .button_col{
-    border-top: none;
+    border: solid 1px black;
 }
 .btn-success{
     width: 200px;

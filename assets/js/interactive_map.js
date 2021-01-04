@@ -31,12 +31,12 @@ window.onload = function () {
 };
 
 
-var counties = {
-    "Connacht": ["Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
-    "Leinster": ["Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
-    "Munster": ["Clare", "Cork", "Kerry", "Limerick", "Tipperary", "Waterford"],
-    "Ulster": ["Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]}
-
+var counties = {  
+                "Connacht": ["Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
+                "Leinster": ["Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
+                "Munster": ["Clare", "Cork", "Kerry", "Limerick", "Tipperary", "Waterford"],
+                "Ulster": ["Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]}
+// update the county list from the above based on selected provence
 document.getElementById("province").addEventListener("change", function(){
     document.getElementById("county").innerHTML = "";
     
@@ -48,4 +48,7 @@ document.getElementById("province").addEventListener("change", function(){
         cnty.value = prov_arr[c];
         county_lst.add(cnty)
     }
-});
+    // Show the county drop down list when the provice is upated
+    var cnty_drop = document.getElementById("county_lst");
+    cnty_drop.classList.add("show");
+})
