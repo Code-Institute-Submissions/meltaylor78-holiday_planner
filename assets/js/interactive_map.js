@@ -38,10 +38,11 @@ var counties = {
     "Ulster": ["Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]}
 
 document.getElementById("province").addEventListener("change", function(){
+    document.getElementById("county").innerHTML = "";
+    
     var prov_arr = eval("counties." + this.value)
     var county_lst = document.getElementById("county");
     for(var c = 0; c < prov_arr.length;++c){ 
-        console.log(c) 
         var cnty = document.createElement('option');
         cnty.text = prov_arr[c];
         cnty.value = prov_arr[c];
