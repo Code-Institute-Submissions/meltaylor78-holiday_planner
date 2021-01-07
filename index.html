@@ -37,7 +37,7 @@
                         <p>Select your holiday</p>
                     </div>
                 </div>
-                <form name="mapForm" id="mapForm" action="/action_page.php"> <!-- Map selector meues-->
+                <form> <!-- Map selector meues-->
                     <div class="row">
                         <div class="col-md-2 dropDown_col">
                             Accommodation: <select name="accommodation" id="accommodation" class="dropDown">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 button_col">
-                            <input class="btn btn-success" type="submit" value="Update Map">
+                            <input class="btn btn-success" onclick="functionRenderMap()" value="Update Map">
                         </div>
                     </div>  
                 </form>
@@ -73,7 +73,7 @@
             </div> 
         </div>
          <div class="container-fluid"> <!-- Page section for contact form-->
-            <button type="button" class="formCollapse" onclick="functionShowHide()"><h2><span class="fas fa-chevron-down down_arrow"></span>Have a Question?<span class="fas fa-chevron-down down_arrow"></span></h2> </button>
+            <button type="button" class="formCollapse" onclick="functionShowHide()"><h2><span class="fas fa-chevron-down down_arrow"></span>Have a Question / Comment?<span class="fas fa-chevron-down down_arrow"></span></h2> </button>
                 <div class="row-md-8 formrow" id="formSection">
                     <div class="col inquirytext">
                         <p>If you have any questions, comments or would like to see updates / improvements to this site please submit the 
@@ -125,7 +125,6 @@
         </footer>
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&callback=initMap"></script>
-        <script src="assets/js/interactive_map.js"></script>
-        <script src="assets/js/form.js"></script>
+        <script src="assets/js/main.js"></script>
 </body>
 </html>
