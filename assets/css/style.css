@@ -72,11 +72,19 @@ h1{
     width: 200px;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
+
 .formrow {
     margin-left: 20%;
     margin-right: 20%;
     background-color: #E8E8E8;
     margin-bottom: 20px;
+}
+.inquirytext p {
+    text-align: center;
+}
+.inquirytext span {
+    font-weight: bold;
+    color: navy;
 }
 .formCollapse{
     background-color: #E8E8E8;
@@ -93,7 +101,8 @@ h1{
 }
 .down_arrow{
     color: green;
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 30x;
 }
 
