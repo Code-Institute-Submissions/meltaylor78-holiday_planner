@@ -4,6 +4,7 @@
 .container-fluid{
     border-top: solid 2px black;
     padding-top: 20px;
+    width: 96%;
     margin-left: 2%;
     margin-right: 2%;
 }
