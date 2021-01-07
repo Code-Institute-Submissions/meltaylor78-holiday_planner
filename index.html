@@ -73,10 +73,12 @@
             </div> 
         </div>
          <div class="container-fluid"> <!-- Page section for contact form-->
-                <div class="row-md-8 formrow">
+            <button type="button" class="formCollapse" onclick="functionShowHide()"><h2>Have a Question?<span class="fas fa-chevron-down down_arrow"></span></h2> </button>
+                <div class="row-md-8 formrow" id="formSection">
                     <div class="col inquirytext">
-                        <h2>Have a Question?</h2>
-                        <p>Submit using the below form and a member of the team will be happy to assist.</p>
+                        <p>If you have any questions, comments or would like to see updates / improvements to this site please submit the 
+                            details in the form and the team will review and get back to you. Thank you. 
+                        </p>
                     </div>
                     <div class="inquiryform">
                         <form>
@@ -122,5 +124,6 @@
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&callback=initMap"></script>
         <script src="assets/js/interactive_map.js"></script>
+        <script src="assets/js/form.js"></script>
 </body>
 </html>
