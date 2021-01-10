@@ -10,11 +10,13 @@
     margin-right: 2%;
 }
 .hide {
-    visibility: hidden
+    display: none;
 }
+
 .show {
-    visibility: visible
+    display: inline;
 }
+
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
     text-transform: uppercase;
@@ -50,6 +52,10 @@ h1{
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
 .interactive-map {
     padding-bottom: 20px;
+}
+.mapInstructions{
+    color: red;
+    font: italic bold;
 }
 #map {
     min-height: 600px;

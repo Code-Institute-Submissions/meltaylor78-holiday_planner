@@ -44,7 +44,7 @@
                             <option value="" selected="selected">Select</option>
                             </select>
                         </div>
-                        <div class="col-md-2 dropDown_col">
+                        <div class="col-md-2 dropDown_col hide" id="province_list">
                             Province: <select name="province" id="province" class="dropDown">
                                 <option value="" selected="selected">Select</option>
                             </select>
@@ -57,7 +57,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 button_col">
-                            <input class="btn btn-success" onclick="functionRenderMap()" value="Update Map">
+                            <input id="mapButton" class="btn btn-success hide" onclick="functionRenderMap()" value="Update Map">
+                            <p id="mapInstructions" class="mapInstructions">Select your search criteria from the menus above to update the map</p>
                         </div>
                     </div>  
                 </form>
