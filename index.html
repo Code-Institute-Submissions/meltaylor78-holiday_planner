@@ -41,25 +41,25 @@
                     <div class="row">
                         <div class="col-md-2 dropDown_col">
                             Accommodation: <select name="accommodation" id="accommodation" class="dropDown">
-                            <option value="" selected="selected">Select</option>
+                            <option value="" disabled selected hidden>Select</option>
                             </select>
                         </div>
                         <div class="col-md-2 dropDown_col hide" id="province_list">
                             Province: <select name="province" id="province" class="dropDown">
-                                <option value="" selected="selected">Select</option>
+                                <option value="" disabled selected hidden>Select</option>
                             </select>
                         </div>
                         <div class="col-md-2 dropDown_col hide" id="county_lst" >
                             County: <select name="county" id="county" class="dropDown">
-                                <option value="" selected="selected">Select</option>
+                                <option value="" disabled selected hidden>Select</option>
                             </select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 button_col">
+                            <p id="mapSelectionError" class="mapSelectionError hide"> Error! : You must make a valid selection in the County menu. <br></p>
                             <input id="mapButton" class="btn btn-success hide" onclick="functionRenderMap()" value="Update Map">
                             <p id="mapInstructions" class="mapInstructions">Select your search criteria from the menus above to update the map</p>
-                            <p id="mapSelectionError" class="mapSelectionError hide"> Error : You must make a valid selection in all three drop down list!</p>
                         </div>
                     </div>  
                 </form>
@@ -126,7 +126,7 @@
             </div>
         </footer>
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&libraries=places&callback=initMap"></script>
         <script src="assets/js/main.js"></script>
 </body>
 </html>

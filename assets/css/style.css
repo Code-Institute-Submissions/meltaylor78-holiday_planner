@@ -16,7 +16,10 @@
 .show {
     display: inline;
 }
+.errorHighlight {
+    border: 1px solid red;
 
+}
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
     text-transform: uppercase;
@@ -74,6 +77,13 @@ h1{
     text-align: center;
     background-color: #E8E8E8;
     border-bottom: none;
+}
+.errorDropdown_col {
+    border: 2px solid red;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #E8E8E8;
 }
 .button_col{
     border: solid 1px black;
