@@ -12,10 +12,11 @@ function initMap() {
 
 /* -_-_-_-_-_-_-_-_-_-_ Dropdown Lists _-_-_-_-_-_-_-_-_-_- */
 
-var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
-var region = ["Connacht", "Leinster", "Munster", "Ulster"];
+var accommodation_type = ["Select","Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
+var region = ["Select","Connacht", "Leinster", "Munster", "Ulster"];
 
 window.onload = function () {
+    document.getElementById("accommodation").innerHTML = "";
     var select = document.getElementById("accommodation");  // populate the accomadation type list
     for(var i = 0; i < accommodation_type.length;++i){  
         var option = document.createElement('option');
@@ -27,6 +28,7 @@ window.onload = function () {
 };
 
 document.getElementById("accommodation").addEventListener("change", function(){
+    document.getElementById("province").innerHTML = "";
     var region_lst = document.getElementById("province");  // populate the list of provinces
     for(var x = 0; x < region.length;++x){  
         var prov = document.createElement('option');
@@ -45,47 +47,45 @@ var counties = {
 // update the county list from the above based on selected provence
 document.getElementById("province").addEventListener("change", function(){
     document.getElementById("county").innerHTML = "";
-    
+        
     var prov_arr = eval("counties." + this.value)
     var county_lst = document.getElementById("county");
-    for(var c = 0; c < prov_arr.length;++c){ 
-        var cnty = document.createElement('option');
-        cnty.text = prov_arr[c];
-        cnty.value = prov_arr[c];
-        county_lst.add(cnty)
-    }
+        for(var c = 0; c < prov_arr.length;++c){ 
+            var cnty = document.createElement('option');
+            cnty.text = prov_arr[c];
+            cnty.value = prov_arr[c];
+            county_lst.add(cnty)
+        }
+   
     // Show the county drop down list when the provice is upated
     var cnty_drop = document.getElementById("county_lst");
     cnty_drop.classList.add("show");
+
 });
-document.getElementById("county").addEventListener("change", function(){
+    document.getElementById("county").addEventListener("change", function(){
     document.getElementById("mapInstructions").classList.add("hide")
     document.getElementById("mapButton").classList.add("show")
 
 });
 
-/* -_-_-_-_-_-_-_-_-_-_ Render Map _-_-_-_-_-_-_-_-_-_- */
+/* -_-_-_-_-_-_-_-_-_-_ Render Map (Button Click)_-_-_-_-_-_-_-_-_-_- */
 
 function functionRenderMap(){  
     let acc_type_selected = document.getElementById("accommodation").value;
     let province_selected = document.getElementById("province").value; 
     let county_selected = document.getElementById("county").value; 
 
-    console.log("The accommodation type selected was : " + acc_type_selected);
-    console.log("The province selected was : " + province_selected);
-    console.log("The province county selected was : " + county_selected)
+    console.log("selection made, accomadation type = " + acc_type_selected +", province = " + province_selected + " & county = " + county_selected )
 
-    let search_area ;
-    if (province_selected = "Select") {
-        search_area = "Ireland"
+    if (acc_type_selected == "Select" || province_selected == "Select" || county_selected == "Select") {
+        console.log("error");
+        document.getElementById("mapSelectionError").classList.add("show")
     }
-    else if (county_selected = "Select"){
-        search_area = county_selected
+    else {
+        document.getElementById("mapSelectionError").classList.remove("show")
+        document.getElementById("mapSelectionError").classList.add("hide")
     }
-    let search = (acc_type_selected + "+" + search_area)
-    console.log("search string = " + search)
-}
-
+  
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 
 function functionShowHide() {
@@ -95,4 +95,4 @@ function functionShowHide() {
   } else {
     x.style.display = "none";
   }
-}
+}}

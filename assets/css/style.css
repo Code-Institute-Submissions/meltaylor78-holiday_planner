@@ -54,6 +54,10 @@ h1{
     padding-bottom: 20px;
 }
 .mapInstructions{
+    color: blue;
+    font: italic bold;
+}
+.mapSelectionError{
     color: red;
     font: italic bold;
 }
