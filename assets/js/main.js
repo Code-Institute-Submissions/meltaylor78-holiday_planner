@@ -86,17 +86,29 @@ function functionRenderMap(){
         document.getElementById("county_lst").classList.remove("errorDropdown_col")
         document.getElementById("mapSelectionError").classList.add("hide")
     }
-    searchCriteria = acc_type_selected + "+" + county_selected
-    // search = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + acc_type_selected + "+" + county_selected + "&key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss"
-    // console.log(search)
-    // let searchInput = new google.maps.places.SearchBox(searchCriteria);
-    // console.log(searchInput);
-    // places = searchInput.getPlaces();
-    // console.log(places)
- 
-    var searchBox = new google.maps.places.SearchBox(searchCriteria);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchCriteria);
-    return map;
+    function jasonPCall() {
+        var url = '//maps.googleapis.com/maps/api/place/textsearch/json?query=mayo+camping&key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss';
+
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: false,
+            jsonpCallback: 'jsonCallback',
+            contentType: "application/json",
+            dataType: 'json',
+            success: function (json) {
+
+                console.log("We got a response.");
+                console.dir(json.results[0].name);
+
+            },
+            error: function (e) {
+                console.log("We didn't get a response.");
+                console.log(e.message);
+            }
+        });
+    }
+    jasonPCall()
 }
     
 
