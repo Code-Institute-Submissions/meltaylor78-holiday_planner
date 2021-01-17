@@ -18,6 +18,36 @@ var locations = [
    "lng" : -8.062045099999999,
    "name" : "Pink Apple Orchard - Yurt Glamping",
    "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
-   "comments" : "dont like Yurts, build real accomadation"}
+   "comments" : "dont like Yurts, build real accomadation"},
+   {
+   "acc_type" : "Camping & Caravan Park",
+   "prov" : "Connacht",
+   "county" : "Leitrim", 
+   "address" : "Lustia, Carrick-on-Shannon, Co. Leitrim, Ireland",
+   "lat" : 53.995661,
+   "lng" : -8.080700999999999,
+   "name" : "Battlebridge Caravan & Camping Park",
+   "place_id" : "ChIJizDXUFyPXkgRo6fPXPx4FIo",
+   "comments" : ""},
+   {
+   "acc_type" : "Camping",
+   "prov" : "Connacht",
+   "county" : "Roscommon", 
+   "address" : "Cordrehid, Co. Roscommon, Ireland",
+   "lat" : 53.93724049999999,
+   "lng" : -8.086846,
+   "name" : "Carrick Camping",
+   "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
+   "comments" : ""},
+   {
+   "acc_type" : "Camping & Caravan Park",
+   "prov" : "Connacht",
+   "county" : "Leitrim", 
+   "address" : "L1053, Clooncahir, Co. Leitrim, Ireland",
+   "lat" : 53.8994642,
+   "lng" : -7.8550134,
+   "name" : "Lough Rynn Caravan and Camping",
+   "place_id" : "",
+   "comments" : ""}
 ]
 

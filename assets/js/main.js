@@ -1,11 +1,8 @@
 /* -_-_-_-_-_-_-_-_-_-_ Draw Blank Map _-_-_-_-_-_-_-_-_-_- */
 function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
+    const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 7,
-        center: {
-            lat: 53.383328,
-            lng: -7.5091553
-        },
+        center: {lat: 53.383328, lng: -7.5091553        },
         mapTypeId: 'satellite'
     });
 }
@@ -13,7 +10,7 @@ function initMap() {
 /* -_-_-_-_-_-_-_-_-_-_ Lists _-_-_-_-_-_-_-_-_-_- */
 
 var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
-var region = ["Connacht", "Leinster", "Munster", "Ulster"];
+var region = ["Select","Connacht", "Leinster", "Munster", "Ulster"];
 var counties = {  
                 "Connacht": ["Select","Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
                 "Leinster": ["Select","Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
@@ -21,7 +18,9 @@ var counties = {
                 "Ulster": ["Select","Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]}
 
 /* -_-_-_- onLoad Function _-_-_-_ */
-// Loads the first menu for map search section and hides query form.
+
+    // Loads the first menu for map search section and hides query form.
+
 window.onload = function () {
 
     var select = document.getElementById("accommodation");  // populate the accomadation type list
@@ -34,7 +33,9 @@ window.onload = function () {
     document.getElementById("formSection").style.display = "none" // Hide the form section on load.
 };
 /* -_-_-_- Drop Down Lists _-_-_-_ */
+
 document.getElementById("accommodation").addEventListener("change", function(){
+    document.getElementById("province").innerHTML = "";
     var region_lst = document.getElementById("province");  // populate the list of provinces
     for(var x = 0; x < region.length;++x){  
         var prov = document.createElement('option');
@@ -42,10 +43,12 @@ document.getElementById("accommodation").addEventListener("change", function(){
         prov.value = region[x];
         region_lst.add(prov)
     }
+
     document.getElementById("province_list").classList.add("show")
 });
 
 // update the county list from the above based on selected provence
+
 document.getElementById("province").addEventListener("change", function(){
     document.getElementById("county").innerHTML = "";
         
@@ -58,6 +61,7 @@ document.getElementById("province").addEventListener("change", function(){
             county_lst.add(cnty)
         }
     // Show the county drop down list when the provice is upated
+
     var cnty_drop = document.getElementById("county_lst");
     cnty_drop.classList.add("show");
 });
@@ -68,15 +72,15 @@ document.getElementById("province").addEventListener("change", function(){
 });
 
 /* -_-_-_-_-_-_-_-_-_-_ Render Map (Button Click)_-_-_-_-_-_-_-_-_-_- */
+selectedData = [];
+
 function functionRenderMap(){  
     let acc_type_selected = document.getElementById("accommodation").value;
     let province_selected = document.getElementById("province").value; 
     let county_selected = document.getElementById("county").value; 
 
-    console.log("selection made, accomadation type = " + acc_type_selected +", province = " + province_selected + " & county = " + county_selected )
-
-    if (county_selected == "Select") {
-        console.log("error");
+    if (county_selected == "Select" || county_selected == "" ) {
+        console.log("error : no county / province selected in dropdown menu");
         document.getElementById("mapSelectionError").classList.add("show")
         document.getElementById("county_lst").classList.add("errorDropdown_col")
     }
@@ -85,30 +89,32 @@ function functionRenderMap(){
         document.getElementById("mapSelectionError").classList.add("hide")
         document.getElementById("county_lst").classList.remove("errorDropdown_col")
         document.getElementById("mapSelectionError").classList.add("hide")
+    }       
+    
+    //new array from locations, including only selected locations based on user input.
+    selectedData = [];
+    for (var i = 0; i < locations.length; i++) {
+        if (locations[i].acc_type.includes(acc_type_selected) && locations[i].county == county_selected){
+            selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+        }
     }
-    function jasonPCall() {
-        var url = '//maps.googleapis.com/maps/api/place/textsearch/json?query=mayo+camping&key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss';
+    console.log(selectedData)
+    // Add markers to the map
+    var mapOptions = {
+            zoom: 7,
+            center: {lat: 53.383328, lng: -7.5091553},
+            mapTypeId: 'satellite'
+        };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-        $.ajax({
-            type: 'GET',
-            url: url,
-            async: false,
-            jsonpCallback: 'jsonCallback',
-            contentType: "application/json",
-            dataType: 'json',
-            success: function (json) {
-
-                console.log("We got a response.");
-                console.dir(json.results[0].name);
-
-            },
-            error: function (e) {
-                console.log("We didn't get a response.");
-                console.log(e.message);
-            }
-        });
+    for (var m = 0; m < selectedData.length; m++){
+        var marker = new google.maps.Marker({
+                position: {lat: selectedData[m].lat, lng: selectedData[m].lng},
+                title: selectedData[m].name,
+                map: map
+            });
     }
-    jasonPCall()
+
 }
     
 
