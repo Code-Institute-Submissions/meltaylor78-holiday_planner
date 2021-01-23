@@ -23,7 +23,6 @@ var counties = {
     // Loads the first menu for map search section and hides query form.
 
 window.onload = function () {
-
     var select = document.getElementById("accommodation");  // populate the accomadation type list
     for(var i = 0; i < accommodation_type.length;++i){  
         var option = document.createElement('option');
@@ -87,15 +86,15 @@ function functionRenderMap(){
     console.log(county_selected)
 
     var markerColour
-    if (acc_type_selected = "Camping"){
+    if (acc_type_selected == "Camping"){
         markerColour = "purple"
-    } else if (acc_type_selected = "Caravan Park"){
+    } else if (acc_type_selected == "Caravan Park"){
         markerColour = "yellow"
-    } else if (acc_type_selected = "Hotel"){
+    } else if (acc_type_selected == "Hotel"){
         markerColour = "pink"
-    } else if (acc_type_selected = "Hostel"){
+    } else if (acc_type_selected == "Hostel"){
         markerColour = "blue"
-    } else if (acc_type_selected = "Bed & Breakfast"){
+    } else if (acc_type_selected == "Bed & Breakfast"){
         markerColour = "green"
     }
     var iconColour = "http://maps.google.com/mapfiles/ms/icons/"+ markerColour +"-dot.png"
@@ -116,22 +115,15 @@ function functionRenderMap(){
     selectedData = [];
     if (county_selected == "All Counties"){
         for (var i = 0; i < locations.length; i++) {
-            if ( (locations[i].acc_type.indexOf(acc_type_selected) > 0) && (locations[i].prov == province_selected)){
-                console.log(acc_type_selected)
-                console.log(locations[i].acc_type)
-                console.log(locations[i].acc_type == "Hostel");
-                console.log("--- END ---")
-                console.log(province_selected)
-                console.log(locations[i].prov == province_selected);
-                console.log(locations[i].prov)
-                console.log("--- END ---")
-                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+            if ( (locations[i].acc_type.indexOf(acc_type_selected) >= 0 ) && (locations[i].prov == province_selected)){
+                console.log(locations[i].acc_type.indexOf(acc_type_selected) > 0)
+                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
             }
         }
     }
     else{
         for (var i = 0; i < locations.length; i++) {
-            if (locations[i].acc_type.indexOf(acc_type_selected) > 0 && locations[i].county == county_selected){
+            if ( (locations[i].acc_type.indexOf(acc_type_selected) >= 0 ) && locations[i].county == county_selected){
                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
             }
         }   
