@@ -12,7 +12,7 @@ var locations = [
  {
    "acc_type" : "Camping",
    "prov" : "Connacht",
-   "county" : "Letrim", 
+   "county" : "Leitrim", 
    "address" : "Corry, Drumkeeran, Co. Leitrim, Ireland",
    "lat" : 54.1666489,
    "lng" : -8.062045099999999,
@@ -40,7 +40,7 @@ var locations = [
    "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
    "comments" : ""},
    {
-   "acc_type" : "Camping & Caravan Park",
+   "acc_type" : "Hostel",
    "prov" : "Connacht",
    "county" : "Leitrim", 
    "address" : "L1053, Clooncahir, Co. Leitrim, Ireland",

@@ -32,6 +32,7 @@ window.onload = function () {
         select.add(option)
     };
     document.getElementById("formSection").style.display = "none" // Hide the form section on load.
+    console.log(locations)
 };
 /* -_-_-_- Drop Down Lists _-_-_-_ */
 
@@ -81,6 +82,24 @@ function functionRenderMap(){
     let acc_type_selected = document.getElementById("accommodation").value;
     let province_selected = document.getElementById("province").value; 
     let county_selected = document.getElementById("county").value; 
+    console.log(acc_type_selected)
+    console.log(province_selected)
+    console.log(county_selected)
+
+    var markerColour
+    if (acc_type_selected = "Camping"){
+        markerColour = "purple"
+    } else if (acc_type_selected = "Caravan Park"){
+        markerColour = "yellow"
+    } else if (acc_type_selected = "Hotel"){
+        markerColour = "pink"
+    } else if (acc_type_selected = "Hostel"){
+        markerColour = "blue"
+    } else if (acc_type_selected = "Bed & Breakfast"){
+        markerColour = "green"
+    }
+    var iconColour = "http://maps.google.com/mapfiles/ms/icons/"+ markerColour +"-dot.png"
+
 
     if (county_selected == "Select" || county_selected == "" ) {
         console.log("error : no county / province selected in dropdown menu");
@@ -97,19 +116,27 @@ function functionRenderMap(){
     selectedData = [];
     if (county_selected == "All Counties"){
         for (var i = 0; i < locations.length; i++) {
-            if (locations[i].acc_type.includes(acc_type_selected) && locations[i].prov == province_selected){
+            if ( (locations[i].acc_type.indexOf(acc_type_selected) > 0) && (locations[i].prov == province_selected)){
+                console.log(acc_type_selected)
+                console.log(locations[i].acc_type)
+                console.log(locations[i].acc_type == "Hostel");
+                console.log("--- END ---")
+                console.log(province_selected)
+                console.log(locations[i].prov == province_selected);
+                console.log(locations[i].prov)
+                console.log("--- END ---")
                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
             }
         }
     }
     else{
         for (var i = 0; i < locations.length; i++) {
-            if (locations[i].acc_type.includes(acc_type_selected) && locations[i].county == county_selected){
+            if (locations[i].acc_type.indexOf(acc_type_selected) > 0 && locations[i].county == county_selected){
                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
             }
         }   
     }
-    
+    console.log(selectedData)
     if ( selectedData.length <1){
         document.getElementById("accInsert").innerHTML = acc_type_selected
         document.getElementById("countyInsert").innerHTML = county_selected
@@ -118,7 +145,6 @@ function functionRenderMap(){
         document.getElementById("mapButton").classList.add("hide")
     }
     else {
-        console.log(selectedData)
         // Add markers to the map
         var mapOptions = {
             zoom: 7,
@@ -126,23 +152,28 @@ function functionRenderMap(){
             mapTypeId: 'hybrid'
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
+        var contentString = "Test"
+        // loop through the locations
         for (var m = 0; m < selectedData.length; m++){
+
             var marker = new google.maps.Marker({
                 position: {lat: selectedData[m].lat, lng: selectedData[m].lng},
                 title: selectedData[m].name,
-                map: map
+                map: map,
+                icon: iconColour,
             });
-            
+            const infowindow = new google.maps.InfoWindow({
+                content: "Test"
+            });
+                 
             // Click event listner for marker
             marker.addListener("click", function (event) {
+                infowindow.open(map, marker);
                 map.setZoom(10);
-                map.setCenter(marker.getPosition());
-                console.log (marker.title)
+                map.setCenter(marker.getPosition()); 
             });
         }
     }
-
 }
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 
