@@ -12,10 +12,11 @@ function initMap() {
 var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
 var region = ["Select","Connacht", "Leinster", "Munster", "Ulster"];
 var counties = {  
-                "Connacht": ["Select","Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
-                "Leinster": ["Select","Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
-                "Munster": ["Select","Clare", "Cork", "Kerry", "Limerick", "Tipperary", "Waterford"],
-                "Ulster": ["Select","Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]}
+                "Connacht": ["Select", "All Counties", "Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
+                "Leinster": ["Select", "All Counties", "Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
+                "Munster": ["Select", "All Counties", "Clare", "Cork", "Kerry", "Limerick", "Tipperary", "Waterford"],
+                "Ulster": ["Select", "All Counties", "Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]
+            }
 
 /* -_-_-_- onLoad Function _-_-_-_ */
 
@@ -68,6 +69,8 @@ document.getElementById("province").addEventListener("change", function(){
     document.getElementById("county").addEventListener("change", function(){
     document.getElementById("mapInstructions").classList.add("hide")
     document.getElementById("mapButton").classList.add("show")
+    document.getElementById("noLocationError").classList.add("hide")
+    document.getElementById("noLocationError").classList.remove("show")
 
 });
 
@@ -88,36 +91,59 @@ function functionRenderMap(){
         document.getElementById("mapSelectionError").classList.remove("show")
         document.getElementById("mapSelectionError").classList.add("hide")
         document.getElementById("county_lst").classList.remove("errorDropdown_col")
-        document.getElementById("mapSelectionError").classList.add("hide")
     }       
     
     //new array from locations, including only selected locations based on user input.
     selectedData = [];
-    for (var i = 0; i < locations.length; i++) {
-        if (locations[i].acc_type.includes(acc_type_selected) && locations[i].county == county_selected){
-            selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+    if (county_selected == "All Counties"){
+        for (var i = 0; i < locations.length; i++) {
+            if (locations[i].acc_type.includes(acc_type_selected) && locations[i].prov == province_selected){
+                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+            }
         }
     }
-    console.log(selectedData)
-    // Add markers to the map
-    var mapOptions = {
+    else{
+        for (var i = 0; i < locations.length; i++) {
+            if (locations[i].acc_type.includes(acc_type_selected) && locations[i].county == county_selected){
+                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+            }
+        }   
+    }
+    
+    if ( selectedData.length <1){
+        document.getElementById("accInsert").innerHTML = acc_type_selected
+        document.getElementById("countyInsert").innerHTML = county_selected
+        document.getElementById("noLocationError").classList.add("show")
+        document.getElementById("mapButton").classList.remove("show")
+        document.getElementById("mapButton").classList.add("hide")
+    }
+    else {
+        console.log(selectedData)
+        // Add markers to the map
+        var mapOptions = {
             zoom: 7,
             center: {lat: 53.383328, lng: -7.5091553},
-            mapTypeId: 'satellite'
+            mapTypeId: 'hybrid'
         };
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    for (var m = 0; m < selectedData.length; m++){
-        var marker = new google.maps.Marker({
+        for (var m = 0; m < selectedData.length; m++){
+            var marker = new google.maps.Marker({
                 position: {lat: selectedData[m].lat, lng: selectedData[m].lng},
                 title: selectedData[m].name,
                 map: map
             });
+            
+            // Click event listner for marker
+            marker.addListener("click", function (event) {
+                map.setZoom(10);
+                map.setCenter(marker.getPosition());
+                console.log (marker.title)
+            });
+        }
     }
 
 }
-    
-
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 
 function functionShowHide() {
