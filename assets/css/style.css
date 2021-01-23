@@ -62,7 +62,12 @@ h1{
 }
 .mapSelectionError{
     color: red;
-    font: italic bold;
+}
+#accInsert, #countyInsert{
+    font: bold;
+}
+.noLocationError{
+    color: blue;
 }
 #map {
     min-height: 600px;
