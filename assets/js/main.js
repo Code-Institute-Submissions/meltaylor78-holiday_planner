@@ -2,7 +2,7 @@
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 7,
-        center: {lat: 53.383328, lng: -7.5091553        },
+        center: {lat: 53.383328, lng: -7.5091553},
         mapTypeId: 'satellite'
     });
 }
@@ -81,9 +81,6 @@ function functionRenderMap(){
     let acc_type_selected = document.getElementById("accommodation").value;
     let province_selected = document.getElementById("province").value; 
     let county_selected = document.getElementById("county").value; 
-    console.log(acc_type_selected)
-    console.log(province_selected)
-    console.log(county_selected)
 
     var markerColour
     if (acc_type_selected == "Camping"){
@@ -117,7 +114,7 @@ function functionRenderMap(){
         for (var i = 0; i < locations.length; i++) {
             if ( (locations[i].acc_type.indexOf(acc_type_selected) >= 0 ) && (locations[i].prov == province_selected)){
                 console.log(locations[i].acc_type.indexOf(acc_type_selected) > 0)
-                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website });
             }
         }
     }
@@ -144,7 +141,6 @@ function functionRenderMap(){
             mapTypeId: 'hybrid'
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var contentString = "Test"
         // loop through the locations
         for (var m = 0; m < selectedData.length; m++){
 
@@ -155,14 +151,13 @@ function functionRenderMap(){
                 icon: iconColour,
             });
             const infowindow = new google.maps.InfoWindow({
-                content: "Test"
+                content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
+                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">'
             });
                  
             // Click event listner for marker
-            marker.addListener("click", function (event) {
+            google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
-                map.setZoom(10);
-                map.setCenter(marker.getPosition()); 
             });
         }
     }

@@ -7,6 +7,7 @@ var locations = [
    "lat" : 54.2720352,
    "lng" : -8.6055212,
    "name" : "Strandhill Caravan & Camping Park",
+   "website" : "www.rte.ie",
    "place_id" : "ChIJY3q5fm_DXkgRwYqzDXv4pQ8",
    "comments" : "nice place to stay"},
  {
@@ -17,6 +18,7 @@ var locations = [
    "lat" : 54.1666489,
    "lng" : -8.062045099999999,
    "name" : "Pink Apple Orchard - Yurt Glamping",
+   "website" : "www.rte.ie",
    "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
    "comments" : "dont like Yurts, build real accomadation"},
    {
@@ -27,6 +29,7 @@ var locations = [
    "lat" : 53.995661,
    "lng" : -8.080700999999999,
    "name" : "Battlebridge Caravan & Camping Park",
+   "website" : "www.rte.ie",
    "place_id" : "ChIJizDXUFyPXkgRo6fPXPx4FIo",
    "comments" : ""},
    {
@@ -37,6 +40,7 @@ var locations = [
    "lat" : 53.93724049999999,
    "lng" : -8.086846,
    "name" : "Carrick Camping",
+   "website" : "www.rte.ie",
    "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
    "comments" : ""},
    {
@@ -47,6 +51,7 @@ var locations = [
    "lat" : 53.8994642,
    "lng" : -7.8550134,
    "name" : "Lough Rynn Caravan and Camping",
+   "website" : "www.rte.ie",
    "place_id" : "",
    "comments" : ""}
 ]

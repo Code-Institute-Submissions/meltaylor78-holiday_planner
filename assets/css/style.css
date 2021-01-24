@@ -96,6 +96,12 @@ h1{
 .btn-success{
     width: 200px;
 }
+#moreInfo{
+    min-width: 100%;
+    font-size: 15px;
+    padding: 0px;
+    margin-top: 3px;
+}
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 
 .formrow {
