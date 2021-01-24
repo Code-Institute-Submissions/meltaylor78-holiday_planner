@@ -45,12 +45,12 @@
                             <option value="" selected hidden>Select</option>
                             </select>
                         </div>
-                        <div class="col-md-2 dropDown_col hide" id="province_list">
+                        <div class="col-md-2 dropDown_col displayNone" id="province_list">
                             Province:<br> <select name="province" id="province" class="dropDown">
                                 <option value="" selected hidden>Select</option>s
                             </select>
                         </div>
-                        <div class="col-md-2 dropDown_col hide" id="county_lst" >
+                        <div class="col-md-2 dropDown_col displayNone" id="county_lst" >
                             County:<br> <select name="county" id="county" class="dropDown">
                                 <option value="" selected hidden>Select</option>
                             </select>
@@ -66,15 +66,51 @@
                             <input id="mapButton" class="btn btn-success hide" onclick="functionRenderMap()" value="Update Map">
                             <p id="mapInstructions" class="mapInstructions">Select your search criteria from the menus above to update the map</p>
                         </div>
+                        <div class="col-md-6">
+                            <h2 class="moreInfo"> More information</h2>
+                        </div>
                     </div>  
                 </form>
                 <div class="row">
                     <div class="col-md-6" id="map">
 
                     </div>
-                    <div class="col-md-6" id="map_addtional_info">
-                        <p> Place holder for addtionla info
-                        </p>
+                        <p id="instructionsInfo"> Click on the map pins to get more information on each location </p>
+                    <div class="col-md-6 hide" id="map_addtional_info">
+                        <div class="row">
+                            <div class="col-md-6 moreinfoLeft" id="">
+                                <h5>Name: </h5>
+                                    <span id="nameMoreInfo"></span>
+                            </div>
+                            <div class="col-md-6 moreinfoRight">
+                                <h5>Accommodation Type: </h5>
+                                    <span id="accMoreInfo"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 moreinfoLeft">
+                                <h5>Address: </h5>
+                                    <span id="addressMoreInfo"></span>
+                            </div>
+                            <div class="col-md-6 moreinfoRight">
+                                <h5>Phone #: </h5>
+                                    <span id="phoneMoreInfo"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col moreinfoLeft">
+                                <h5>Review Information: </h5>
+                                    <span id="commentsMoreInfo"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col moreinfoLeft">
+                                <h5>Further Information: </h5>
+                                    <p> For more information on <span id="nameMoreInfo1"></span> visit their website,
+                                        <a id="websiteMoreInfo" href="" target="_blank"> <i class="fas fa-external-link-alt"></i></a>
+                                    </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div> 

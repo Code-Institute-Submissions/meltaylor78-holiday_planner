@@ -16,6 +16,12 @@
 .show {
     display: inline;
 }
+.displayNone {
+    visibility: hidden;
+}
+.display {
+    visibility: visible;
+}
 .errorHighlight {
     border: 1px solid red;
 
@@ -102,6 +108,31 @@ h1{
     padding: 0px;
     margin-top: 3px;
 }
+/* -_-_-_-_-_-_-_-_-_-_ More Info Section Form _-_-_-_-_-_-_-_-_-_- */
+.moreInfo{
+    text-align: center;
+    border: solid 1px black;
+    background-color: #E8E8E8;
+    padding-bottom: 5px;
+}
+.moreinfoLeft{
+    border: 1px solid black;
+    background-color: #E8E8E8;
+    border-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.moreinfoRight{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #E8E8E8;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.moreinfoRight h5, .moreinfoLeft h5 {
+    color: blue;
+}
+
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 
 .formrow {

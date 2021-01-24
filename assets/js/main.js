@@ -45,7 +45,7 @@ document.getElementById("accommodation").addEventListener("change", function(){
         region_lst.add(prov)
     }
 
-    document.getElementById("province_list").classList.add("show")
+    document.getElementById("province_list").classList.add("display")
 });
 
 // update the county list from the above based on selected provence
@@ -64,7 +64,7 @@ document.getElementById("province").addEventListener("change", function(){
     // Show the county drop down list when the provice is upated
 
     var cnty_drop = document.getElementById("county_lst");
-    cnty_drop.classList.add("show");
+    cnty_drop.classList.add("display");
 });
     document.getElementById("county").addEventListener("change", function(){
     document.getElementById("mapInstructions").classList.add("hide")
@@ -114,7 +114,8 @@ function functionRenderMap(){
         for (var i = 0; i < locations.length; i++) {
             if ( (locations[i].acc_type.indexOf(acc_type_selected) >= 0 ) && (locations[i].prov == province_selected)){
                 console.log(locations[i].acc_type.indexOf(acc_type_selected) > 0)
-                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website });
+                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website,
+                comments : locations[i].comments, phone : locations[i].phone, acc_type : locations[i].acc_type});
             }
         }
     }
@@ -152,7 +153,7 @@ function functionRenderMap(){
             });
             const infowindow = new google.maps.InfoWindow({
                 content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
-                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">'
+                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
             });
                  
             // Click event listner for marker
@@ -161,6 +162,20 @@ function functionRenderMap(){
             });
         }
     }
+}
+function functionMoreInfo(){
+    var num = document.getElementById("arrayNum").innerHTML
+    document.getElementById("instructionsInfo").classList.add("hide")
+    document.getElementById("map_addtional_info").classList.remove("hide")
+    document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
+    document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name
+    document.getElementById("accMoreInfo").innerHTML = selectedData[num].acc_type
+    document.getElementById("addressMoreInfo").innerHTML = selectedData[num].address
+    document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
+    document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
+    document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
+
+    phoneMoreInfo
 }
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 
