@@ -90,10 +90,6 @@ document.getElementById("province").addEventListener("change", function(){
 });
 
 /* -_-_-_-_-_-_-_-_-_-_ Render Map (Button Click)_-_-_-_-_-_-_-_-_-_- */
-const infowindow = new google.maps.InfoWindow({
-                content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
-                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
-            });
 selectedData = [];
 
 function functionRenderMap(){  
@@ -181,7 +177,11 @@ function functionRenderMap(){
                 map: map,
                 icon: iconColour,
             });
-
+            const infowindow = new google.maps.InfoWindow({
+                content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
+                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
+            });
+                 
             // Click event listner for marker
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
@@ -201,8 +201,7 @@ function functionMoreInfo(){
     document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
     document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
     document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
-    infowindow.close()
-}
+    }
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 
 function functionShowHide() {
