@@ -1,6 +1,6 @@
 /* -_-_-_-_-_-_-_-_-_-_ Draw Blank Map _-_-_-_-_-_-_-_-_-_- */
 function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
+        map = new google.maps.Map(document.getElementById("map"), {
         zoom: 7,
         center: {lat: 53.383328, lng: -7.5091553},
         mapTypeId: 'satellite'
@@ -9,13 +9,14 @@ function initMap() {
 
 /* -_-_-_-_-_-_-_-_-_-_ Lists _-_-_-_-_-_-_-_-_-_- */
 
-var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
-var region = ["Select","Connacht", "Leinster", "Munster", "Ulster"];
+// var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
+var accommodation_type = ["All Types"];
+var region = ["Select"];
 var counties = {  
-                "Connacht": ["Select", "All Counties", "Galway", "Leitrim", "Mayo", "Roscommon", "Sligo"], 
-                "Leinster": ["Select", "All Counties", "Carlow", "Dublin", "Kildare", "Kilkenny", "Laois", "Longford", "Louth", "Meath", "Offaly", "Westmeath", "Wexford", "Wicklow"],
-                "Munster": ["Select", "All Counties", "Clare", "Cork", "Kerry", "Limerick", "Tipperary", "Waterford"],
-                "Ulster": ["Select", "All Counties", "Antrim", "Armagh", "Cavan", "Donegal", "Down", "Fermanagh", "Derry", "Monaghan", "Tyrone"]
+                "Connacht": ["Select", "All Counties"],
+                "Leinster": ["Select", "All Counties"],
+                "Munster": ["Select", "All Counties"],
+                "Ulster": ["Select", "All Counties"],
             }
 
 /* -_-_-_- onLoad Function _-_-_-_ */
@@ -23,6 +24,19 @@ var counties = {
     // Loads the first menu for map search section and hides query form.
 
 window.onload = function () {
+
+    for (var y = 0; y < locations.length; y++){
+        if (accommodation_type.includes(locations[y].acc_type)== false){
+            accommodation_type.push(locations[y].acc_type)
+            }
+        if (region.includes(locations[y].prov)== false){
+            region.push(locations[y].prov)
+            }
+        if (counties[locations[y].prov].includes(locations[y].county)== false){
+            counties[locations[y].prov].push(locations[y].county)
+            }
+        }
+
     var select = document.getElementById("accommodation");  // populate the accomadation type list
     for(var i = 0; i < accommodation_type.length;++i){  
         var option = document.createElement('option');
@@ -31,7 +45,7 @@ window.onload = function () {
         select.add(option)
     };
     document.getElementById("formSection").style.display = "none" // Hide the form section on load.
-    console.log(locations)
+
 };
 /* -_-_-_- Drop Down Lists _-_-_-_ */
 
@@ -46,6 +60,7 @@ document.getElementById("accommodation").addEventListener("change", function(){
     }
 
     document.getElementById("province_list").classList.add("display")
+
 });
 
 // update the county list from the above based on selected provence
@@ -75,6 +90,10 @@ document.getElementById("province").addEventListener("change", function(){
 });
 
 /* -_-_-_-_-_-_-_-_-_-_ Render Map (Button Click)_-_-_-_-_-_-_-_-_-_- */
+const infowindow = new google.maps.InfoWindow({
+                content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
+                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
+            });
 selectedData = [];
 
 function functionRenderMap(){  
@@ -84,17 +103,19 @@ function functionRenderMap(){
 
     var markerColour
     if (acc_type_selected == "Camping"){
-        markerColour = "purple"
+        markerColour = "blue.png"
     } else if (acc_type_selected == "Caravan Park"){
-        markerColour = "yellow"
+        markerColour = "red.png"
     } else if (acc_type_selected == "Hotel"){
-        markerColour = "pink"
+        markerColour = "purple.png"
     } else if (acc_type_selected == "Hostel"){
-        markerColour = "blue"
+        markerColour = "ltblue.png"
     } else if (acc_type_selected == "Bed & Breakfast"){
-        markerColour = "green"
+        markerColour = "yellow.png"
+    } else {
+        markerColour = "orange.png"
     }
-    var iconColour = "http://maps.google.com/mapfiles/ms/icons/"+ markerColour +"-dot.png"
+    var iconColour = "http://maps.google.com/mapfiles/ms/icons/"+ markerColour
 
 
     if (county_selected == "Select" || county_selected == "" ) {
@@ -110,11 +131,19 @@ function functionRenderMap(){
     
     //new array from locations, including only selected locations based on user input.
     selectedData = [];
-    if (county_selected == "All Counties"){
+    if (acc_type_selected == "All Types"){
+        for (var i = 0; i < locations.length; i++) {
+            if (locations[i].prov == province_selected){
+                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website,
+                comments : locations[i].comments, phone : locations[i].phone, acc_type : locations[i].acc_type});
+            }
+        }
+    }
+    
+    else if ((county_selected == "All Counties") && (acc_type_selected != "All Types")) {
         for (var i = 0; i < locations.length; i++) {
             if ( (locations[i].acc_type.indexOf(acc_type_selected) >= 0 ) && (locations[i].prov == province_selected)){
-                console.log(locations[i].acc_type.indexOf(acc_type_selected) > 0)
-                 selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website,
+                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website,
                 comments : locations[i].comments, phone : locations[i].phone, acc_type : locations[i].acc_type});
             }
         }
@@ -122,11 +151,12 @@ function functionRenderMap(){
     else{
         for (var i = 0; i < locations.length; i++) {
             if ( (locations[i].acc_type.indexOf(acc_type_selected) >= 0 ) && locations[i].county == county_selected){
-                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng });
+                selectedData.push({name: locations[i].name, lat : locations[i].lat, lng : locations[i].lng, address : locations[i].address, website : locations[i].website,
+                comments : locations[i].comments, phone : locations[i].phone, acc_type : locations[i].acc_type});
             }
         }   
     }
-    console.log(selectedData)
+
     if ( selectedData.length <1){
         document.getElementById("accInsert").innerHTML = acc_type_selected
         document.getElementById("countyInsert").innerHTML = county_selected
@@ -151,11 +181,7 @@ function functionRenderMap(){
                 map: map,
                 icon: iconColour,
             });
-            const infowindow = new google.maps.InfoWindow({
-                content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
-                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
-            });
-                 
+
             // Click event listner for marker
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
@@ -163,6 +189,7 @@ function functionRenderMap(){
         }
     }
 }
+
 function functionMoreInfo(){
     var num = document.getElementById("arrayNum").innerHTML
     document.getElementById("instructionsInfo").classList.add("hide")
@@ -174,8 +201,7 @@ function functionMoreInfo(){
     document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
     document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
     document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
-
-    phoneMoreInfo
+    infowindow.close()
 }
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 

@@ -49,8 +49,8 @@ var locations = [
    "comments" : ""},
    {
    "acc_type" : "Hostel",
-   "prov" : "Connacht",
-   "county" : "Leitrim", 
+   "prov" : "Leinster",
+   "county" : "Dublin", 
    "address" : "L1053, Clooncahir, Co. Leitrim, Ireland",
    "phone" : "(071) 555 1111",
    "lat" : 53.8994642,
