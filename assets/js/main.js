@@ -192,7 +192,6 @@ function functionRenderMap(){
 
 function functionMoreInfo(){
     var num = document.getElementById("arrayNum").innerHTML
-    document.getElementById("instructionsInfo").classList.add("hide")
     document.getElementById("map_addtional_info").classList.remove("hide")
     document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
     document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name

@@ -59,9 +59,7 @@ h1{
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
-.interactive-map {
-    padding-bottom: 20px;
-}
+
 .mapInstructions{
     color: blue;
     font: italic bold;
@@ -115,22 +113,38 @@ h1{
     background-color: #E8E8E8;
     padding-bottom: 5px;
 }
-.moreinfoLeft{
+.moreInfoCol{
     border: 1px solid black;
+    border: 1px solid black;
+}
+.firstRow{
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    margin-bottom: 2px;
+}
+.secondRow{
     background-color: #E8E8E8;
-    border-bottom: 0px;
+    border: 1px solid black;
+    margin-bottom: 2px;
+}
+.centreBorder{
+    border-right: 1px solid black;
+}
+.moreinfoLeft{
     padding-bottom: 10px;
     padding-top: 10px;
 }
 .moreinfoRight{
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    background-color: #E8E8E8;
     padding-bottom: 10px;
     padding-top: 10px;
 }
 .moreinfoRight h5, .moreinfoLeft h5 {
     color: blue;
+    padding-left: 10px;
+}
+
+.bottomRow{
+    border-bottom: 1px solid black;
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */

@@ -31,54 +31,54 @@
                 </p>
             </div> 
         </div>
-        <div class="container-fluid"> <!-- Interactive Map Section -->
-            <div class="interactive-map">
-                <div class="row">
-                    <div class="col">
-                        <p>Select your holiday</p>
-                    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" col map-intro">
+                    <h3>Ready to look for your next holiday</h3>
+                    <p>
+                        Use the menus below to find places that have been reviewed and recommended for your holiday. <br>
+                        The meus allow you limityour search to the type of accommodation you prefer and province / county you want to visit, not sure then use the all options to start looking for ideas.
+                    </p>
                 </div>
-                <form> <!-- Map selector meues-->
-                    <div class="row">
-                        <div class="col-md-2 dropDown_col">
-                            Accommodation:<br> <select name="accommodation" id="accommodation" class="dropDown">
-                            <option value="" selected hidden>Select</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2 dropDown_col displayNone" id="province_list">
-                            Province:<br> <select name="province" id="province" class="dropDown">
-                                <option value="" selected hidden>Select</option>s
-                            </select>
-                        </div>
-                        <div class="col-md-2 dropDown_col displayNone" id="county_lst" >
-                            County:<br> <select name="county" id="county" class="dropDown">
-                                <option value="" selected hidden>Select</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 button_col">
-                            <p id="mapSelectionError" class="mapSelectionError hide"> Error! : You must make a valid selection in the County menu. <br></p>
-                            <p id="noLocationError" class="noLocationError hide"> We have not reviewed any <span id="accInsert"></span> locations in <span id="countyInsert"></span> at this time.<br>
-                            Be the first to submit a suggestion for review and inclusion on our site. <br>
-                            Use the Form [add a link to the form] to submit your suggestion.
-                        </p>
-                            <input id="mapButton" class="btn btn-success hide" onclick="functionRenderMap()" value="Update Map">
-                            <p id="mapInstructions" class="mapInstructions">Select your search criteria from the menus above to update the map</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h2 class="moreInfo"> More information</h2>
-                        </div>
-                    </div>  
-                </form>
-                <div class="row">
-                    <div class="col-md-6" id="map">
-
-                    </div>
-                        <p id="instructionsInfo"> Click on the map pins to get more information on each location </p>
-                    <div class="col-md-6 hide" id="map_addtional_info">
-                        <div class="row">
-                            <div class="col-md-6 moreinfoLeft" id="">
+            </div>
+            <div class="row">
+                <div class="col-md-2 dropDown_col">
+                    Accommodation:<br> <select name="accommodation" id="accommodation" class="dropDown">
+                    <option value="" selected hidden>Select</option>
+                    </select>
+                </div>
+                <div class="col-md-2 dropDown_col displayNone" id="province_list">
+                    Province:<br> <select name="province" id="province" class="dropDown">
+                    <option value="" selected hidden>Select</option>s
+                    </select>
+                </div>
+                <div class="col-md-2 dropDown_col displayNone" id="county_lst" >
+                    County:<br> <select name="county" id="county" class="dropDown">
+                    <option value="" selected hidden>Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 button_col">
+                    <p id="mapSelectionError" class="mapSelectionError hide"> Error! : You must make a valid selection in the County menu. <br></p>
+                    <p id="noLocationError" class="noLocationError hide"> We have not reviewed any <span id="accInsert"></span> locations in <span id="countyInsert"></span> at this time.<br>
+                        Be the first to submit a suggestion for review and inclusion on our site. <br>
+                        Use the Form [add a link to the form] to submit your suggestion.
+                    </p>
+                        <input id="mapButton" class="btn btn-success hide" onclick="functionRenderMap()" value="Update Map">
+                        <p id="mapInstructions" class="mapInstructions">Select your search criteria from the menus above to update the map</p>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="moreInfo"> More information</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="map">
+                </div>
+                   <!-- start - more info section populated from map on-click action-->
+                 <div class="col-md-6 " id="map_addtional_info">
+                        <div class="row no-gutters firstRow">
+                            <div class="col-md-6 moreinfoLeft centreBorder">
                                 <h5>Name: </h5>
                                     <span id="nameMoreInfo"></span>
                             </div>
@@ -87,8 +87,8 @@
                                     <span id="accMoreInfo"></span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 moreinfoLeft">
+                        <div class="row no-gutters secondRow">
+                            <div class="col-md-6 moreinfoLeft centreBorder">
                                 <h5>Address: </h5>
                                     <span id="addressMoreInfo"></span>
                             </div>
@@ -97,13 +97,13 @@
                                     <span id="phoneMoreInfo"></span>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row no-gutters firstRow">
                             <div class="col moreinfoLeft">
                                 <h5>Review Information: </h5>
                                     <span id="commentsMoreInfo"></span>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row no-gutters secondRow bottomRow">
                             <div class="col moreinfoLeft">
                                 <h5>Further Information: </h5>
                                     <p> For more information on <span id="nameMoreInfo1"></span> visit their website,
@@ -111,9 +111,8 @@
                                     </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div> 
+                   <!--end-->
+            </div>
         </div>
          <div class="container-fluid"> <!-- Page section for contact form-->
             <button type="button" class="formCollapse" onclick="functionShowHide()"><h2><span class="fas fa-chevron-down down_arrow"></span>Have a Question / Comment?<span class="fas fa-chevron-down down_arrow"></span></h2> </button>
