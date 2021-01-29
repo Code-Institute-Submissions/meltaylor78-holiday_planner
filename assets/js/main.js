@@ -59,7 +59,8 @@ document.getElementById("accommodation").addEventListener("change", function(){
         region_lst.add(prov)
     }
 
-    document.getElementById("province_list").classList.add("display")
+    document.getElementById("province_list").classList.remove("hide")
+    document.getElementById("province_list").classList.add("show")
 
 });
 
@@ -79,13 +80,11 @@ document.getElementById("province").addEventListener("change", function(){
     // Show the county drop down list when the provice is upated
 
     var cnty_drop = document.getElementById("county_lst");
-    cnty_drop.classList.add("display");
+    cnty_drop.classList.add("show");
+    cnty_drop.classList.remove("hide");
 });
     document.getElementById("county").addEventListener("change", function(){
-    document.getElementById("mapInstructions").classList.add("hide")
-    document.getElementById("mapButton").classList.add("show")
-    document.getElementById("noLocationError").classList.add("hide")
-    document.getElementById("noLocationError").classList.remove("show")
+    document.getElementById("mapButton").classList.add("show").remove("hide")
 
 });
 
@@ -114,7 +113,7 @@ function functionRenderMap(){
     var iconColour = "http://maps.google.com/mapfiles/ms/icons/"+ markerColour
 
 
-    if (county_selected == "Select" || county_selected == "" ) {
+    if (county_selected == "Select" || county_selected == "" || province_selected == "Select" ) {
         console.log("error : no county / province selected in dropdown menu");
         document.getElementById("mapSelectionError").classList.add("show")
         document.getElementById("county_lst").classList.add("errorDropdown_col")
@@ -152,22 +151,13 @@ function functionRenderMap(){
             }
         }   
     }
-
-    if ( selectedData.length <1){
-        document.getElementById("accInsert").innerHTML = acc_type_selected
-        document.getElementById("countyInsert").innerHTML = county_selected
-        document.getElementById("noLocationError").classList.add("show")
-        document.getElementById("mapButton").classList.remove("show")
-        document.getElementById("mapButton").classList.add("hide")
-    }
-    else {
-        // Add markers to the map
-        var mapOptions = {
-            zoom: 7,
-            center: {lat: 53.383328, lng: -7.5091553},
-            mapTypeId: 'hybrid'
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    // Add markers to the map
+    var mapOptions = {
+        zoom: 7,
+        center: {lat: 53.383328, lng: -7.5091553},
+        mapTypeId: 'hybrid'
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
         // loop through the locations
         for (var m = 0; m < selectedData.length; m++){
 
@@ -186,13 +176,15 @@ function functionRenderMap(){
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
             });
-        }
     }
 }
 
 function functionMoreInfo(){
+    document.getElementById("map").classList.remove("col-md-12")
+    document.getElementById("map").classList.add("col-md-6")
     var num = document.getElementById("arrayNum").innerHTML
     document.getElementById("map_addtional_info").classList.remove("hide")
+    document.getElementById("moreInfoHeader").classList.remove("hide")
     document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
     document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name
     document.getElementById("accMoreInfo").innerHTML = selectedData[num].acc_type

@@ -21,15 +21,25 @@
             </div>
         </div>
         <div class="container-fluid"> <!-- Intro Paragraph & information-->
-            <div class="intro-text">
-                <h2>
-                    Holiday in Ireland
-                </h2>
-                <p>
-                    Welcome to the Ireland holiday planner, here you can find your ideal holiday destination in Ireland. 
-                    You can use the interactive Map below to look for your destination nased on what you want from a holiday. 
-                </p>
-            </div> 
+            <div class="row">
+                <div class=" col introtext">
+                    <h2>
+                        Holiday in Ireland
+                    </h2>
+                    <p>
+                        Welcome to the Ireland holiday planner, here you can find your ideal holiday destination in Ireland. 
+                        You can use the interactive Map below to look for your destination nased on what you want from a holiday. 
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <iframe width="854" height="480" src="https://www.youtube.com/embed/4PUIkunjFAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -41,66 +51,78 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
+        
+            <div class="row mapOptionsCentre">
+                <div class="col-md-3"></div>
                 <div class="col-md-2 dropDown_col">
                     Accommodation:<br> <select name="accommodation" id="accommodation" class="dropDown">
                     <option value="" selected hidden>Select</option>
                     </select>
                 </div>
-                <div class="col-md-2 dropDown_col displayNone" id="province_list">
+                <div class="col-md-2 dropDown_col hide" id="province_list">
                     Province:<br> <select name="province" id="province" class="dropDown">
                     <option value="" selected hidden>Select</option>s
                     </select>
                 </div>
-                <div class="col-md-2 dropDown_col displayNone" id="county_lst" >
+                <div class="col-md-2 dropDown_col hide" id="county_lst" >
                     County:<br> <select name="county" id="county" class="dropDown">
                     <option value="" selected hidden>Select</option>
                     </select>
                 </div>
+                <div class="col-md-3"></div>
             </div>
             <div class="row">
-                <div class="col-md-6 button_col">
+                <div class="col-md-12 button_col">
                     <p id="mapSelectionError" class="mapSelectionError hide"> Error! : You must make a valid selection in the County menu. <br></p>
-                    <p id="noLocationError" class="noLocationError hide"> We have not reviewed any <span id="accInsert"></span> locations in <span id="countyInsert"></span> at this time.<br>
-                        Be the first to submit a suggestion for review and inclusion on our site. <br>
-                        Use the Form [add a link to the form] to submit your suggestion.
-                    </p>
                         <input id="mapButton" class="btn btn-success hide" onclick="functionRenderMap()" value="Update Map">
-                        <p id="mapInstructions" class="mapInstructions">Select your search criteria from the menus above to update the map</p>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="moreInfo"> More information</h2>
                 </div>
             </div>
+            </div>
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6" id="map">
+                <div class="col-md-12 mapInitalView" id="map">
                 </div>
                    <!-- start - more info section populated from map on-click action-->
-                 <div class="col-md-6 " id="map_addtional_info">
+                 <div class="col-md-6 hide" id="map_addtional_info">
+                    <div class="row no-gutters" > 
+                        <div class="col">
+                          <h2 class="hide" id="moreInfoHeader"> More information</h2>
+                          </div>
+                    </div>
                         <div class="row no-gutters firstRow">
                             <div class="col-md-6 moreinfoLeft centreBorder">
                                 <h5>Name: </h5>
-                                    <span id="nameMoreInfo"></span>
+                                   <p>
+                                       <span id="nameMoreInfo"></span>
+                                   </p>
                             </div>
                             <div class="col-md-6 moreinfoRight">
                                 <h5>Accommodation Type: </h5>
+                                <p>
                                     <span id="accMoreInfo"></span>
+                                </p>
                             </div>
                         </div>
                         <div class="row no-gutters secondRow">
                             <div class="col-md-6 moreinfoLeft centreBorder">
                                 <h5>Address: </h5>
+                                <p>
                                     <span id="addressMoreInfo"></span>
+                                </p>
                             </div>
                             <div class="col-md-6 moreinfoRight">
                                 <h5>Phone #: </h5>
+                                <p>
                                     <span id="phoneMoreInfo"></span>
+                                </p>
                             </div>
                         </div>
                         <div class="row no-gutters firstRow">
                             <div class="col moreinfoLeft">
                                 <h5>Review Information: </h5>
+                                <p>
                                     <span id="commentsMoreInfo"></span>
+                                </p>
                             </div>
                         </div>
                         <div class="row no-gutters secondRow bottomRow">
@@ -137,6 +159,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </article>
     <footer class="container-fluid"> <!-- Page footer section-->
             <div class="row footer">
