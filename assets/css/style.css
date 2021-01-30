@@ -9,6 +9,10 @@
     margin-left: 2%;
     margin-right: 2%;
 }
+.noTopBorder{
+    border-top: none;
+    padding-top: 0px;
+}
 .hide {
     display: none;
 }
@@ -98,6 +102,19 @@ h1{
     font-weight: 600;
     color: coral;
 }
+.fa-angle-double-down{
+    color: green;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30x;
+}
+.fa-angle-double-up{
+    color: red;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 30x;
+}
+    
 
 
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */

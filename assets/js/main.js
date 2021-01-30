@@ -7,8 +7,6 @@ function initMap() {
     });
 }
 
-/* -_-_-_-_-_-_-_-_-_-_ Lists _-_-_-_-_-_-_-_-_-_- */
-
 // var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
 var accommodation_type = ["All Types"];
 var region = ["Select"];
@@ -193,6 +191,34 @@ function functionMoreInfo(){
     document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
     document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
     }
+/* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
+function functionOpenExtraText1(){
+    document.getElementById("destinationTextExtra1").classList.add("show")
+    document.getElementById("destinationText1").classList.add("hide")
+}
+function functionCloseExtraText1() {
+    document.getElementById("destinationTextExtra1").classList.remove("show")
+    document.getElementById("destinationText1").classList.remove("hide")
+}
+
+function functionOpenExtraText2(){
+    document.getElementById("destinationTextExtra2").classList.add("show")
+    document.getElementById("destinationText2").classList.add("hide")
+}
+function functionCloseExtraText2() {
+    document.getElementById("destinationTextExtra2").classList.remove("show")
+    document.getElementById("destinationText2").classList.remove("hide")
+}
+
+function functionOpenExtraText3(){
+    document.getElementById("destinationTextExtra3").classList.add("show")
+    document.getElementById("destinationText3").classList.add("hide")
+}
+function functionCloseExtraText3() {
+    document.getElementById("destinationTextExtra3").classList.remove("show")
+    document.getElementById("destinationText3").classList.remove("hide")
+}
+
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
 
 function functionShowHide() {
