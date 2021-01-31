@@ -82,8 +82,8 @@ document.getElementById("province").addEventListener("change", function(){
     cnty_drop.classList.remove("hide");
 });
     document.getElementById("county").addEventListener("change", function(){
-    document.getElementById("mapButton").classList.add("show").remove("hide")
-
+    document.getElementById("mapButton").classList.add("show")
+    document.getElementById("mapButton").classList.remove("hide")
 });
 
 /* -_-_-_-_-_-_-_-_-_-_ Render Map (Button Click)_-_-_-_-_-_-_-_-_-_- */
@@ -178,45 +178,71 @@ function functionRenderMap(){
 }
 
 function functionMoreInfo(){
-    document.getElementById("map").classList.remove("col-md-12")
-    document.getElementById("map").classList.add("col-md-6")
-    var num = document.getElementById("arrayNum").innerHTML
-    document.getElementById("map_addtional_info").classList.remove("hide")
-    document.getElementById("moreInfoHeader").classList.remove("hide")
-    document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
-    document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name
-    document.getElementById("accMoreInfo").innerHTML = selectedData[num].acc_type
-    document.getElementById("addressMoreInfo").innerHTML = selectedData[num].address
-    document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
-    document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
-    document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
+    var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    console.log(vw)
+    if (vw =>992){
+        document.getElementById("map").classList.remove("col-md-12")
+        document.getElementById("map").classList.add("col-md-6")
+        var num = document.getElementById("arrayNum").innerHTML
+        document.getElementById("map_addtional_info").classList.remove("hide")
+        document.getElementById("moreInfoHeader").classList.remove("hide")
+        document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
+        document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name
+        document.getElementById("accMoreInfo").innerHTML = selectedData[num].acc_type
+        document.getElementById("addressMoreInfo").innerHTML = selectedData[num].address
+        document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
+        document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
+        document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
     }
+    else{
+        alert ("The screen size (width is > " + vw)
+    }
+}
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
 function functionOpenExtraText1(){
     document.getElementById("destinationTextExtra1").classList.add("show")
     document.getElementById("destinationText1").classList.add("hide")
+    document.getElementById("destinationcol2").classList.add("hide")
+    document.getElementById("destinationcol3").classList.add("hide")
+    document.getElementById("destinationcol1").classList.add("focusView")
 }
+
 function functionCloseExtraText1() {
     document.getElementById("destinationTextExtra1").classList.remove("show")
     document.getElementById("destinationText1").classList.remove("hide")
+    document.getElementById("destinationcol2").classList.remove("hide")
+    document.getElementById("destinationcol3").classList.remove("hide")
+    document.getElementById("destinationcol1").classList.remove("focusView")
 }
 
 function functionOpenExtraText2(){
     document.getElementById("destinationTextExtra2").classList.add("show")
     document.getElementById("destinationText2").classList.add("hide")
+    document.getElementById("destinationcol1").classList.add("hide")
+    document.getElementById("destinationcol3").classList.add("hide")
+    document.getElementById("destinationcol2").classList.add("focusView")
 }
 function functionCloseExtraText2() {
     document.getElementById("destinationTextExtra2").classList.remove("show")
     document.getElementById("destinationText2").classList.remove("hide")
+    document.getElementById("destinationcol1").classList.remove("hide")
+    document.getElementById("destinationcol3").classList.remove("hide")
+    document.getElementById("destinationcol2").classList.remove("focusView")
 }
 
 function functionOpenExtraText3(){
     document.getElementById("destinationTextExtra3").classList.add("show")
     document.getElementById("destinationText3").classList.add("hide")
+    document.getElementById("destinationcol1").classList.add("hide")
+    document.getElementById("destinationcol2").classList.add("hide")
+    document.getElementById("destinationcol3").classList.add("focusView")
 }
 function functionCloseExtraText3() {
     document.getElementById("destinationTextExtra3").classList.remove("show")
     document.getElementById("destinationText3").classList.remove("hide")
+    document.getElementById("destinationcol1").classList.remove("hide")
+    document.getElementById("destinationcol2").classList.remove("hide")
+    document.getElementById("destinationcol3").classList.remove("focusView")
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
