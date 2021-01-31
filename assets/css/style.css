@@ -2,11 +2,13 @@
 
 /* -_-_-_-_-_-_-_-_-_-_ containers _-_-_-_-_-_-_-_-_-_- */
 .container-fluid{
-    border-top: solid 2px black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 @media(min-width: 992px){
+    .container-fluid{
+        border-top: solid 2px black;
+    }
     .container-fluid{
         width: 96%;
         margin-left: 2%;
@@ -22,12 +24,6 @@
 }
 .show {
     display: inline;
-}
-.displayNone {
-    visibility: hidden;
-}
-.display {
-    visibility: visible;
 }
 .errorHighlight {
     border: 1px solid red;
@@ -148,16 +144,22 @@ h1{
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
-
-.destinationcol{
+#destinationcol {
     border: 1px solid black;
     margin-bottom: 5px;
 }
-
-.destinationHeadin{
-    background-color: #E8E8E8;
-    color: blue;
-    text-align: center;
+.destinationHeading{
+    visibility: hidden;
+    display: none;
+}
+@media(min-width: 992px){
+    .destinationHeading{
+        background-color: #E8E8E8;
+        color: blue;
+        text-align: center;
+        visibility: visible;
+        display: block;
+    }
 }
 .wildAtlanticWay{
     background: url(../images/wildAtlanticWay.jpg);
@@ -214,7 +216,15 @@ h1{
     padding-right: 20px;
     font-size: 30x;
 }
-
+@media(min-width: 992px){
+    .focusView{
+        max-width: 60%;
+        border: 1px solid blue;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
 .mapInitalView{
     padding-bottom: 15px;
@@ -340,6 +350,7 @@ h1{
     background-color: #E8E8E8;
     color: blue;
     width: 100%;
+    
 }
 
 @media(min-width: 992px){
@@ -348,8 +359,8 @@ h1{
         margin-right: 20%;
         width: 60%;
     }
-    .formCollapse h5{
-        font-size: 3px;
+    .formCollapse h5 {
+        font-size: 30px;
     }
 }
 .formCollapse:hover {
