@@ -12,11 +12,42 @@
 </head>
 <body>
     <article>
-        <div class="container-fluid">
+        <div class="container-fluid noTopBorder">
+                <div class="links row">
+                    <ul class="mainnav list-inline col">
+                        <li class="navlink list-inline-item col-3">
+                            <a href="#topAnchor" onclick="functionHideForm()">Home</a>
+                        </li>
+                        <li class="navlink list-inline-item col-3">
+                            <a href="#destinationAnchor" onclick="functionHideForm()">Destinations</a>
+                        </li>
+                        <li class="navlink list-inline-item col-3">
+                            <a href="#mapAnchor" onclick="functionHideForm()">Interactive Map</a>
+                        </li>
+                        <li class="navlink list-inline-item col-3">
+                            <a href="#formAnchor" onclick="functionShowForm()">Submit a Suggestion</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="container-fluid noTopBorder" id="hideCovid">
+            <div class="row covidAlert">
+                <div class="col">
+                    <h3>Covid-19 Information</h3>
+                    <p>
+                        Text about covid
+                    <br>
+                        <h5 onclick="functionHideCovidInfo()">Dismiss</h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a name="topAnchor"></a>
+        <div class="container-fluid noTopBorder">
             <div class="jumbotron">
-                <h1>Holiday Planner for Ireland</h1>
-                <p>Plan your ideal holiday in Ireland. <br>
-                    Where to go, where to stay, what to see! 
+                <h1>Irish Staycations</h1>
+                <p>Find Accommodation, Get Reviews & Plan your staycation! <br>
+                    Enjoy Ireland as a holiday destination.
                 </p>
             </div>
         </div>
@@ -41,6 +72,7 @@
                 </div>
             </div>
         </div>
+        <a name="destinationAnchor"></a>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 no-gutters destinationcol">
@@ -125,7 +157,7 @@
             
             </div>
         </div>
-
+        <a name="mapAnchor"></a>
         <div class="container-fluid">
             <div class="row">
                 <div class=" col map-intro">
@@ -168,6 +200,7 @@
                 <div class="col-md-12 mapInitalView" id="map">
                 </div>
                    <!-- start - more info section populated from map on-click action-->
+                   <a name="moreInfoAnchor"></a>
                  <div class="col-md-6 hide" id="map_addtional_info">
                     <div class="row no-gutters" > 
                         <div class="col">
@@ -221,6 +254,7 @@
                    <!--end-->
             </div>
         </div>
+        <a name="formAnchor"></a>
          <div class="container-fluid"> <!-- Page section for contact form-->
             <button type="button" class="formCollapse" onclick="functionShowHide()"><h2><span class="fas fa-chevron-down down_arrow"></span>Have a Question / Comment?<span class="fas fa-chevron-down down_arrow"></span></h2> </button>
                 <div class="row-md-8 formrow" id="formSection">

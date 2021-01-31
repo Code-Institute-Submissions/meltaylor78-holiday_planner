@@ -36,11 +36,16 @@ h1{
 }
 .jumbotron h1{
     font-size: 50px;
-    color: red;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
 }
 .jumbotron p{
     font-size: 15px;
-    color: red;
+    color: white;
+    position: relative;
+    text-align: center;
 }
 
 .jumbotron{
@@ -49,6 +54,7 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
+    vertical-align: middle;
 }
 @media(min-width: 992px){
     .jumbotron{
@@ -60,6 +66,59 @@ h1{
 .intro-text{
     margin-left: 5%;
     margin-right: 5%;
+}
+/* -_-_-_-_-_-_-_-_-_-_ Nav Links _-_-_-_-_-_-_-_-_-_- */
+.links{
+    background-color: #E8E8E8;
+    font-size: 16px;
+    opacity: 0.9;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    width: 96%
+}
+
+.links a:hover{
+    color: darkblue;
+}
+.mainnav{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0;
+}
+.navlink{
+    text-align: left;
+    padding-left: 5px;
+    margin: 0 !important;
+}
+.navlink i{
+    padding-right: 2px;
+}
+@media(min-width: 992px){
+    .navlink{
+        font-size: 25px;
+        text-align: center;
+    }
+}
+/* -_-_-_-_-_-_-_-_-_-_ Covid-19 Section _-_-_-_-_-_-_-_-_-_- */
+#hideCovid{
+    opacity: 0.9;
+    position: fixed;
+    top: 50px;
+    z-index: 2;
+}
+.covidAlert{
+    background-color: yellow;
+    border: 1px solid red;
+}
+
+.covidAlert h5{
+    text-align: center;
+    color: blue;
+}
+.covidAlert h5:hover{
+    color: lightblue;
+    text-decoration: underline;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Intro Section _-_-_-_-_-_-_-_-_-_- */
 .irelandVideo{

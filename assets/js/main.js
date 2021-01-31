@@ -229,3 +229,17 @@ function functionShowHide() {
     x.style.display = "none";
   }
 }
+function functionShowForm() {
+    var x = document.getElementById("formSection");
+    x.style.display = "block";
+  }
+function functionHideForm(){
+    var x = document.getElementById("formSection");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
+}
+/* -_-_-_-_-_-_-_-_-_-_ Covid Section _-_-_-_-_-_-_-_-_-_- */
+function functionHideCovidInfo(){
+    document.getElementById("hideCovid").classList.add("hide")
+}
