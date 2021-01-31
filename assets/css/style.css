@@ -5,9 +5,13 @@
     border-top: solid 2px black;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
+}
+@media(min-width: 992px){
+    .container-fluid{
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
 }
 .noTopBorder{
     border-top: none;
@@ -16,7 +20,6 @@
 .hide {
     display: none;
 }
-
 .show {
     display: inline;
 }
@@ -28,26 +31,32 @@
 }
 .errorHighlight {
     border: 1px solid red;
-
 }
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
     text-transform: uppercase;
 }
 .jumbotron h1{
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     position: relative;
     text-align: center;
     padding-top: 10%;
 }
 .jumbotron p{
-    font-size: 15px;
+    font-size: 10px;
     color: white;
     position: relative;
-    text-align: center;
+   text-align: center;
 }
-
+@media(min-width: 992px){
+    .jumbotron h1{
+        font-size: 50px;
+    }
+    .jumbotron p{
+        font-size: 15px;
+    }
+}
 .jumbotron{
     background: url(../images/jumbotron.jpg);
     background-position: centre;
@@ -87,17 +96,18 @@ h1{
     font-size: 0;
 }
 .navlink{
-    text-align: left;
-    padding-left: 5px;
+    text-align: center;
+    font-size: 10px;
     margin: 0 !important;
+    vertical-align: middle;
 }
 .navlink i{
     padding-right: 2px;
+    
 }
 @media(min-width: 992px){
     .navlink{
         font-size: 25px;
-        text-align: center;
     }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Covid-19 Section _-_-_-_-_-_-_-_-_-_- */
@@ -111,7 +121,6 @@ h1{
     background-color: yellow;
     border: 1px solid red;
     padding-left: 2%;
-    padding-right: %;
 }
 .covidAlert h6{
     padding-left: 3%;
@@ -129,13 +138,22 @@ h1{
 .irelandVideo{
     background-size: cover;
     width: 100%;
-    height: 600px;
+    height: 360px;
 }
+@media(min-width: 992px){
+    .irelandVideo{
+        background-size: cover;
+        height: 600px;
+    }
+}
+
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
+
 .destinationcol{
     border: 1px solid black;
     margin-bottom: 5px;
 }
+
 .destinationHeadin{
     background-color: #E8E8E8;
     color: blue;
@@ -145,22 +163,40 @@ h1{
     background: url(../images/wildAtlanticWay.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 90px;
     width: 100%;
-    height: 180px;
+}
+@media(min-width: 992px){
+    .wildAtlanticWay{
+        height: 180px;
+    }
 }
 .irelandsAncientEast{
     background: url(../images/irelandsAncientEast.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 180px;
+    height: 90px;
+}
+@media(min-width: 992px){
+    .irelandsAncientEast{
+        height: 180px;
+    }
 }
 .hiddenHeartlands{
     background: url(../images/hiddenHeartlands.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 180px;
+    height: 90px;
+}
+@media(min-width: 992px){
+    .hiddenHeartlands{
+        height: 180px;
+    }
 }
 .linkText{
     font-weight: 600;
@@ -178,16 +214,19 @@ h1{
     padding-right: 20px;
     font-size: 30x;
 }
-    
-
 
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
 .mapInitalView{
-    min-height: 60px;
-    max-width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding-bottom: 15px;
+}
+@media(min-width: 992px){
+    .mapInitalView{
+        min-height: 60px;
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .mapSelectionError{
     color: red;
@@ -281,10 +320,14 @@ h1{
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 
 .formrow {
-    margin-left: 20%;
-    margin-right: 20%;
     background-color: #E8E8E8;
     margin-bottom: 20px;
+}
+@media(min-width: 992px){
+    .formrow {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 .inquirytext p {
     text-align: center;
@@ -295,9 +338,19 @@ h1{
 }
 .formCollapse{
     background-color: #E8E8E8;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 60%;
+    color: blue;
+    width: 100%;
+}
+
+@media(min-width: 992px){
+    .formCollapse {
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+    }
+    .formCollapse h5{
+        font-size: 3px;
+    }
 }
 .formCollapse:hover {
     background-color:lightgreen;
