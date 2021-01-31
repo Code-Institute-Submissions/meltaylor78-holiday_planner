@@ -178,9 +178,10 @@ function functionRenderMap(){
 }
 
 function functionMoreInfo(){
-    var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    console.log(vw)
-    if (vw =>992){
+    var viewer = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    console.log(typeof(viewer))
+    if ( viewer >= 992 ){
+        console.log("if statment " + viewer)
         document.getElementById("map").classList.remove("col-md-12")
         document.getElementById("map").classList.add("col-md-6")
         var num = document.getElementById("arrayNum").innerHTML
@@ -194,8 +195,10 @@ function functionMoreInfo(){
         document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
         document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
     }
-    else{
-        alert ("The screen size (width is > " + vw)
+    else if (viewer < 992) {
+        var num = document.getElementById("arrayNum").innerHTML
+        var name = selectedData[num].name
+        alert ("You clicked " + name)
     }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
