@@ -110,8 +110,13 @@ h1{
 .covidAlert{
     background-color: yellow;
     border: 1px solid red;
+    padding-left: 2%;
+    padding-right: %;
 }
-
+.covidAlert h6{
+    padding-left: 3%;
+    color: red;
+}
 .covidAlert h5{
     text-align: center;
     color: blue;
