@@ -1,6 +1,7 @@
 # **Holiday Planner** 
 <img src="/assets/readmeAssets/holiday_planer_ami_image.jpg">
-## <ins>Index<ins>
+
+## Index
 
 - [Introduction](#Introduction)
 - [Project Motivation](#Project_Motivation)
