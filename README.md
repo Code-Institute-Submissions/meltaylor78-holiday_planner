@@ -1,7 +1,8 @@
 # **Holiday Planner** 
-
+<img src="/assets/readmeAssets/holiday_planer_ami_image.jpg">
 ## <ins>Index<ins>
 
+- [Introduction](#Introduction)
 - [Project Motivation](#Project_Motivation)
 - [UX](#UX) 
     - [User Stories](#User_Stories)
@@ -18,7 +19,19 @@
     - [Acknowledgements](#Acknowledgements)
 
 - - - -
+## **<ins>Introduction</ins>**
+This is my milestone 2 project for the Fullstack Web Developer with the Codeinistitute. The porject is not complete 
+due time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
+14th of March on the Schedule Generator but the due date is the 05th of Febuary. None the less the site is functional and 
+has 90% of the functions and layout. There was some more, I would have added to the project, I will outline the other elements
+that I would have added in the [Future Enhancements](#Future_Enhancements) sections of this document. 
+
 ## **<ins>Project_Motivation</ins>**
+The main objective of this site is to provide a holiday planner for sites in Ireland, as part of the design process I wanted to make it easy to 
+add new or remove existing detinations. To achive this simplification, all the destination location is contained in one file that is loaded to the site
+when it loads. The menu selections for populating the map are dynamic and only populated with data based on locations included and based on user selection. 
+<img src="/assets/readmeAssets/menuView.jpg">
+
 Add descriptive text here
   Bullet if you need them
   - Bullet 1
