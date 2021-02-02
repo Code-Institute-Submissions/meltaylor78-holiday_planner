@@ -21,16 +21,27 @@
 
 - - - -
 ## **<ins>Introduction</ins>**
-This is my milestone 2 project for the Fullstack Web Developer with the Codeinistitute. The porject is not complete 
-due time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
-14th of March on the Schedule Generator but the due date is the 05th of Febuary. None the less the site is functional and 
-has 90% of the functions and layout. There was some more, I would have added to the project, I will outline the other elements
-that I would have added in the [Future Enhancements](#Future_Enhancements) sections of this document. 
+This is my milestone 2 project for the Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/). The project is not complete 
+due to time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
+14th of March on the Schedule Generator but the due date is the 05th of February. None the less the site is functional and 
+has 90+% of the functions and layout envisaged at concept stage. As with my prior project I have tried to use a Agile methodology on the project and 
+as such this is considered a deployment of the Minimum Viable Product (MVP), the site has the required functionality but has other features that would be 
+included in subsequent deployments. I will outline in the [Future Enhancements](#Future_Enhancements) sections details of the additional features 
+that will be considered for future iterations.
 
 ## **<ins>Project_Motivation</ins>**
-The main objective of this site is to provide a holiday planner for sites in Ireland, as part of the design process I wanted to make it easy to 
-add new or remove existing detinations. To achive this simplification, all the destination location is contained in one file that is loaded to the site
-when it loads. The menu selections for populating the map are dynamic and only populated with data based on locations included and based on user selection. 
+The main driver behind the development of this site was to create a holiday planner, that would become a trusted site for reviews and information on 
+sites around Ireland for staycations. The site is limited Ireland, but the scope could be expanded when Covid-19 travel restrictions are eased and 
+travel abroad to complete review is again possible. The reviews are individual and only added by the site owners so all review can be  stood over by the
+site owner, with no anonymous  review and information included.
+
+As part of the design and deployment, I wanted to include two important features, the first being the ability to quickly add new locations without the needing to 
+recode any of the page and the second was to make the interactive map section user friendly and intuitive to use. 
+The ability to add new locations quickly was achieved by placing all the location data in one file, creating a new entry for a location the site picks up the new location on the next
+load of the page. As all the information is dynamically pick up from this file no further updates are needed. 
+To make site easy to use, the user required inputs are presented sequentially to make it easy to follow and let the user know what information the need to provide. The menus are populated 
+from the locations file so only contain options when there is supporting data in the locations file. 
+
 <img src="/assets/readmeAssets/menuView.jpg">
 
 Add descriptive text here
@@ -80,14 +91,17 @@ form was, two fold, first get location information to grow the site location dat
 
 ### <ins>User_Stories</ins>
 
-**User 1;**
-- Add descriptive text here
+**Site User;**
+- I want to find somewhere in Ireland, where I can go for my holidays. 
+- I want to get additional review information on the accommodation location, outside the generic google review.
+- I want to quickly link to the site of a selected accommodation if I want to book or find more information.
+- A stie where I can search on a wide variety of accommodation types and then narrow my search down.
 
-**User 2;**
-- Add descriptive text here
+**Site Owner;**
+- As the site owner, I want to be able to add new locations quickly and easily without needing to update the code. 
+- I want to get input from users, where do they suggest that we review and include in the site.
+- Become a trusted source for reviews of accommodation
 
-**User 3;**
-- Add descriptive text here
 
 ### <ins>Wireframes</ins>
 Add links to any wireframes created
@@ -162,7 +176,11 @@ In addition, final testing was complete at the end of the project with the resul
 The project was developed using GitHub as the repository and I chose to deploy the live project on GitHub Pages,
 The live site can be accessed at https://meltaylor78.github.io/holiday_planner/
 
-To complete the deployment, 
+**Important Note**
+The main data for the locations and data that drives the interactive map are contain in the location.js file.
+This file drives the menus for the map. Ensure this file remains correctlyt linked if you deploy the site or make a local copy of the repo.
+
+**To complete the deployment;**
 - From the Github repository 
 - Navigate to the settings tab on the top of the repository page
 - Scroll down to the section GitHub Pages. 
