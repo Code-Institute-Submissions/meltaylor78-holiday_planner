@@ -264,7 +264,7 @@
                     <div class="col inquirytext">
                         <p>
                             Do you have a favourite location you would like to have revised and included on this site? <br>
-                            Submit the details below <br>
+                            We are always looking for new places to add to our site. Submit your suggestions below. <br>
                             <span>Thank you.</span>
                         </p>
                     </div>
@@ -272,10 +272,14 @@
                         <form>
                             <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
                             <input type="email" name="email" id="email" class="form-control" placeholder="Your e-mail" required />
-                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone No. (Optional)" />
-                            <textarea name="question" id="question" rows="5" class="form-control" placeholder="Enter details of your question / comment here." required></textarea>
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone No. (Optional)" />
+                            <input type="text" name="destinationname" id="destinationname" class="form-control" placeholder="Name of the Destination" required />
+                            <input type="text" name="destinationaddress" id="destinationaddress" class="form-control" placeholder="Address of the Destination" required />
+                            <input type="url" name="destinationurl" id="destinationurl" class="form-control" placeholder="https://location.ie" pattern="https://.*" required>
+                            <textarea name="question" id="question" rows="5" class="form-control" 
+                            placeholder="Provide some details on the destination." required></textarea>
                             <div>
-                                <button class="btn btn-primary other" type="submit">Submit</button>
+                                <button class="btn btn-primary" onclick="submitForm()" >Submit</button>
                             </div>
                         </form>
                     </div>

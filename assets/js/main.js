@@ -45,6 +45,10 @@ window.onload = function () {
     document.getElementById("formSection").style.display = "none" // Hide the form section on load.
 
 };
+/* -_-_-_-_-_-_-_-_-_-_ Covid Section _-_-_-_-_-_-_-_-_-_- */
+function functionHideCovidInfo(){
+    document.getElementById("hideCovid").classList.add("hide")
+}
 /* -_-_-_- Drop Down Lists _-_-_-_ */
 
 document.getElementById("accommodation").addEventListener("change", function(){
@@ -268,7 +272,9 @@ function functionHideForm(){
         x.style.display = "none";
     }
 }
-/* -_-_-_-_-_-_-_-_-_-_ Covid Section _-_-_-_-_-_-_-_-_-_- */
-function functionHideCovidInfo(){
-    document.getElementById("hideCovid").classList.add("hide")
+
+// Submit form.
+function submitForm(){
+    alert ("Thank you. Your recommendation has been sent")
+    return false;
 }
