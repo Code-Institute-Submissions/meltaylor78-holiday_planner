@@ -40,28 +40,42 @@ Add descriptive text here
   - Bullet 3
 
 ## **<ins>UX</ins>**
-Add descriptive text here
-  Bullet if you need them
-  - Bullet 1
-  - Bullet 2
-  - Bullet 3
+Once the concept or the site was developed, as part of the UX design phase it I decided to make the site a one page site with distinctive containers for each 
+section. The site would have 5 major components,
 
-### **Header.**
+- Header
+- Introduction
+- Destinations Information. 
+- Interactive Map
+- Form
+- Footer
 
-Add descriptive text here
+Bootstrap was chosen as the main library for the major design elements, it provides the responsiveness required to ensure the site looks good and works well 
+across all device sizes. On top of bootstrap, custom CSS was used to provide a unique look an feel and set the site apart. 
 
+**Header**
+The header consists of a nav bar, locked to the top of the screen as the page is long the user always has access to the nav bar to jump to the desired 
+location. Under that I included a hero image with crisp white text to capture the users attention. 
 
-### **Footer.**
+**Introduction**
+Consists of a short introduction to the site, some information on staycations in Ireland and a video that gives the users some media content to show case 
+Ireland and holiday locations. The video is embedded as I don’t want users to leave the page in such and early stage. I decided that in this section, the 
+information would be limited to generate interested but ensure the user does not get over whelmed with information and leave the site before exploring further down the page. 
+ 
+**Destination**
+To provide some more value to the users, I have included a section with some cards on major destinations and locations in Ireland. The idea here was to provide 
+some information to the user if they are still deciding on the type of holiday or location within Ireland. 
 
-Add descriptive text here
+**Interactive Map**
+The map section is the main part of the site and as I have described above in the introduction section, this map is driven by a file with the reviewed locations 
+and the menus are dynamic in such that they only populate type, province & county where information to support the search is contain in the file. The file will continue 
+to grow with locations. The design of the menus for the map section was set-up to guide the user through the required selections, the menus are show when the user 
+makes the previous selection and when all selections are made the button to render the map is shown. This was a design feature to make it institutive for the user. Once 
+the map is rendered the user can click on the map pin to provide additional useful information the selected site as well as the review information that is the main content for this site.
 
-### **Body.**
-
-Add descriptive text here
-
-### **Home Page.**
-
-Add descriptive text here
+**Form**
+The form section, was included to allow site users to submit locations that they would like to have reviewed and added to the site. The thinking behind the including the 
+form was, two fold, first get location information to grow the site location data quickly and second, allow the user have input to the site and get invested in the sites success. 
 
 
 ### <ins>User_Stories</ins>
@@ -145,9 +159,24 @@ In addition, final testing was complete at the end of the project with the resul
 - - - -
 
 ## <ins>Deployment</ins>
-Add descriptive text here
+The project was developed using GitHub as the repository and I chose to deploy the live project on GitHub Pages,
+The live site can be accessed at https://meltaylor78.github.io/holiday_planner/
 
-Live deployment @ https://meltaylor78.github.io/athboy/
+To complete the deployment, 
+- From the Github repository 
+- Navigate to the settings tab on the top of the repository page
+- Scroll down to the section GitHub Pages. 
+- In this GitHub Pages section, complete the deployment selection;
+- Select the Branch to deploy from the first menu
+    -	Select the folder from the second menu
+    -	Save the settings
+Further updates can be made, such as custom domain and enforce HTTPS. I did not opt for a custom domain but did select to enforce HTTPS 
+for the additional security it offers. 
+
+GitHub also provides the option to clone the repository, clone allows you to make a local copy of the repository on your machine. 
+You can complete this using the code drop down menu to get details to clone the repositor. You can find more information on how to clone a 
+repository on GitHub Docs [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
 
 [Index](#Index)
 - - - -
