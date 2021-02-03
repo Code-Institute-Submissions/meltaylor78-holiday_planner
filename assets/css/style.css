@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 /* -_-_-_-_-_-_-_-_-_-_ containers _-_-_-_-_-_-_-_-_-_- */
-
+.container-fluid{
+    padding: 0 !important;
+    margin: 0;
+    margin-bottom: 10px;
+}
 .containerShadeGrey{
     background-color: #E8E8E8;
 }
@@ -46,8 +50,8 @@ h1{
     }
 }
 .jumbotron{
-    background: url(../images/jumbotron.webp);
-    background-position: centre;
+    background: url(../images/jumbotron.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
@@ -135,11 +139,47 @@ h1{
         height: 600px;
     }
 }
+.introPic{
+    background: url(../images/newgrange.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    padding-top: 20px;
+}
+.introPic p{
+    color: white;
+    padding-right: 5%;
+    padding-left: 5%;
+    text-align: justify;
+
+}
+@media(min-width: 992px){
+    .introPic{
+        height: 600px;
+    }
+    .introPic p{
+        font-size: large;
+    }
+}
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
-#destinationcol {
-    border: 1px solid black;
-    margin-bottom: 5px;
+.destinationContainer{
+    background: url(../images/kayaking_image.jpg);
+    background-position: centre;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    min-width: 100%;
+}
+@media(min-width: 992px){
+    .destinationContainer{
+        height: 600px;
+    }
+}
+.destinationcol {
+    padding-top: 10%;
+    color: white;
 }
 .destinationHeading{
     visibility: hidden;
@@ -154,48 +194,9 @@ h1{
         display: block;
     }
 }
-.wildAtlanticWay{
-    background: url(../images/wildAtlanticWay.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90px;
-    width: 100%;
-}
-@media(min-width: 992px){
-    .wildAtlanticWay{
-        height: 180px;
-    }
-}
-.irelandsAncientEast{
-    background: url(../images/irelandsAncientEast.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 90px;
-}
-@media(min-width: 992px){
-    .irelandsAncientEast{
-        height: 180px;
-    }
-}
-.hiddenHeartlands{
-    background: url(../images/hiddenHeartlands.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 90px;
-}
-@media(min-width: 992px){
-    .hiddenHeartlands{
-        height: 180px;
-    }
-}
+
 .linkText{
     font-weight: 600;
-    color: coral;
 }
 .fa-angle-double-down{
     color: green;
@@ -208,15 +209,6 @@ h1{
     padding-left: 50px;
     padding-right: 20px;
     font-size: 30x;
-}
-@media(min-width: 992px){
-    .focusView{
-        max-width: 60%;
-        border: 1px solid blue;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
 .mapInitalView{
@@ -274,10 +266,10 @@ h1{
 }
 /* -_-_-_-_-_-_-_-_-_-_ More Info Section Form _-_-_-_-_-_-_-_-_-_- */
 #moreInfoHeader{
-    color: blue;
+    color: white;
     text-align: center;
     border: solid 1px black;
-    background-color: #E8E8E8;
+    background-color: grey;
     padding-bottom: 5px;
 }
 .moreInfoCol{
@@ -307,13 +299,12 @@ h1{
     padding-top: 10px;
 }
 .moreinfoRight h5, .moreinfoLeft h5 {
-    color: blue;
     padding-left: 10px;
 }
 .moreinfoRight p, .moreinfoLeft p {
     padding-left: 15px;
+    padding-right: 15px;
 }
-
 .bottomRow{
     border-bottom: 1px solid black;
 }

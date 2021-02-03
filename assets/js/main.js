@@ -3,7 +3,7 @@ function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
         zoom: 7,
         center: {lat: 53.383328, lng: -7.5091553},
-        mapTypeId: 'satellite'
+        mapTypeId: 'hybrid'
     });
 }
 
@@ -209,47 +209,29 @@ function functionMoreInfo(){
 function functionOpenExtraText1(){
     document.getElementById("destinationTextExtra1").classList.add("show")
     document.getElementById("destinationText1").classList.add("hide")
-    document.getElementById("destinationcol2").classList.add("hide")
-    document.getElementById("destinationcol3").classList.add("hide")
-    document.getElementById("destinationcol1").classList.add("focusView")
 }
 
 function functionCloseExtraText1() {
     document.getElementById("destinationTextExtra1").classList.remove("show")
     document.getElementById("destinationText1").classList.remove("hide")
-    document.getElementById("destinationcol2").classList.remove("hide")
-    document.getElementById("destinationcol3").classList.remove("hide")
-    document.getElementById("destinationcol1").classList.remove("focusView")
 }
 
 function functionOpenExtraText2(){
     document.getElementById("destinationTextExtra2").classList.add("show")
     document.getElementById("destinationText2").classList.add("hide")
-    document.getElementById("destinationcol1").classList.add("hide")
-    document.getElementById("destinationcol3").classList.add("hide")
-    document.getElementById("destinationcol2").classList.add("focusView")
 }
 function functionCloseExtraText2() {
     document.getElementById("destinationTextExtra2").classList.remove("show")
     document.getElementById("destinationText2").classList.remove("hide")
-    document.getElementById("destinationcol1").classList.remove("hide")
-    document.getElementById("destinationcol3").classList.remove("hide")
-    document.getElementById("destinationcol2").classList.remove("focusView")
 }
 
 function functionOpenExtraText3(){
     document.getElementById("destinationTextExtra3").classList.add("show")
     document.getElementById("destinationText3").classList.add("hide")
-    document.getElementById("destinationcol1").classList.add("hide")
-    document.getElementById("destinationcol2").classList.add("hide")
-    document.getElementById("destinationcol3").classList.add("focusView")
 }
 function functionCloseExtraText3() {
     document.getElementById("destinationTextExtra3").classList.remove("show")
     document.getElementById("destinationText3").classList.remove("hide")
-    document.getElementById("destinationcol1").classList.remove("hide")
-    document.getElementById("destinationcol2").classList.remove("hide")
-    document.getElementById("destinationcol3").classList.remove("focusView")
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
