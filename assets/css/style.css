@@ -17,6 +17,9 @@
 .errorHighlight {
     border: 1px solid red;
 }
+.btn-primary{
+    cursor: pointer;
+}
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
     text-transform: uppercase;
@@ -257,9 +260,6 @@ h1{
 .button_col{
     text-align: center;
     padding-top: 5px;
-}
-.btn-success{
-    width: 300px;
 }
 #moreInfo{
     min-width: 100%;
