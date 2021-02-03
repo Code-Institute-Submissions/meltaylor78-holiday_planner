@@ -7,17 +7,16 @@
     }
 @media(min-width: 992px){
     .container-fluid{
-        border-top: solid 2px black;
-    }
-    .container-fluid{
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
     }
 }
-.noTopBorder{
-    border-top: none;
-    padding-top: 0px;
+.containerShadeGrey{
+    background-color: #E8E8E8;
+}
+.containerLightGrey{
+    background-color: lightgrey;
 }
 .hide {
     display: none;
@@ -74,7 +73,7 @@ h1{
 }
 /* -_-_-_-_-_-_-_-_-_-_ Nav Links _-_-_-_-_-_-_-_-_-_- */
 .links{
-    background-color: #E8E8E8;
+    background-color: Black;
     font-size: 16px;
     opacity: 0.9;
     position: fixed;
@@ -82,9 +81,12 @@ h1{
     z-index: 2;
     width: 96%
 }
+.links a{
+    color: white;
+}
 
 .links a:hover{
-    color: darkblue;
+    color: grey;
 }
 .mainnav{
     padding: 0 !important;
@@ -114,13 +116,11 @@ h1{
     z-index: 2;
 }
 .covidAlert{
-    background-color: yellow;
-    border: 1px solid red;
+    background-color:#E8E8E8;
     padding-left: 2%;
 }
 .covidAlert h6{
     padding-left: 3%;
-    color: red;
 }
 .covidAlert h5{
     text-align: center;
@@ -330,7 +330,6 @@ h1{
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 
 .formrow {
-    background-color: #E8E8E8;
     margin-bottom: 20px;
 }
 @media(min-width: 992px){
@@ -347,12 +346,9 @@ h1{
     color: navy;
 }
 .formCollapse{
-    background-color: #E8E8E8;
     color: blue;
     width: 100%;
-    
 }
-
 @media(min-width: 992px){
     .formCollapse {
         margin-left: 20%;
@@ -379,34 +375,27 @@ h1{
 
 /* -_-_-_-_-_-_-_-_-_-_ Footer _-_-_-_-_-_-_-_-_-_- */
 .footer{
-    background-color: grey;
-    min-height: 30px;
-    border-top: 1px solid orange;
+    background-color: black;
+}
+.footerRow{
+    max-height: 20px;
 }
 .footericons{
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     margin-right: 3px;
 }
 .footericons:hover{
-    color: orange;
+    color: grey;
 }
 .left-footer-col{
-    padding-top: 10px;
     color: white;
-    border-right: 1px solid;
-}
-.left-footer-col h5{
-    font-size: 15px;
-    padding-left: 10px;
+    text-align: center;
 }
 .right-footer-col{
-    padding-top: 10px;
     color: white;
     font-size: 10px;
-}
-.right-footer-col h5{
-    font-size: 10px;
+    text-align: center;
 }
 .right-footer-col ul {
   margin: 0; 
@@ -414,40 +403,19 @@ h1{
 }
 .copyright{
     font-size: 7px;
-    padding-left: 50px;
 }  
 
 @media(min-width: 992px){
     .footericons{
-        font-size: 50px;
+        font-size: 30px;
         color: white;
         padding-right: 50px;
     }
-    .left-footer-col{
-        padding-left: 100px;
-        color: white;
-        border-right: 10px solid;
-    }
-    .left-footer-col h5{
-        font-size: 30px;
-        letter-spacing: 4px;
-        
-    }
     .copyright{
-        font-size: 10px;
-        padding-left: 50px;
+        font-size: 12px;
     }   
     .right-footer-col{
-        padding-top: 20px;
-        color: white;
-        font-size: 20px;
+        font-size: 12px;
     }
-    .right-footer-col h5{
-        font-size: 20px;
-        padding-left: 150px;
-        letter-spacing: 4px;
-    }
-    .right-footer-col ul {
-        padding-left: 90px;
-    }
+
 }
