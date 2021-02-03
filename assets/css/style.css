@@ -268,6 +268,9 @@ h1{
     margin-top: 3px;
     
 }
+#mapButton{
+    min-width: 100px;
+}
 /* -_-_-_-_-_-_-_-_-_-_ More Info Section Form _-_-_-_-_-_-_-_-_-_- */
 #moreInfoHeader{
     color: blue;

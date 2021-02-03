@@ -191,7 +191,7 @@
             <div class="row">
                 <div class="col-md-12 button_col">
                     <p id="mapSelectionError" class="mapSelectionError hide"> Error! : You must make a valid selection in the County menu. <br></p>
-                        <input id="mapButton" class="btn btn-primary hide" onclick="functionRenderMap()" value="Update Map">
+                        <button id="mapButton" class="btn btn-primary hide" onclick="functionRenderMap()">Update Map</button>
                 </div>
             </div>
             </div>
@@ -276,10 +276,10 @@
                             <input type="url" name="destinationurl" id="destinationurl" class="form-control" placeholder="https://location.ie" pattern="https://.*" required>
                             <textarea name="question" id="question" rows="5" class="form-control" 
                             placeholder="Provide some details on the destination." required></textarea>
-                        </form>
                     <div>
                     <button class="btn btn-primary btn-form" onclick="submitForm()" >Submit</button>
-                    </div>            
+                    </div>    
+                    </form>        
                 </div>
                     </div>
                 </div>
