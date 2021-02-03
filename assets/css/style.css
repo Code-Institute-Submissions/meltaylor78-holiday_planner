@@ -1,17 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 /* -_-_-_-_-_-_-_-_-_-_ containers _-_-_-_-_-_-_-_-_-_- */
-.container-fluid{
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-@media(min-width: 992px){
-    .container-fluid{
-        width: 96%;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-}
+
 .containerShadeGrey{
     background-color: #E8E8E8;
 }
@@ -53,12 +43,12 @@ h1{
     }
 }
 .jumbotron{
-    background: url(../images/jumbotron.jpg);
+    background: url(../images/jumbotron.webp);
     background-position: centre;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
-    vertical-align: middle;
+    min-width: 100%;
 }
 @media(min-width: 992px){
     .jumbotron{
@@ -79,7 +69,7 @@ h1{
     position: fixed;
     top: 0px;
     z-index: 2;
-    width: 96%
+    width: 100%
 }
 .links a{
     color: white;
@@ -112,7 +102,7 @@ h1{
 #hideCovid{
     opacity: 0.9;
     position: fixed;
-    top: 50px;
+    top: 30px;
     z-index: 2;
 }
 .covidAlert{
@@ -328,25 +318,32 @@ h1{
     background-color: #E8E8E8;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
-
-.formrow {
-    margin-bottom: 20px;
+.formContainer{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
 @media(min-width: 992px){
     .formrow {
         margin-left: 20%;
         margin-right: 20%;
     }
 }
+.inquirytext {
+    background-color: white;
+    padding-bottom: 10px;
+    border: 1px solid grey;
+}
 .inquirytext p {
     text-align: center;
+    font-size: 12px;
 }
 .inquirytext span {
     font-weight: bold;
     color: navy;
 }
 .formCollapse{
-    color: blue;
+    background-color: grey;
     width: 100%;
 }
 @media(min-width: 992px){
@@ -358,19 +355,25 @@ h1{
     .formCollapse h5 {
         font-size: 30px;
     }
+    .inquirytext p {
+    font-size: 18px;
+}
 }
 .formCollapse:hover {
-    background-color:lightgreen;
+    background-color:black;
+    color: white;
 }
-.btn-primary{
+.btn-form{
   background-color: blue;
   min-width: 100%;
 }
 .down_arrow{
-    color: green;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 30x;
+}
+.form-control{
+    border: 1px solid grey;
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Footer _-_-_-_-_-_-_-_-_-_- */
@@ -391,31 +394,31 @@ h1{
 .left-footer-col{
     color: white;
     text-align: center;
+    padding-top: 5px;
 }
 .right-footer-col{
     color: white;
     font-size: 10px;
-    text-align: center;
-}
-.right-footer-col ul {
-  margin: 0; 
-  padding:0
+    padding-top: 2px;
 }
 .copyright{
     font-size: 7px;
 }  
-
 @media(min-width: 992px){
     .footericons{
         font-size: 30px;
         color: white;
         padding-right: 50px;
     }
+    .footerRow{
+    max-height: 50px;
+}
     .copyright{
         font-size: 12px;
+        padding-top: 10px;
     }   
     .right-footer-col{
         font-size: 12px;
+        padding-top: 10px;
     }
-
 }
