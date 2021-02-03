@@ -171,7 +171,7 @@ function functionRenderMap(){
             });
             const infowindow = new google.maps.InfoWindow({
                 content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
-                '<br><input id="moreInfo" class="btn btn-success" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
+                '<br><input id="moreInfo" class="btn btn-primary" onclick="functionMoreInfo()" value="More Info">' + '<p id="arrayNum" class="hide">' + m + "</p>"
             });
                  
             // Click event listner for marker
