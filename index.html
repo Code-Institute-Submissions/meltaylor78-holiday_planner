@@ -56,7 +56,10 @@
             <div class="row">
                 <div class="col-md-6 introPic">
                     <p>
-                        Staycationing in Ireland, the Covid-19 pandemic has cause more people to look at what Ireland has to offer for holiday but even before the pandemic, there was growing interest in Ireland as a holiday destination for those already living in Ireland. he tourist sector in Ireland has some much to offer, with holidays destination ranging from 5 star castles to adventure camping. Our ambition is to review these locations and provide you detailed information so you can choose what you want from a holiday regardless if that is two weeks in the summer or weekend away in the midst of the Irish winter. 
+                        Staycationing in Ireland, the Covid-19 pandemic has cause more people to look at what Ireland has to offer for holiday but even before the pandemic, 
+                        there was growing interest in Ireland as a holiday destination for those already living in Ireland. he tourist sector in Ireland has some much to offer, 
+                        with holidays destination ranging from 5 star castles to adventure camping. Our ambition is to review these locations and provide you detailed 
+                        information so you can choose what you want from a holiday regardless if that is two weeks in the summer or weekend away in the midst of the Irish winter. 
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -76,7 +79,10 @@
                         </p>
                         <div class="hide" id="destinationTextExtra1">
                             <p>
-                                    Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and glittering waves awaits you. Head inland to experience some of the signature discovery points and amazing activities in this incredible region. Feel the power of the Atlantic Ocean as it crashes into the base of towering sea cliffs, wander down vast beaches and watch flocks of birds dance in pastel skies as the sun sets on another magical day.
+                               Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and glittering waves awaits you. Head inland to 
+                               experience some of the signature discovery points and amazing activities in this incredible region. Feel the power of the Atlantic Ocean 
+                               as it crashes into the base of towering sea cliffs, wander down vast beaches and watch flocks of birds dance in pastel skies as the sun sets 
+                               on another magical day.
                                 <br>
                                 <br>
                                 <span class="linkText">More information on the Wild Atlantic Way </span>
@@ -173,12 +179,35 @@
             </div>
             </div>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 mapInitalView" id="map">
+            <div class="row mapRow">
+                <div class="col-md-12 no-gutters mapInitalView" id="map">
+                </div>
+                <div id="popup" class="hide popupBox">
+                    <h5>Accommodation Type</h5>
+                    <p>
+                        <span id="accMoreInfo-Mobile"></span>
+                    </p>
+                    <h5>Name</h5>
+                    <p>
+                        <span id="nameMoreInfo-Mobile"></span>
+                    </p>
+                    <h5>Phone #</h5>
+                    <p>
+                        <span id="phoneMoreInfo-Mobile"></span>
+                    </p>
+                    <h5>Review</h5>
+                    <p>
+                        <span id="commentsMoreInfo-Mobile"></span>
+                    </p>
+                    <h5>Further Information: </h5>
+                     <p> Link to <span id="nameMoreInfo1-Mobile"></span> website,
+                       <a id="websiteMoreInfo-Mobile" href="" target="_blank"> <i class="fas fa-external-link-alt"></i></a> <br>
+                       <span onclick="functionClosePopup()">Close</span>
+                    </p>
                 </div>
                    <!-- start - more info section populated from map on-click action-->
                    <a name="moreInfoAnchor"></a>
-                 <div class="col-md-6 hide" id="map_addtional_info">
+                 <div class="col-md-6 no-gutters hide" id="map_addtional_info">
                     <div class="row no-gutters" > 
                         <div class="col">
                           <h2 class="hide" id="moreInfoHeader"> More information</h2>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 /* -_-_-_-_-_-_-_-_-_-_ containers _-_-_-_-_-_-_-_-_-_- */
+
 .container-fluid{
     padding: 0 !important;
     margin: 0;
@@ -62,12 +63,6 @@ h1{
         height: 600px;
     }
 }
-/* -_-_-_-_-_-_-_-_-_-_ div layout _-_-_-_-_-_-_-_-_-_- */
-
-.intro-text{
-    margin-left: 5%;
-    margin-right: 5%;
-}
 /* -_-_-_-_-_-_-_-_-_-_ Nav Links _-_-_-_-_-_-_-_-_-_- */
 .links{
     background-color: Black;
@@ -109,11 +104,14 @@ h1{
 #hideCovid{
     opacity: 0.9;
     position: fixed;
-    top: 30px;
+    top: 35px;
     z-index: 2;
+    width: 80%;
+    margin-left: 10%;
 }
 .covidAlert{
     background-color:#E8E8E8;
+    max-width: 100%;
     padding-left: 2%;
 }
 .covidAlert h6{
@@ -145,6 +143,7 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
+    width: 100%;
     padding-top: 20px;
 }
 .introPic p{
@@ -166,7 +165,7 @@ h1{
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
 .destinationContainer{
     background: url(../images/kayaking_image.jpg);
-    background-position: centre;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
@@ -181,9 +180,13 @@ h1{
     padding-top: 10%;
     color: white;
 }
-.destinationHeading{
-    visibility: hidden;
-    display: none;
+.destinationcol h3{
+    text-align: center;
+}
+.destinationcol p{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
 }
 @media(min-width: 992px){
     .destinationHeading{
@@ -211,6 +214,10 @@ h1{
     font-size: 30x;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
+.mapRow, .mapOptionsCentre{
+    max-width: 100%;
+}
+
 .mapInitalView{
     padding-bottom: 15px;
 }
@@ -254,7 +261,7 @@ h1{
     padding-top: 5px;
 }
 #moreInfo{
-    min-width: 100%;
+    width: 100%;
     font-size: 15px;
     padding: 0px;
     margin-top: 3px;
@@ -264,7 +271,7 @@ h1{
     min-width: 20%;
     margin-bottom: 5px;
 }
-/* -_-_-_-_-_-_-_-_-_-_ More Info Section Form _-_-_-_-_-_-_-_-_-_- */
+/* -_-_-_-_-_-_-_-_-_-_ More Info Section _-_-_-_-_-_-_-_-_-_- */
 #moreInfoHeader{
     color: white;
     text-align: center;
@@ -300,6 +307,8 @@ h1{
 }
 .moreinfoRight h5, .moreinfoLeft h5 {
     padding-left: 10px;
+    font-weight: 600;
+
 }
 .moreinfoRight p, .moreinfoLeft p {
     padding-left: 15px;
@@ -311,6 +320,16 @@ h1{
 .moreInfoPlaceHolder{
     border: 1px solid black;
     background-color: #E8E8E8;
+}
+/* -_-_-_-_-_-_-_-_-_-_ More Info Section Mobile _-_-_-_-_-_-_-_-_-_- */
+.popupBox{
+    z-index: 1;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%;
+    background-color: lightgrey;
+    width: 70%;
 }
 /* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
 .formContainer{
@@ -374,6 +393,8 @@ h1{
 /* -_-_-_-_-_-_-_-_-_-_ Footer _-_-_-_-_-_-_-_-_-_- */
 .footer{
     background-color: black;
+    margin: 0 !important;
+    overflow: hidden;
 }
 .footerRow{
     max-height: 20px;
@@ -390,6 +411,7 @@ h1{
     color: white;
     text-align: center;
     padding-top: 5px;
+    margin: 0 !important;
 }
 .right-footer-col{
     color: white;

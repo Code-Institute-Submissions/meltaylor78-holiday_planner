@@ -92,6 +92,7 @@ document.getElementById("province").addEventListener("change", function(){
 
 /* -_-_-_-_-_-_-_-_-_-_ Render Map (Button Click)_-_-_-_-_-_-_-_-_-_- */
 selectedData = [];
+var viewer = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
 function functionRenderMap(){  
     let acc_type_selected = document.getElementById("accommodation").value;
@@ -182,7 +183,6 @@ function functionRenderMap(){
 }
 
 function functionMoreInfo(){
-    var viewer = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     console.log(typeof(viewer))
     if ( viewer >= 992 ){
         console.log("if statment " + viewer)
@@ -201,9 +201,19 @@ function functionMoreInfo(){
     }
     else if (viewer < 992) {
         var num = document.getElementById("arrayNum").innerHTML
-        var name = selectedData[num].name
-        alert ("You clicked " + name)
+        document.getElementById("accMoreInfo-Mobile").innerHTML = selectedData[num].acc_type
+        document.getElementById("nameMoreInfo-Mobile").innerHTML = selectedData[num].name
+        document.getElementById("nameMoreInfo1-Mobile").innerHTML = selectedData[num].name
+        document.getElementById("phoneMoreInfo-Mobile").innerHTML = selectedData[num].phone
+        document.getElementById("commentsMoreInfo-Mobile").innerHTML = selectedData[num].comments
+        document.getElementById("websiteMoreInfo-Mobile").setAttribute("href", "https://" + selectedData[num].website);
+        document.getElementById("popup").classList.remove("hide")
+        document.getElementById("popup").classList.add("show")
     }
+}
+function functionClosePopup(){
+    document.getElementById("popup").classList.remove("show")
+    document.getElementById("popup").classList.add("hide")
 }
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
 function functionOpenExtraText1(){
