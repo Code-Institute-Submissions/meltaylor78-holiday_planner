@@ -191,13 +191,40 @@ The site was deployed and included here are a list of addtional features that we
 [Index](#Index)
 - - - -
 ## <ins>Testing</ins>
-The project was developed in a DevOps type process. During the development of the website, there were frequent deployments and ongoing testing and fixing of issues. Issues that were found were logged in Github and fixes were deployed on the next development cycle
-Automated testing was complete on all html & CSS files in W3C code checker and for responsiveness on mi.responsivedesig.
+As with the previous project, I apoplied a DevOps type process towards development and testing. In addtional to regular testing as features are added
+and updated using, the Github http server and the responcive design mode in Firefox to simulate multiple devices. The projects was deployed to Github and 
+tested on mobile devices from the github pages site. 
 
-In addition, final testing was complete at the end of the project with the results in the linked manual testing excel file. 
-| File Name | Location |
+In addtion the following testing was carried out;
+
+**Functional Testig**
+The html codes was passed through automated code validators;
+| Code | Testing | Tool | Link |
+| --- | --- | --- | --- |
+|HTML| Validate HTML code|W3C - Markup Validation Service|https://validator.w3.org/|
+|CSS| Validate CSS code| W3C - CSS Validation Service|https://jigsaw.w3.org/css-validator/|
+The inital test of the HTMl code presented erros due to the use of name tages in Anchor links, I replaced with ID tags. 
+After the HTML fixes, the both the CSS and HTML code passed with no issues. 
+
+**User Acceptance Testing**
+user acceptance tesing was compplete by users manually interacting with the site and checking expected functioinality vs site responce, 
+in addtion the users were looking at the useability and the look and feel of the site. 
+
+Testing was conducted on;
+    Fire Fox, Safri & Chrome on Mac.
+    Mobile devices, Samsung Galaxy S7 & Huawei P20 Lite.
+
+During the course of the testing, the following bugs were found
+
+Details of bugs found during testing
+| Bug | Fix |
 | --- | --- |
-| Athboy Website (MS1) Testing Checklist | https://app.box.com/s/hptfyxe9syfs8x1is1entqxzu51beunv |
+|White margin below footer on mobile| |
+|Horizontal scroll on site (both mobile & desktop||
+|Map menus differnt sizes on mobile||
+|Herom image, low quality||
+|Too much hite space on the site||
+|||
 
 [Index](#Index)
 - - - -
@@ -260,8 +287,7 @@ to extend our thanks and apperication to.
 ### <ins>Acknowledgements</ins>
 | Name | Acknowledgement | Acknowledgement |
 | --- | --- | --- |
-| Rahul Lakhanpal | Project Mentor | Rahul provided the advice & input needed to develop the site
-                                     He also guided me with the layout and ascetics to ensure a modern look and feel. |
+| Rahul Lakhanpal | Project Mentor | Rahul provided the advice & input needed to develop the site. He also guided me with the layout and ascetics to ensure a modern look and feel. |
 | Caroline Taylor | Content Provider | Helped to source images and content for the site. Reviewed included text|
 | Caroline Taylor | User Acceptance Testing | Provided user functional testing and user acceptance testing |
 | Discover Ireland | Content | For images and video content included |
