@@ -183,9 +183,7 @@ function functionRenderMap(){
 }
 
 function functionMoreInfo(){
-    console.log(typeof(viewer))
     if ( viewer >= 992 ){
-        console.log("if statment " + viewer)
         document.getElementById("map").classList.remove("col-md-12")
         document.getElementById("map").classList.add("col-md-6")
         var num = document.getElementById("arrayNum").innerHTML
@@ -267,6 +265,9 @@ function functionHideForm(){
 
 // Submit form.
 function submitForm(){
-    alert ("Thank you. Your recommendation has been sent")
-    return false;
+    console.log("For not active at this time")
+}
+// hide underconstruction popup.
+function functionHideFormInfo(){
+    document.getElementById("formNoteId").classList.add("hide")
 }

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holiday Planner</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-</head>
-<body>
-    <article>
-        <div class="container-fluid">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Holiday Planner</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <article>
+            <div class="container-fluid">
                 <div class="links row">
                     <ul class="mainnav list-inline col">
                         <li class="navlink list-inline-item col-3">
@@ -29,202 +28,199 @@
                         </li>
                     </ul>
                 </div>
-        </div>
-        <div class="container-fluid" id="hideCovid">
-            <div class="row covidAlert">
-                <div class="col">
-                    <h3>Covid-19 Information</h3>
-                    <p>
-                        Our site is set-up for you to find destinations to visit in Ireland, as we are still in the midst of the Covid19 pandemic please follow all guidelines 
-                        and advice before booking and traveling. <br>
-                        Form more information, visit the <a href="https://www.gov.ie/en/press-release/066ce-ireland-placed-on-full-level-5-restrictions-of-the-plan-for-living-with-covid-19/">gov.ie</a> 
-                        for more information and updates on restrictions or <a href="https://www2.hse.ie/coronavirus/">HSE.ie/coronavirus</a> for more information.
-                    </p>
-                    <h6>Stay safe & protect each other.</h6>
-                    <h5 onclick="functionHideCovidInfo()">Dismiss</h5>
+            </div>
+            <div class="container-fluid" id="hideCovid">
+                <div class="row covidAlert">
+                    <div class="col">
+                        <h3>Covid-19 Information</h3>
+                        <p>
+                            Our site is set-up for you to find destinations to visit in Ireland, as we are still in the midst of the Covid19 pandemic please follow all guidelines and advice before booking and traveling. <br />
+                            Form more information, visit the <a href="https://www.gov.ie/en/press-release/066ce-ireland-placed-on-full-level-5-restrictions-of-the-plan-for-living-with-covid-19/">gov.ie</a> for more information and updates
+                            on restrictions or <a href="https://www2.hse.ie/coronavirus/">HSE.ie/coronavirus</a> for more information.
+                        </p>
+                        <h6>Stay safe & protect each other.</h6>
+                        <h5 onclick="functionHideCovidInfo()">Dismiss</h5>
+                    </div>
                 </div>
             </div>
-        </div>
-        <a name="topAnchor"></a>
-        <div class="container-fluid jumbotron">
+            <a id="topAnchor"></a>
+            <div class="container-fluid jumbotron">
                 <h1>Irish Staycations</h1>
-                <p>Find Accommodation, Get Reviews & Plan your staycation! <br>
+                <p>
+                    Find Accommodation, Get Reviews & Plan your staycation! <br />
                     Enjoy Ireland as a holiday destination.
                 </p>
-        </div>
-        <div class="container-fluid no-gutters"> <!-- Intro Paragraph & information-->
-            <div class="row introRow no-gutters">
-                <div class="col-md-6 introPic no-gutters">
-                    <p>
-                        Staycationing in Ireland, the Covid-19 pandemic has cause more people to look at what Ireland has to offer for holiday but even before the pandemic, 
-                        there was growing interest in Ireland as a holiday destination for those already living in Ireland. he tourist sector in Ireland has some much to offer, 
-                        with holidays destination ranging from 5 star castles to adventure camping. 
-                    </p>
-                    <p>
-                            Our ambition is to review these locations and provide you detailed 
-                            information so you can choose what you want from a holiday regardless if that is two weeks in the summer or weekend away in the midst of the Irish winter. 
-                    </p>
-                </div>
-                <div class="col-md-6 introVid no-gutters">
-                    <iframe class="irelandVideo" src="https://www.youtube.com/embed/rvSdyIhpdrM" allow="" allowfullscreen> </iframe>
+            </div>
+            <div class="container-fluid no-gutters">
+                <!-- Intro Paragraph & information-->
+                <div class="row introRow no-gutters">
+                    <div class="col-md-6 introPic no-gutters">
+                        <p>
+                            Staycationing in Ireland, the Covid-19 pandemic has cause more people to look at what Ireland has to offer for holiday but even before the pandemic, there was growing interest in Ireland as a holiday destination
+                            for those already living in Ireland. he tourist sector in Ireland has some much to offer, with holidays destination ranging from 5 star castles to adventure camping.
+                        </p>
+                        <p>
+                            Our ambition is to review these locations and provide you detailed information so you can choose what you want from a holiday regardless if that is two weeks in the summer or weekend away in the midst of the
+                            Irish winter.
+                        </p>
+                    </div>
+                    <div class="col-md-6 introVid no-gutters">
+                        <iframe class="irelandVideo" src="https://www.youtube.com/embed/rvSdyIhpdrM" allow="" allowfullscreen> </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-        <a name="destinationAnchor"></a>
-        <div class="container-fluid destinationContainer">
-            <div class="row" id="destinationRow">
-                <div class="col-md-4 no-gutters destinationcol" id="destinationcol1">                   
-                    <div>
-                        <h3>Explore the epic Wild Atlantic Way</h3>
-                        <p id="destinationText1">
-                            Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and glittering waves awaits you.
-                            <i class="fas fa-angle-double-down" onclick="functionOpenExtraText1()"></i>
-                        </p>
-                        <div class="hide" id="destinationTextExtra1">
-                            <p>
-                               Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and glittering waves awaits you. Head inland to 
-                               experience some of the signature discovery points and amazing activities in this incredible region. Feel the power of the Atlantic Ocean 
-                               as it crashes into the base of towering sea cliffs, wander down vast beaches and watch flocks of birds dance in pastel skies as the sun sets 
-                               on another magical day.
-                                <br>
-                                <br>
-                                <span class="linkText">More information on the Wild Atlantic Way </span>
-                                        <a href="https://www.discoverireland.ie/wild-atlantic-way" target="_blank"> <i class="fas fa-external-link-alt"></i></a>
-                                <i class="fas fa-angle-double-up" onclick="functionCloseExtraText1()"></i>
+            <a id="destinationAnchor"></a>
+            <div class="container-fluid destinationContainer">
+                <div class="row" id="destinationRow">
+                    <div class="col-md-4 no-gutters destinationcol" id="destinationcol1">
+                        <div>
+                            <h3>Explore the epic Wild Atlantic Way</h3>
+                            <p id="destinationText1">
+                                Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and glittering waves awaits you.
+                                <i class="fas fa-angle-double-down" onclick="functionOpenExtraText1()"></i>
                             </p>
+                            <div class="hide" id="destinationTextExtra1">
+                                <p>
+                                    Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and glittering waves awaits you. Head inland to experience some of the signature discovery points and amazing
+                                    activities in this incredible region. Feel the power of the Atlantic Ocean as it crashes into the base of towering sea cliffs, wander down vast beaches and watch flocks of birds dance in pastel skies as
+                                    the sun sets on another magical day.
+                                    <br />
+                                    <br />
+                                    <span class="linkText">More information on the Wild Atlantic Way </span>
+                                    <a href="https://www.discoverireland.ie/wild-atlantic-way" target="_blank"> <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                    <i class="fas fa-angle-double-up" aria-hidden="true" onclick="functionCloseExtraText1()"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>                    
-                
-                <div class="col-md-4 no-gutters destinationcol" id="destinationcol2">
-                    <div>
-                        <h3>Discover Ireland's Hidden Heartlands</h3>
-                        <p id="destinationText2">
-                            Experience Ireland’s Hidden Heartlands, a beautifully unspoiled part of Ireland where life moves at its own pace.
-                            <i class="fas fa-angle-double-down" onclick="functionOpenExtraText2()"></i>
-                        </p>
-                        <div class="hide" id="destinationTextExtra2">
-                            <p>
-                                    Experience Ireland’s Hidden Heartlands, a beautifully unspoiled part of Ireland where life moves at its own 
-                                    pace. Listen to the ebb and flow of trickling streams, kayak across wonderful waterways and explore magical forest 
-                                    treks and trails. Meander across expansive boglands, majestic mountains and open valleys. Visit the riverside towns and 
-                                    villages dotted throughout this enchanting region. Make sure to stop and soak up the peaceful atmosphere, there's nowhere quite like it.
-                                <br>
-                                <br>
-                                <span class="linkText">More information on Ireland's hidden heartlands </span>
-                                        <a href="https://www.discoverireland.ie/irelands-hidden-heartlands" target="_blank"> <i class="fas fa-external-link-alt"></i></a>
-                                <i class="fas fa-angle-double-up" onclick="functionCloseExtraText2()"></i>
+
+                    <div class="col-md-4 no-gutters destinationcol" id="destinationcol2">
+                        <div>
+                            <h3>Discover Ireland's Hidden Heartlands</h3>
+                            <p id="destinationText2">
+                                Experience Ireland’s Hidden Heartlands, a beautifully unspoiled part of Ireland where life moves at its own pace.
+                                <i class="fas fa-angle-double-down" aria-hidden="true" onclick="functionOpenExtraText2()"></i>
                             </p>
+                            <div class="hide" id="destinationTextExtra2">
+                                <p>
+                                    Experience Ireland’s Hidden Heartlands, a beautifully unspoiled part of Ireland where life moves at its own pace. Listen to the ebb and flow of trickling streams, kayak across wonderful waterways and
+                                    explore magical forest treks and trails. Meander across expansive boglands, majestic mountains and open valleys. Visit the riverside towns and villages dotted throughout this enchanting region. Make sure
+                                    to stop and soak up the peaceful atmosphere, there's nowhere quite like it.
+                                    <br />
+                                    <br />
+                                    <span class="linkText">More information on Ireland's hidden heartlands </span>
+                                    <a href="https://www.discoverireland.ie/irelands-hidden-heartlands" target="_blank"> <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                    <i class="fas fa-angle-double-up" aria-hidden="true" onclick="functionCloseExtraText2()"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>                       
-                <div class="col-md-4 no-gutters destinationcol" id="destinationcol3">
-                    <div>
-                        <h3>Uncover Ireland's Ancient East</h3>
-                        <p id="destinationText3">
-                            Experience Ireland’s Ancient East where vibrant history and modern life meet.
-                            <i class="fas fa-angle-double-down" onclick="functionOpenExtraText3()"></i>
-                        </p>
-                        <div class="hide" id="destinationTextExtra3">
-                            <p>
-                                    Experience Ireland’s Ancient East where vibrant history and modern life meet. Enjoy memorable food experiences, wander down the cobbled 
-                                    streets of medieval towns and explore the gorgeous gardens of this scenic region. Hear local legends and mythical tales on a lively walking 
-                                    tour or travel back in time at an ancient monastic site. Head on an epic mountain hike and afterwards, experience the buzzing nightlife in the 
-                                    contemporary cities.
-                                <br>
-                                <br>
-                                <span class="linkText">More information on Ireland's ancient east  </span>
-                                    <a href="https://www.discoverireland.ie/irelands-ancient-east" target="_blank"> <i class="fas fa-external-link-alt"></i></a>             
-                                <i class="fas fa-angle-double-up" onclick="functionCloseExtraText3()"></i>
+                    <div class="col-md-4 no-gutters destinationcol" id="destinationcol3">
+                        <div>
+                            <h3>Uncover Ireland's Ancient East</h3>
+                            <p id="destinationText3">
+                                Experience Ireland’s Ancient East where vibrant history and modern life meet.
+                                <i class="fas fa-angle-double-down" aria-hidden="true" onclick="functionOpenExtraText3()"></i>
                             </p>
+                            <div class="hide" id="destinationTextExtra3">
+                                <p>
+                                    Experience Ireland’s Ancient East where vibrant history and modern life meet. Enjoy memorable food experiences, wander down the cobbled streets of medieval towns and explore the gorgeous gardens of this
+                                    scenic region. Hear local legends and mythical tales on a lively walking tour or travel back in time at an ancient monastic site. Head on an epic mountain hike and afterwards, experience the buzzing
+                                    nightlife in the contemporary cities.
+                                    <br />
+                                    <br />
+                                    <span class="linkText">More information on Ireland's ancient east </span>
+                                    <a href="https://www.discoverireland.ie/irelands-ancient-east" target="_blank"> <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                    <i class="fas fa-angle-double-up" aria-hidden="true" onclick="functionCloseExtraText3()"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>    
-            
-            </div>
-        </div>
-        <a name="mapAnchor"></a>
-        <div class="container-fluid">
-            <div class="row map-intro-col no-gutters">
-                <div class=" col map-intro">
-                    <h3>Ready for your next holiday?</h3>
-                    <p>
-                        Use the menus below to find places that have been reviewed and recommended for your holiday. <br>
-                        The meuns allow you limityour search to the type of accommodation you prefer and province / county you want to visit, 
-                        not sure then use the all options to start looking for ideas.
-                    </p>
                 </div>
             </div>
-            <div class="row mapOptionsCentre">
-                <div class="col-md-3"></div>
-                <div class="col-md-2 dropDown_col">
-                    Accommodation:<br> <select name="accommodation" id="accommodation" class="dropDown">
-                    <option value="" selected hidden>Select</option>
-                    </select>
+            <a id="mapAnchor"></a>
+            <div class="container-fluid">
+                <div class="row map-intro-col no-gutters">
+                    <div class="col map-intro">
+                        <h3>Ready for your next holiday?</h3>
+                        <p>
+                            Use the menus below to find places that have been reviewed and recommended for your holiday. <br />
+                            The meuns allow you limityour search to the type of accommodation you prefer and province / county you want to visit, not sure then use the all options to start looking for ideas.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-md-2 dropDown_col hide" id="province_list">
-                    Province:<br> <select name="province" id="province" class="dropDown">
-                    <option value="" selected hidden>Select</option>s
-                    </select>
+                <div class="row mapOptionsCentre">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-2 dropDown_col">
+                        Accommodation:<br />
+                        <select name="accommodation" id="accommodation" class="dropDown">
+                            <option value="" selected hidden>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 dropDown_col hide" id="province_list">
+                        Province:<br />
+                        <select name="province" id="province" class="dropDown">
+                            <option value="" selected hidden>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 dropDown_col hide" id="county_lst">
+                        County:<br />
+                        <select name="county" id="county" class="dropDown">
+                            <option value="" selected hidden>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
-                <div class="col-md-2 dropDown_col hide" id="county_lst" >
-                    County:<br> <select name="county" id="county" class="dropDown">
-                    <option value="" selected hidden>Select</option>
-                    </select>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 button_col">
-                    <p id="mapSelectionError" class="mapSelectionError hide"> Error! : You must make a valid selection in the County menu. <br></p>
+                <div class="row">
+                    <div class="col-md-12 button_col">
+                        <p id="mapSelectionError" class="mapSelectionError hide">Error! : You must make a valid selection in the County menu. <br /></p>
                         <button id="mapButton" class="btn btn-primary btn-map hide" onclick="functionRenderMap()">Update Map</button>
-                </div>
-            </div>
-            </div>
-        <div class="container-fluid">
-            <div class="row mapRow">
-                <div class="col-md-12 no-gutters mapInitalView" id="map">
-                </div>
-                <div id="popup" class="hide popupBox">
-                    <h5>Accommodation Type</h5>
-                    <p>
-                        <span id="accMoreInfo-Mobile"></span>
-                    </p>
-                    <h5>Name</h5>
-                    <p>
-                        <span id="nameMoreInfo-Mobile"></span>
-                    </p>
-                    <h5>Phone #</h5>
-                    <p>
-                        <span id="phoneMoreInfo-Mobile"></span>
-                    </p>
-                    <h5>Review</h5>
-                    <p>
-                        <span id="commentsMoreInfo-Mobile"></span>
-                    </p>
-                    <h5>Further Information: </h5>
-                     <p> Link to <span id="nameMoreInfo1-Mobile"></span> website,
-                       <a id="websiteMoreInfo-Mobile" href="" target="_blank"> <i class="fas fa-external-link-alt"></i></a> <br>
-                       <span class="popupClose"  onclick="functionClosePopup()">Close</span>
-                    </p>
-                </div>
-                   <!-- start - more info section populated from map on-click action-->
-                   <a name="moreInfoAnchor"></a>
-                 <div class="col-md-6 no-gutters hide" id="map_addtional_info">
-                    <div class="row no-gutters" > 
-                        <div class="col">
-                          <h2 class="hide" id="moreInfoHeader"> More information</h2>
-                          </div>
                     </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row mapRow">
+                    <div class="col-md-12 no-gutters mapInitalView" id="map"></div>
+                    <div id="popup" class="hide popupBox">
+                        <h5>Accommodation Type</h5>
+                        <p>
+                            <span id="accMoreInfo-Mobile"></span>
+                        </p>
+                        <h5>Name</h5>
+                        <p>
+                            <span id="nameMoreInfo-Mobile"></span>
+                        </p>
+                        <h5>Phone #</h5>
+                        <p>
+                            <span id="phoneMoreInfo-Mobile"></span>
+                        </p>
+                        <h5>Review</h5>
+                        <p>
+                            <span id="commentsMoreInfo-Mobile"></span>
+                        </p>
+                        <h5>Further Information:</h5>
+                        <p>
+                            Link to <span id="nameMoreInfo1-Mobile"></span> website, <a id="websiteMoreInfo-Mobile" href="" target="_blank"> <i class="fas fa-external-link-alt" aria-hidden="true"></i></a> <br />
+                            <span class="popupClose" onclick="functionClosePopup()">Close</span>
+                        </p>
+                    </div>
+                    <!-- start - more info section populated from map on-click action-->
+                    <a id="moreInfoAnchor"></a>
+                    <div class="col-md-6 no-gutters hide" id="map_addtional_info">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <h2 class="hide" id="moreInfoHeader">More information</h2>
+                            </div>
+                        </div>
                         <div class="row no-gutters firstRow">
                             <div class="col-md-6 moreinfoLeft centreBorder">
-                                <h5>Name: </h5>
-                                   <p>
-                                       <span id="nameMoreInfo"></span>
-                                   </p>
+                                <h5>Name:</h5>
+                                <p>
+                                    <span id="nameMoreInfo"></span>
+                                </p>
                             </div>
                             <div class="col-md-6 moreinfoRight">
-                                <h5>Accommodation Type: </h5>
+                                <h5>Accommodation Type:</h5>
                                 <p>
                                     <span id="accMoreInfo"></span>
                                 </p>
@@ -232,13 +228,13 @@
                         </div>
                         <div class="row no-gutters secondRow">
                             <div class="col-md-6 moreinfoLeft centreBorder">
-                                <h5>Address: </h5>
+                                <h5>Address:</h5>
                                 <p>
                                     <span id="addressMoreInfo"></span>
                                 </p>
                             </div>
                             <div class="col-md-6 moreinfoRight">
-                                <h5>Phone #: </h5>
+                                <h5>Phone #:</h5>
                                 <p>
                                     <span id="phoneMoreInfo"></span>
                                 </p>
@@ -246,7 +242,7 @@
                         </div>
                         <div class="row no-gutters firstRow">
                             <div class="col moreinfoLeft">
-                                <h5>Review Information: </h5>
+                                <h5>Review Information:</h5>
                                 <p>
                                     <span id="commentsMoreInfo"></span>
                                 </p>
@@ -254,47 +250,57 @@
                         </div>
                         <div class="row no-gutters secondRow bottomRow">
                             <div class="col moreinfoLeft">
-                                <h5>Further Information: </h5>
-                                    <p> For more information on <span id="nameMoreInfo1"></span> visit their website,
-                                        <a id="websiteMoreInfo" href="" target="_blank"> <i class="fas fa-external-link-alt"></i></a>
-                                    </p>
+                                <h5>Further Information:</h5>
+                                <p>
+                                    For more information on <span id="nameMoreInfo1"></span> visit their website,
+                                    <a id="websiteMoreInfo" href="" target="_blank"> <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </div>
-                   <!--end-->
-            </div>
-        </div>
-        </div>
-        <a name="formAnchor"></a>
-         <div class="container-fluid formContainer"> <!-- Page section for contact form-->
-            <button type="button" class="formCollapse" onclick="functionShowHide()"><h5><span class="fas fa-chevron-down down_arrow"></span>Suggestion Form!<span class="fas fa-chevron-down down_arrow"></span></h5> </button>
-                <div class="row-md-8 formrow" id="formSection">
-                    <div class="col inquirytext">
-                        <p>
-                            Do you have a favourite location you would like to have revised and included on this site? <br>
-                            We are always looking for new places to add to our site. Submit your suggestions below. <br>
-                            <span>Thank you.</span>
-                        </p>
-
-                    <div class="inquiryform">
-                        <form>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Your e-mail" required />
-                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone No. (Optional)" />
-                            <input type="text" name="destinationname" id="destinationname" class="form-control" placeholder="Name of the Destination" required />
-                            <input type="text" name="destinationaddress" id="destinationaddress" class="form-control" placeholder="Address of the Destination" required />
-                            <input type="url" name="destinationurl" id="destinationurl" class="form-control" placeholder="https://location.ie" pattern="https://.*" required>
-                            <textarea name="question" id="question" rows="5" class="form-control" 
-                            placeholder="Provide some details on the destination." required></textarea>
-                    <div>
-                    <button class="btn btn-primary btn-form" onclick="submitForm()" >Submit</button>
-                    </div>    
-                    </form>        
-                </div>
+                        <!--end-->
                     </div>
                 </div>
             </div>
-    </article>
-    <footer class="container-fluid footer"> <!-- Page footer section-->
+            <a id="formAnchor"></a>
+            <div class="container-fluid formContainer">
+                <!-- Page section for contact form-->
+                <button type="button" class="formCollapse" onclick="functionShowHide()"><span class="fas fa-chevron-down down_arrow"></span>Suggestion Form!<span class="fas fa-chevron-down down_arrow"></span></button>
+                <div class="row-md-8 formrow" id="formSection">
+                    <div class="col inquirytext">
+                        <p>
+                            Do you have a favourite location you would like to have revised and included on this site? <br />
+                            We are always looking for new places to add to our site. Submit your suggestions below. <br />
+                            <span>Thank you.</span>
+                        </p>
+                        <div class="formNote" id="formNoteId">
+                            <h3>Note:</h3>
+                            <p>
+                                <i class="fas fa-wrench" aria-hidden="true"></i>
+                                Form under construction, check back soon.
+                                <i class="fas fa-hammer" aria-hidden="true"></i>
+                            </p>
+                            <h6 onclick="functionHideFormInfo()">Dismiss</h6>
+                        </div>
+                        <div class="inquiryform">
+                            <form>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Your e-mail" required />
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone No. (Optional)" />
+                                <input type="text" name="destinationname" id="destinationname" class="form-control" placeholder="Name of the Destination" required />
+                                <input type="text" name="destinationaddress" id="destinationaddress" class="form-control" placeholder="Address of the Destination" required />
+                                <input type="url" name="destinationurl" id="destinationurl" class="form-control" placeholder="https://location.ie" pattern="https://.*" required />
+                                <textarea name="question" id="question" rows="5" class="form-control" placeholder="Provide some details on the destination." required></textarea>
+                                <div>
+                                    <button class="btn btn-primary btn-form" onclick="submitForm()">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer class="container-fluid footer">
+            <!-- Page footer section-->
             <div class="row footerRow">
                 <div class="col left-footer-col">
                     <h6 class="copyright">Copyright (C) 2020. All Rights Reserved</h6>
@@ -319,7 +325,7 @@
         </footer>
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&libraries=places&callback=initMap"></script>
-        <script type="text/javascript" language="javascript" src="assets/locations/locations.js"></script>
-        <script type="text/javascript" language="javascript" src="assets/js/main.js"></script>
-</body>
+        <script src="assets/locations/locations.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
