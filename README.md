@@ -44,22 +44,17 @@ from the locations file so only contain options when there is supporting data in
 
 <img src="/assets/readmeAssets/menuView.jpg">
 
-Add descriptive text here
-  Bullet if you need them
-  - Bullet 1
-  - Bullet 2
-  - Bullet 3
 
 ## **<ins>UX</ins>**
 Once the concept or the site was developed, as part of the UX design phase it I decided to make the site a one page site with distinctive containers for each 
 section. The site would have 5 major components,
 
-- Header
-- Introduction
-- Destinations Information. 
-- Interactive Map
-- Form
-- Footer
+   - Header
+   - Introduction
+   - Destinations Information. 
+   - Interactive Map
+   - Form
+   - Footer
 
 Bootstrap was chosen as the main library for the major design elements, it provides the responsiveness required to ensure the site looks good and works well 
 across all device sizes. On top of bootstrap, custom CSS was used to provide a unique look an feel and set the site apart. 
@@ -104,26 +99,53 @@ form was, two fold, first get location information to grow the site location dat
 
 
 ### <ins>Wireframes</ins>
-Add links to any wireframes created
+Once the site concept and userstories were worked out, a wirefram was built to use as a reference guide as elements were added.
+Provided the quick reference for the construction of the site.
 | Title | Link to Wirefram (pdf) |
 | --- | --- |
-| Title 1 | https://link |
-| Title 2 | https://link |
-| Title 3 | https://link |
+| Title 1 | https://app.box.com/s/c8qnumxsedgjwzw54c3bqdmbvq5oc3qe |
+**Note:** There was one element added to the site that was not included in the wireframe.
+A covid banner was added to the site, as the site is dedicated to travel & staycations, the banner was added an reminder to follow all current restrictions and advice.
+Outside the drafted wireframe but necessary in the current Covid-19 environment.
 
 [Index](#Index)
 - - - -
 ## **<ins>Features</ins>**
-Add descriptive text here
+The following section, details the existing features on the site followed, followed by a list of features to be added as enhacments or features that 
+were not included due to time constraints.
 ### <ins>Existing_Features</ins>
-- Add descriptive text here
+- Colour palet of Black / white & Grey are the prodomint colours with blue used where useres attendation was needed for an action.
+- The basic colour palet was off set with constrasting coulourfull images.
+- Nav bar & foother. Minimilast design in black & white. Functional but not distracting from the site.
+- Nav bar is locaked to the top of the site to give useres continuious access to the links to move through the site quickly.
+- Images were included as background with overlaid text, to reduce the size of the page and create visual appeal.
 
-**Responsiveness;**
- - Add descriptive text here
+- Interactive Map;
+    -- The map is the mail appeal and function of the site. 
+    -- It includes simple drop down menus that are populated using a locations file, this ensures only options with supporting data are presented.
+    -- The menus are intuitive and appear in sequence after selection to guid the user.
+    -- The map draws on the google maps api to populate the date based on the user slections. 
+    -- Pins are clickable and provide name & address data with a button for more info on click.
+    -- The more info button draws data from the locations file and presents to the user.
+        --- The more info functions different on larger screens sizes and mobile.
+        --- There was place on larger screens to present the data side by side with the map, once clicked the map moves to the left
+            and a table with the addtional info is presented. 
+        --- For mobiles, as the more info data would be incluuded below the map, it was decided to use instead a popup div that overlays
+            the map and presents the same information but in a more mobile iser friendly way.
+    -- The site also includes a form, this is still under construction but when complete would allow users of the site to suggest locations
+        that could be reviewed and included on the site.
 
 ### <ins>Future_Enhancements</ins>
-Add descriptive text here
- - Add descriptive text heres. 
+As described above in the [Introduction](#Introduction) section, there was a shorter that expected lead time to deployment.
+The site was deployed and included here are a list of addtional features that were being considered if time premitted.
+ - A carousel of images in the hero image section to improve visual efects on loading the page.
+ - Interactive Map;
+    -- Upon clicking the pin, the map would zoom to the location of the selected pin.
+    --
+ - Form Section;
+    -- add email service to send e-mails
+    -- include an responce on screen when mail is sent.
+    -- include a confirmation e-mail to the subnitter.
 
 [Index](#Index)
 - - - -
@@ -141,6 +163,10 @@ Add descriptive text here
 **Bootstrap** https://getbootstrap.com/
 - Bootstrap library was chosen for the initial layout & to provide responsiveness across devices sizes, layout was customised on top of bootstrap.
 
+**Google Maps API** https://cloud.google.com/maps-platform/
+- Google Maps API to create the map
+- plotting the locations based on location data.
+
 **Google Fonts** https://fonts.google.com/
 - Google fonts provided fonts for the project (Roboto Condensed & Serrat)
 
@@ -156,6 +182,9 @@ Add descriptive text here
 **ami.responsivedesign** http://ami.responsivedesign.is/#
 - The project was tested on ami.responsivedesign
 - image used in readme file was taken from ami.responsivedesign site
+
+**w3schools** https://www.w3schools.com
+- For addtional code explanations & features to use.
 
 
 [Index](#Index)
@@ -217,13 +246,10 @@ The developers of the Athboy community hub would like to thanks all those who co
 
 | Details | Site | Link |
 | --- | --- | --- |
-| Google Maps | Google | https://www.google.ie/maps |
-| Historical Images | Athboy 100 | https://athboy100.com/ |
-| Images | Athboy Parish | https://www.athboyparish.ie/ |
-| Video - Rambling Around Athboy | Rambling Girl - YouTube | https://www.youtube.com/watch?v=NPB_WZzZwJs&feature=youtu.be |
-| Video - Athboy Co. Meath Ireland. | Nick Eogans Adventures - YouTube | https://www.youtube.com/watch?v=iXYbLqi1xWU&feature=youtu.be |
-| Image | Puca Festival | https://www.pucafestival.com/ |
-| Image | Blue Jean Festival | http://bluejeanfest.com/ |
+| Google Maps | Google Maps API | https://cloud.google.com/maps-platform/ |
+| Video - Ireland – a luxury destination |  Discover Ireland - YouTube | https://www.youtube.com/watch?v=rvSdyIhpdrM&feature=youtu.be |
+| Images | Discover Ireland | https://www.discoverireland.ie/ |
+
 
 [Index](#Index)
 - - - -
@@ -231,11 +257,11 @@ The developers of the Athboy community hub would like to thanks all those who co
 ### <ins>Acknowledgements</ins>
 | Name | Acknowledgement | Acknowledgement |
 | --- | --- | --- |
-| Caroline Taylor | Initial Idea | Provide the initial idea for the project and help develop the wireframes of what would be included. |
-| Caroline Taylor | Content Provider | Provided images and content for the site. |
-| Caroline Taylor | User Acceptance Testing | Helped with the testing of the site during the development and final user acceptance testing. |
-| Rahul Lakhanpal | Project Mentor | Rahul provided me with the guidance to complete the project and advise on areas to better meet the project brief. |
-| Athboy Community | Content | The sports clubs, activity groups for all the content and information to include on the site. |
+| Rahul Lakhanpal | Project Mentor | Rahul provided the advice & input needed to develop the site
+                                     He also guided me with the layout and ascetics to ensure a modern look and feel. |
+| Caroline Taylor | Content Provider | Helped to source images and content for the site. Reviewed included text|
+| Caroline Taylor | User Acceptance Testing | Provided user functional testing and user acceptance testing |
+| Discover Ireland | Content | For images and video content included |
 
 [Index](#Index)
 - - - -
