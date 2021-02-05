@@ -81,8 +81,7 @@ h1{
     color: grey;
 }
 .mainnav{
-    padding: 0 !important;
-    margin: 0 !important;
+    max-height: 20px;
     font-size: 0;
 }
 .navlink{
@@ -108,23 +107,33 @@ h1{
     z-index: 2;
     max-width: 80%;
     margin-left: 10%;
-    margin-right: 10%;
 }
 .covidAlert{
     background-color:#E8E8E8;
     max-width: 100%;
     padding-left: 2%;
+    text-align: center;
 }
-.covidAlert h6{
-    padding-left: 3%;
+.covidAlert p{
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .covidAlert h5{
-    text-align: center;
     color: blue;
 }
 .covidAlert h5:hover{
     color: lightblue;
     text-decoration: underline;
+}
+@media(min-width: 992px){
+    #hideCovid{
+    max-width: 80%;
+    margin-left: 10%;
+}
+    .covidAlert p{
+        text-align: center;
+    }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Intro Section _-_-_-_-_-_-_-_-_-_- */
 
