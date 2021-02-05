@@ -203,6 +203,7 @@ The html codes was passed through automated code validators;
 | --- | --- | --- | --- |
 |HTML| Validate HTML code|W3C - Markup Validation Service|https://validator.w3.org/|
 |CSS| Validate CSS code| W3C - CSS Validation Service|https://jigsaw.w3.org/css-validator/|
+
 The inital test of the HTMl code presented erros due to the use of name tages in Anchor links, I replaced with ID tags. 
 After the HTML fixes, the both the CSS and HTML code passed with no issues. 
 
@@ -219,12 +220,12 @@ During the course of the testing, the following bugs were found
 Details of bugs found during testing
 | Bug | Fix |
 | --- | --- |
-|White margin below footer on mobile| |
-|Horizontal scroll on site (both mobile & desktop||
-|Map menus differnt sizes on mobile||
-|Herom image, low quality||
-|Too much hite space on the site||
-|||
+|White margin below footer on mobile|Issue was fixed by removing marging to the bottom of the row that was causing the white space|
+|Horizontal scroll on site (both mobile & desktop|After fixing all containers and their childer that no part ran over, issue presisted. I added a section in the CSS file for body & html section to remove the overflow |
+|Map menus differnt sizes on mobile|One issue reported on mobile, the menus for the map were different sizes, on desk top they were side by side and it was not an issue that they were the size of the content. Set a fixed value to improve look on mobile, where they were in a vertical row.|
+|Hero image, low quality|Hero image was oigainlly added as palce holder but was not removed, testers raised issue. New image added.|
+|Too much white space on the site|Users reported that there was too much white space, this was resolved by reducing the number of rows and using images as background images|
+|Nav link to form lead to collapsed form|When using the nav link to jump to the form section, it was collapsed. I added JS onclick to the nav link to expand the section, nav link now takes user to the form section and its expanded.|
 
 [Index](#Index)
 - - - -
@@ -266,7 +267,7 @@ through providing media and content for the site.
 | --- | --- | --- |
 | Discover Ireland images & video | Discover Ireland | https://www.discoverireland.ie/ |
 
-In addtion to the list aboved, see the [Technologies Used](#Technologies_Used) and the [Acknowledgements](#Acknowledgements) section for others that we wouldlike 
+In addtion to the list aboved, see the [Technologies Used](#Technologies_Used) and the [Acknowledgements](#Acknowledgements) section for others that we would like 
 to extend our thanks and apperication to.
 
 [Index](#Index)
