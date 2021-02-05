@@ -227,6 +227,13 @@ Details of bugs found during testing
 |Too much white space on the site|Users reported that there was too much white space, this was resolved by reducing the number of rows and using images as background images|
 |Nav link to form lead to collapsed form|When using the nav link to jump to the form section, it was collapsed. I added JS onclick to the nav link to expand the section, nav link now takes user to the form section and its expanded.|
 
+Time for testing was limited, to meet deployment schedule so testing was ocused on testing that the website functions and that the users were noy having any issues. 
+The site was tsted with Lighthouse on Chorme Dev tools. 
+
+The site, did not score very highy, I did fix some issues highlighted, such as unused JS and CSS. 
+I should have engaged the Lighhouse tool earlier in the development cycle.
+<img src="/assets/readmeAssets/Lighthouse Test.jpg">
+
 [Index](#Index)
 - - - -
 
