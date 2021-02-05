@@ -23,31 +23,31 @@
 ## **<ins>Introduction</ins>**
 This is my milestone 2 project for the Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/). The project is not complete 
 due to time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
-14th of March on the Schedule Generator but the due date is the 05th of February. None the less the site is functional and 
+14th of March as per the Schedule Generator but the due date is the 05th of February. None the less the site is functional and 
 has 90+% of the functions and layout envisaged at concept stage. As with my prior project I have tried to use a Agile methodology on the project and 
-as such this is considered a deployment of the Minimum Viable Product (MVP), the site has the required functionality but has other features that would be 
+as such this is considered a deployment of the Minimum Viable Product (MVP), the site has the required functionality but is missing some other features that would be 
 included in subsequent deployments. I will outline in the [Future Enhancements](#Future_Enhancements) sections details of the additional features 
 that will be considered for future iterations.
 
 ## **<ins>Project_Motivation</ins>**
 The main driver behind the development of this site was to create a holiday planner, that would become a trusted site for reviews and information on 
 sites around Ireland for staycations. The site is limited Ireland, but the scope could be expanded when Covid-19 travel restrictions are eased and 
-travel abroad to complete review is again possible. The reviews are individual and only added by the site owners so all review can be  stood over by the
-site owner, with no anonymous  review and information included.
+travel abroad to complete reviews is again possible. The reviews are individual and only added by the site owners so all reviews can be stood over by the
+site owner, with no anonymous review information included.
 
-As part of the design and deployment, I wanted to include two important features, the first being the ability to quickly add new locations without the needing to 
+As part of the design and deployment, I wanted to include two important features, the first being the ability to quickly add new locations without the need to 
 recode any of the page and the second was to make the interactive map section user friendly and intuitive to use. 
-The ability to add new locations quickly was achieved by placing all the location data in one file, creating a new entry for a location the site picks up the new location on the next
-load of the page. As all the information is dynamically pick up from this file no further updates are needed. 
-To make site easy to use, the user required inputs are presented sequentially to make it easy to follow and let the user know what information the need to provide. The menus are populated 
+The ability to add new locations quickly was achieved by placing all the location data in one file, to add a new location the location.js file can be updated with thedata for the
+new location, the site picks up the new location on the next load of the page. As all the information is dynamically pick up from this file no further updates are needed. 
+To make the site easy to use, the user required inputs are presented sequentially to make it easy to follow and let the user know what information they need to provide. The menus are populated 
 from the locations file so only contain options when there is supporting data in the locations file. 
 
 <img src="/assets/readmeAssets/menuView.jpg">
 
 
 ## **<ins>UX</ins>**
-Once the concept or the site was developed, as part of the UX design phase it I decided to make the site a one page site with distinctive containers for each 
-section. The site would have 5 major components,
+Once the concept of the site was developed, as part of the UX design phase I decided to make the site a one page site with distinctive containers for each 
+section. The site would have 6 major components,
 
    - Header
    - Introduction
@@ -57,7 +57,7 @@ section. The site would have 5 major components,
    - Footer
 
 Bootstrap was chosen as the main library for the major design elements, it provides the responsiveness required to ensure the site looks good and works well 
-across all device sizes. On top of bootstrap, custom CSS was used to provide a unique look an feel and set the site apart. 
+across all device sizes. On top of bootstrap, custom CSS was used to provide a unique look and feel and set the site apart. 
 
 **Header**
 The header consists of a nav bar, locked to the top of the screen as the page is long the user always has access to the nav bar to jump to the desired 
@@ -65,8 +65,8 @@ location. Under that I included a hero image with crisp white text to capture th
 
 **Introduction**
 Consists of a short introduction to the site, some information on staycations in Ireland and a video that gives the users some media content to show case 
-Ireland and holiday locations. The video is embedded as I don’t want users to leave the page in such and early stage. I decided that in this section, the 
-information would be limited to generate interested but ensure the user does not get over whelmed with information and leave the site before exploring further down the page. 
+Ireland and holiday locations. The video is embedded as I don’t want users to leave the page at such and early stage. I decided that in this section, the 
+information would be limited to generate interest but ensure the user does not get over whelmed with information and leave the site before exploring further down the page. 
  
 **Destination**
 To provide some more value to the users, I have included a section with some cards on major destinations and locations in Ireland. The idea here was to provide 
@@ -74,13 +74,14 @@ some information to the user if they are still deciding on the type of holiday o
 
 **Interactive Map**
 The map section is the main part of the site and as I have described above in the introduction section, this map is driven by a file with the reviewed locations 
-and the menus are dynamic in such that they only populate type, province & county where information to support the search is contain in the file. The file will continue 
-to grow with locations. The design of the menus for the map section was set-up to guide the user through the required selections, the menus are show when the user 
+the menus are dynamic in such that they only populate type, province & county where information to support the search is contain in the file. The file will continue 
+to grow with locations. The design of the menus for the map section was set-up to guide the user through the required selections, the menus are shown when the user 
 makes the previous selection and when all selections are made the button to render the map is shown. This was a design feature to make it institutive for the user. Once 
-the map is rendered the user can click on the map pin to provide additional useful information the selected site as well as the review information that is the main content for this site.
+the map is rendered the user can click on the map pin, which will provide additional useful information related to the selected pin as well as the review information that is 
+unique to the site.
 
 **Form**
-The form section, was included to allow site users to submit locations that they would like to have reviewed and added to the site. The thinking behind the including the 
+The form section, was included to allow site users to submit locations that they would like to have reviewed and added to the site. The thinking behind including the 
 form was, two fold, first get location information to grow the site location data quickly and second, allow the user have input to the site and get invested in the sites success. 
 
 
@@ -90,7 +91,7 @@ form was, two fold, first get location information to grow the site location dat
 - I want to find somewhere in Ireland, where I can go for my holidays. 
 - I want to get additional review information on the accommodation location, outside the generic google review.
 - I want to quickly link to the site of a selected accommodation if I want to book or find more information.
-- A stie where I can search on a wide variety of accommodation types and then narrow my search down.
+- A site where I can search on a wide variety of accommodation types and then narrow my search down.
 
 **Site Owner;**
 - As the site owner, I want to be able to add new locations quickly and easily without needing to update the code. 
@@ -99,14 +100,15 @@ form was, two fold, first get location information to grow the site location dat
 
 
 ### <ins>Wireframes</ins>
-Once the site concept and userstories were worked out, a wirefram was built to use as a reference guide as elements were added.
-Provided the quick reference for the construction of the site.
-| Title | Link to Wirefram (pdf) |
+Once the site concept and userstories were worked out, a wireframe was built to use as a reference guide as elements were added.
+Providing a quick reference for the construction of the site during development.
+
+| Title | Link to Wireframe (pdf) |
 | --- | --- |
 | Title 1 | https://app.box.com/s/c8qnumxsedgjwzw54c3bqdmbvq5oc3qe |
 
 **Note:** There was one element added to the site that was not included in the wireframe.
-A covid banner was added to the site, as the site is dedicated to travel & staycations, the banner was added an reminder to follow all current restrictions and advice.
+A covid banner was added to the site, as the site is dedicated to travel & staycations, the banner was added as reminder to follow all current restrictions and advice.
 Outside the drafted wireframe but necessary in the current Covid-19 environment.
 
 [Index](#Index)
@@ -115,38 +117,38 @@ Outside the drafted wireframe but necessary in the current Covid-19 environment.
 The following section, details the existing features on the site followed, followed by a list of features to be added as enhacments or features that 
 were not included due to time constraints.
 ### <ins>Existing_Features</ins>
-- Colour palet of Black / white & Grey are the prodomint colours with blue used where useres attendation was needed for an action.
-- The basic colour palet was off set with constrasting coulourfull images.
-- Nav bar & foother. Minimilast design in black & white. Functional but not distracting from the site.
-- Nav bar is locaked to the top of the site to give useres continuious access to the links to move through the site quickly.
+- A colour palette of Black / white & Grey was used foras the prominent colours on the site with blue being used where users attention was needed for an action.
+- The basic colour palette was off set with constrasting coulourfull images.
+- Nav bar & footer. Minimalist design in black & white. Functional but not distracting from the site.
+- Nav bar is locaked to the top of the site to give users continuious access to the links to move through the site quickly.
 - Images were included as background with overlaid text, to reduce the size of the page and create visual appeal.
 
 - Interactive Map;
-    - The map is the mail appeal and function of the site. 
+    - The map is the main appeal and function of the site. 
     - It includes simple drop down menus that are populated using a locations file, this ensures only options with supporting data are presented.
-    - The menus are intuitive and appear in sequence after selection to guid the user.
-    - The map draws on the google maps api to populate the date based on the user slections. 
-    - Pins are clickable and provide name & address data with a button for more info on click.
-    - The more info button draws data from the locations file and presents to the user.
-        - The more info functions different on larger screens sizes and mobile.
+    - The menus are intuitive and appear in sequence after selection to guide the user.
+    - The map draws on the google maps api to populate the data based on the user selections. 
+    - Pins are clickable and provide name & address data with a button for more info to click on.
+    - The more info button draws data from the locations file and presents it to the user.
+        - The more info functions differentiates between larger screens sizes and mobile.
         - There was place on larger screens to present the data side by side with the map, once clicked the map moves to the left
             and a table with the addtional info is presented. 
-        - For mobiles, as the more info data would be incluuded below the map, it was decided to use instead a popup div that overlays
-            the map and presents the same information but in a more mobile iser friendly way.
-    - The site also includes a form, this is still under construction but when complete would allow users of the site to suggest locations
+        - For mobiles, as the more info data section would be included below the map, it was decided to instead use a popup div that overlays
+            the map and presents the same information but in a more mobile user friendly way.
+    - The site also includes a form, this is still under construction but when completed would allow users of the site to suggest locations
         that could be reviewed and included on the site.
 
 ### <ins>Future_Enhancements</ins>
 As described above in the [Introduction](#Introduction) section, there was a shorter that expected lead time to deployment.
-The site was deployed and included here are a list of addtional features that were being considered if time premitted.
- - A carousel of images in the hero image section to improve visual efects on loading the page.
+The site was deployed and included here are a list of addtional features that were being considered if time permitted.
+ - A carousel of images in the hero image section to improve visual effects on loading the page.
  - Interactive Map;
     - Upon clicking the pin, the map would zoom to the location of the selected pin.
     
  - Form Section;
     - add email service to send e-mails
     - include an responce on screen when mail is sent.
-    - include a confirmation e-mail to the subnitter.
+    - include a confirmation e-mail to the submitter.
 
 [Index](#Index)
 - - - -
@@ -191,7 +193,7 @@ The site was deployed and included here are a list of addtional features that we
 [Index](#Index)
 - - - -
 ## <ins>Testing</ins>
-As with the previous project, I apoplied a DevOps type process towards development and testing. In addtional to regular testing as features are added
+As with the previous project, I applied a DevOps type process towards development and testing. In addtiona to regular testing as features are added
 and updated using, the Github http server and the responcive design mode in Firefox to simulate multiple devices. The projects was deployed to Github and 
 tested on mobile devices from the github pages site. 
 
@@ -208,7 +210,7 @@ The inital test of the HTMl code presented erros due to the use of name tages in
 After the HTML fixes, the both the CSS and HTML code passed with no issues. 
 
 **User Acceptance Testing**
-user acceptance tesing was compplete by users manually interacting with the site and checking expected functioinality vs site responce, 
+user acceptance tesing was completed by users manually interacting with the site and checking expected functioinality vs site responce, 
 in addtion the users were looking at the useability and the look and feel of the site. 
 
 Testing was conducted on;
@@ -220,15 +222,15 @@ During the course of the testing, the following bugs were found
 Details of bugs found during testing
 | Bug | Fix |
 | --- | --- |
-|White margin below footer on mobile|Issue was fixed by removing marging to the bottom of the row that was causing the white space|
-|Horizontal scroll on site (both mobile & desktop|After fixing all containers and their childer that no part ran over, issue presisted. I added a section in the CSS file for body & html section to remove the overflow |
+|White margin below footer on mobile|Issue was fixed by removing margin to the bottom of the row that was causing the white space|
+|Horizontal scroll on site (both mobile & desktop|After fixing all containers and their childern to ensure that no part ran over, issue presisted. I added a section in the CSS file for body & html section to remove the overflow |
 |Map menus differnt sizes on mobile|One issue reported on mobile, the menus for the map were different sizes, on desk top they were side by side and it was not an issue that they were the size of the content. Set a fixed value to improve look on mobile, where they were in a vertical row.|
 |Hero image, low quality|Hero image was oigainlly added as palce holder but was not removed, testers raised issue. New image added.|
 |Too much white space on the site|Users reported that there was too much white space, this was resolved by reducing the number of rows and using images as background images|
 |Nav link to form lead to collapsed form|When using the nav link to jump to the form section, it was collapsed. I added JS onclick to the nav link to expand the section, nav link now takes user to the form section and its expanded.|
 
-Time for testing was limited, to meet deployment schedule so testing was ocused on testing that the website functions and that the users were noy having any issues. 
-The site was tsted with Lighthouse on Chorme Dev tools. 
+Time for testing was limited, to meet deployment schedule so testing was focused on testing that the website functions and that the users were not having any issues. 
+The site was tested with Lighthouse on Chorme Dev tools. 
 
 The site, did not score very highy, I did fix some issues highlighted, such as unused JS and CSS. 
 I should have engaged the Lighhouse tool earlier in the development cycle.
@@ -238,12 +240,12 @@ I should have engaged the Lighhouse tool earlier in the development cycle.
 - - - -
 
 ## <ins>Deployment</ins>
-The project was developed using GitHub as the repository and I chose to deploy the live project on GitHub Pages,
+The project was developed using GitHub as the repository and I choose to deploy the live project on GitHub Pages,
 The live site can be accessed at https://meltaylor78.github.io/holiday_planner/
 
 **Important Note**
-The main data for the locations and data that drives the interactive map are contain in the location.js file.
-This file drives the menus for the map. Ensure this file remains correctlyt linked if you deploy the site or make a local copy of the repo.
+The main data for the locations and data that drives the interactive map are contained in the location.js file.
+This file drives the menus for the map. Ensure this file remains correctly linked if you deploy the site or make a local copy of the repo.
 
 **To complete the deployment;**
 - From the Github repository 
@@ -256,7 +258,7 @@ This file drives the menus for the map. Ensure this file remains correctlyt link
 Further updates can be made, such as custom domain and enforce HTTPS. I did not opt for a custom domain but did select to enforce HTTPS 
 for the additional security it offers. 
 
-GitHub also provides the option to clone the repository, clone allows you to make a local copy of the repository on your machine. 
+GitHub also provides the option to clone the repository, cloning allows you to make a local copy of the repository on your machine. 
 You can complete this using the code drop down menu to get details to clone the repositor. You can find more information on how to clone a 
 repository on GitHub Docs [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
@@ -265,7 +267,7 @@ repository on GitHub Docs [Cloning a repository](https://docs.github.com/en/gith
 - - - -
 
 ## <ins>Credits</ins>
-The developers of the Holidat Planner site would like to thanks all those who contributed directly or indirectly to the development of the site, or 
+The developers of the Holiday Planner site would like to thank all those who contributed directly or indirectly to the development of the site, or 
 through providing media and content for the site.
 
 - - - -
