@@ -104,6 +104,7 @@ Provided the quick reference for the construction of the site.
 | Title | Link to Wirefram (pdf) |
 | --- | --- |
 | Title 1 | https://app.box.com/s/c8qnumxsedgjwzw54c3bqdmbvq5oc3qe |
+
 **Note:** There was one element added to the site that was not included in the wireframe.
 A covid banner was added to the site, as the site is dedicated to travel & staycations, the banner was added an reminder to follow all current restrictions and advice.
 Outside the drafted wireframe but necessary in the current Covid-19 environment.
@@ -121,18 +122,18 @@ were not included due to time constraints.
 - Images were included as background with overlaid text, to reduce the size of the page and create visual appeal.
 
 - Interactive Map;
-    -- The map is the mail appeal and function of the site. 
-    -- It includes simple drop down menus that are populated using a locations file, this ensures only options with supporting data are presented.
-    -- The menus are intuitive and appear in sequence after selection to guid the user.
-    -- The map draws on the google maps api to populate the date based on the user slections. 
-    -- Pins are clickable and provide name & address data with a button for more info on click.
-    -- The more info button draws data from the locations file and presents to the user.
-        --- The more info functions different on larger screens sizes and mobile.
-        --- There was place on larger screens to present the data side by side with the map, once clicked the map moves to the left
+    - The map is the mail appeal and function of the site. 
+    - It includes simple drop down menus that are populated using a locations file, this ensures only options with supporting data are presented.
+    - The menus are intuitive and appear in sequence after selection to guid the user.
+    - The map draws on the google maps api to populate the date based on the user slections. 
+    - Pins are clickable and provide name & address data with a button for more info on click.
+    - The more info button draws data from the locations file and presents to the user.
+        - The more info functions different on larger screens sizes and mobile.
+        - There was place on larger screens to present the data side by side with the map, once clicked the map moves to the left
             and a table with the addtional info is presented. 
-        --- For mobiles, as the more info data would be incluuded below the map, it was decided to use instead a popup div that overlays
+        - For mobiles, as the more info data would be incluuded below the map, it was decided to use instead a popup div that overlays
             the map and presents the same information but in a more mobile iser friendly way.
-    -- The site also includes a form, this is still under construction but when complete would allow users of the site to suggest locations
+    - The site also includes a form, this is still under construction but when complete would allow users of the site to suggest locations
         that could be reviewed and included on the site.
 
 ### <ins>Future_Enhancements</ins>
@@ -140,12 +141,12 @@ As described above in the [Introduction](#Introduction) section, there was a sho
 The site was deployed and included here are a list of addtional features that were being considered if time premitted.
  - A carousel of images in the hero image section to improve visual efects on loading the page.
  - Interactive Map;
-    -- Upon clicking the pin, the map would zoom to the location of the selected pin.
-    --
+    - Upon clicking the pin, the map would zoom to the location of the selected pin.
+    
  - Form Section;
-    -- add email service to send e-mails
-    -- include an responce on screen when mail is sent.
-    -- include a confirmation e-mail to the subnitter.
+    - add email service to send e-mails
+    - include an responce on screen when mail is sent.
+    - include a confirmation e-mail to the subnitter.
 
 [Index](#Index)
 - - - -
@@ -229,15 +230,17 @@ repository on GitHub Docs [Cloning a repository](https://docs.github.com/en/gith
 - - - -
 
 ## <ins>Credits</ins>
-The developers of the Athboy community hub would like to thanks all those who contributed directly to the development of the site or through providing media and content for the site.
+The developers of the Holidat Planner site would like to thanks all those who contributed directly or indirectly to the development of the site, or 
+through providing media and content for the site.
+
 - - - -
 
 | Details | Site | Link |
 | --- | --- | --- |
-| Historical Content | Athboy Wikipedia | https://en.wikipedia.org/wiki/Athboy |
-| Historical Content | Athboy 100 | https://athboy100.com/ |
-| Event Description | Puca Festival | https://www.pucafestival.com/ |
-| Event Description | Blue Jean Festival | http://bluejeanfest.com/ |
+| Discover Ireland images & video | Discover Ireland | https://www.discoverireland.ie/ |
+
+In addtion to the list aboved, see the [Technologies Used](#Technologies_Used) and the [Acknowledgements](#Acknowledgements) section for others that we wouldlike 
+to extend our thanks and apperication to.
 
 [Index](#Index)
 - - - -
