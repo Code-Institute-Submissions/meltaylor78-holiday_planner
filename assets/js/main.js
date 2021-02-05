@@ -6,7 +6,6 @@ function initMap() {
         mapTypeId: 'hybrid'
     });
 }
-
 // var accommodation_type = ["Camping", "Caravan Park", "Hotel", "Hostel", "Bed & Breakfast"];
 var accommodation_type = ["All Types"];
 var region = ["Select"];
@@ -63,7 +62,6 @@ document.getElementById("accommodation").addEventListener("change", function(){
 
     document.getElementById("province_list").classList.remove("hide")
     document.getElementById("province_list").classList.add("show")
-
 });
 
 // update the county list from the above based on selected provence

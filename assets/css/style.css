@@ -51,7 +51,6 @@ h1{
     min-width: 100%;
     margin-bottom: 5px;
 }
-
 @media(min-width: 992px){
     .jumbotron{
         height: 600px;
@@ -91,8 +90,7 @@ h1{
     vertical-align: middle;
 }
 .navlink i{
-    padding-right: 2px;
-    
+    padding-right: 2px; 
 }
 @media(min-width: 992px){
     .navlink{
