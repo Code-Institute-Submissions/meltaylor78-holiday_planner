@@ -1,42 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Holiday Planner</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    </head>
-    <body>
-        
-        <footer class="container-fluid footer">
-            <!-- Page footer section-->
-            <div class="row footerRow">
-                <div class="col left-footer-col">
-                    <h6 class="copyright">Copyright (C) 2020. All Rights Reserved</h6>
-                </div>
-                <div class="col right-footer-col">
-                    <ul>
-                        <li class="footerlinks list-inline-item">
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square footericons" aria-hidden="true"></i> <span class="sr-only">Facebook link.</span></a>
-                        </li>
-                        <li class="footerlinks list-inline-item">
-                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square footericons" aria-hidden="true"></i> <span class="sr-only">Twitter link.</span></a>
-                        </li>
-                        <li class="footerlinks list-inline-item">
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram footericons" aria-hidden="true"></i> <span class="sr-only">Instagram link.</span></a>
-                        </li>
-                        <li class="footerlinks list-inline-item">
-                            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square footericons" aria-hidden="true"></i> <span class="sr-only">Youtube link.</span></a>
-                        </li>
-                    </ul>
-                </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday Planner</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
             </div>
-        </footer>
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&libraries=places&callback=initMap"></script>
-        <script src="assets/locations/locations.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+        </div>
+    </nav>
+    <div class="container-fluid jumbotron">
+                <h1>Irish Staycations</h1>
+                <p>
+                    Find Accommodation, Get Reviews & Plan your staycation! <br />
+                    Enjoy Ireland as a holiday destination.
+                </p>
+            </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p>
+                    Staycationing in Ireland, the Covid-19 pandemic has caused more people to look at what Ireland has to offer for holiday, but even before the pandemic there was growing interest in Ireland as a holiday destination
+                    for those already living in Ireland. The tourist sector in Ireland has so much to offer, with holidays destination ranging from 5 star castles to adventure camping.
+                    <br>
+                     Our ambition is to review these locations and provide you with detailed information so you can choose what you want from a holiday regardless if that is two weeks in the summer or weekend away in the midst of the
+                    Irish winter.
+                </p>
+            </div>
+            <div class="col">
+                <iframe class="irelandVideo" src="https://www.youtube.com/embed/L3OBlbOF30E" frameborder="0" allow="" allowfullscreen> </iframe>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row mapOptionsCentre">
+                    <div class="col-md-2 dropDown_col">
+                        Accommodation:<br/>
+                        <select name="accommodation" id="accommodation" class="btn btn-primary dropdown-toggle">
+                            <option value="" selected hidden>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 dropDown_col hide" id="province_list">
+                        Province:<br/>
+                        <select name="province" id="province" class="btn btn-primary dropdown-toggle">
+                            <option value="" selected hidden>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 dropDown_col hide" id="county_lst">
+                        County:<br />
+                        <select name="county" id="county" class="btn btn-primary dropdown-toggle">
+                            <option value="" selected hidden>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 button_col">
+                        <p id="mapSelectionError" class="mapSelectionError hide">Error! : You must make a valid selection in the County menu. <br /></p>
+                        <button id="mapButton" class="btn btn-success btn-map hide" onclick="functionRenderMap()">Update Map</button>
+                    </div>
+                </div>
+        
+        <div class="col-md-12 mapInitalView" id="map"></div>
+            </div>
+    </div>
+    <footer class="container-fluid footer">
+        <!-- Page footer section-->
+        <div class="row footerRow">
+            <div class="col left-footer-col">
+                <h6 class="copyright">Copyright (C) 2020. All Rights Reserved</h6>
+            </div>
+            <div class="col right-footer-col">
+                <ul>
+                    <li class="footerlinks list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fab fa-facebook-square footericons" aria-hidden="true"></i> <span
+                                class="sr-only">Facebook link.</span></a>
+                    </li>
+                    <li class="footerlinks list-inline-item">
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square footericons"
+                                aria-hidden="true"></i> <span class="sr-only">Twitter link.</span></a>
+                    </li>
+                    <li class="footerlinks list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram footericons"
+                                aria-hidden="true"></i> <span class="sr-only">Instagram link.</span></a>
+                    </li>
+                    <li class="footerlinks list-inline-item">
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square footericons"
+                                aria-hidden="true"></i> <span class="sr-only">Youtube link.</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&libraries=places&callback=initMap"></script>
+    <script src="assets/locations/locations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

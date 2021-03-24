@@ -1,7 +1,7 @@
 /* -_-_-_-_-_-_-_-_-_-_ Draw Blank Map _-_-_-_-_-_-_-_-_-_- */
 function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 7,
+        zoom: 7.4,
         center: {lat: 53.383328, lng: -7.5091553},
         mapTypeId: 'hybrid'
     });
@@ -181,21 +181,9 @@ function functionRenderMap(){
 }
 
 function functionMoreInfo(){
-    if ( viewer >= 992 ){
-        document.getElementById("map").classList.remove("col-md-12")
-        document.getElementById("map").classList.add("col-md-6")
-        var num = document.getElementById("arrayNum").innerHTML
-        document.getElementById("map_addtional_info").classList.remove("hide")
-        document.getElementById("moreInfoHeader").classList.remove("hide")
-        document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
-        document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name
-        document.getElementById("accMoreInfo").innerHTML = selectedData[num].acc_type
-        document.getElementById("addressMoreInfo").innerHTML = selectedData[num].address
-        document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
-        document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
-        document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
-    }
-    else if (viewer < 992) {
+
+      
+
         var num = document.getElementById("arrayNum").innerHTML
         document.getElementById("accMoreInfo-Mobile").innerHTML = selectedData[num].acc_type
         document.getElementById("nameMoreInfo-Mobile").innerHTML = selectedData[num].name
@@ -205,7 +193,7 @@ function functionMoreInfo(){
         document.getElementById("websiteMoreInfo-Mobile").setAttribute("href", "https://" + selectedData[num].website);
         document.getElementById("popup").classList.remove("hide")
         document.getElementById("popup").classList.add("show")
-    }
+
 }
 function functionClosePopup(){
     document.getElementById("popup").classList.remove("show")
