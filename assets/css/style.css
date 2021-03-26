@@ -40,7 +40,8 @@ h1{
     font-size: 10px;
     color: white;
     position: relative;
-   text-align: center;
+    text-align: center;
+    font-weight: 700;
 }
 .jumbotron{
     background: url(../images/jumbotron.jpg);
@@ -134,56 +135,31 @@ h1{
     }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Intro Section _-_-_-_-_-_-_-_-_-_- */
-
 .irelandVideo{
     background-size: cover;
     width: 100%;
     height: 360px;
 }
-.introPic{
-    background: url(../images/newgrange.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 360px;
-    width: 100%;
+.intro_text {
+    margin: auto;
 }
-.introPic p{
-    color: white;
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-top: 10%;
+.intro_text p {
+    padding-top: 10px;
     text-align: justify;
-
 }
+
 @media(min-width: 992px){
     .irelandVideo{
         background-size: cover;
         height: 600px;
     }
-    .introPic{
-        height: 600px;
-    }
-    .introPic p{
-        font-size: large;
+    .intro_row {
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
-.destination{
-    background: url(../images/kayaking_image.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 360px;
-    min-width: 100%;
-}
-.destinationRow{
-    background-color: lightgray;
-}
-.destinationcol {
-    padding-top: 10%;
-}
 .destinationcol h3{
     text-align: center;
 }
@@ -218,6 +194,11 @@ h1{
         visibility: visible;
         display: block;
     }
+    .destinationRow{
+    background-color: lightgray;
+    margin-right: 2%;
+    margin-left: 2%;
+}
 }
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
 .button_row {
@@ -227,14 +208,17 @@ h1{
 .mapSelectionError{
     color: red;
 }
+.mapRow {
+        padding-bottom: 2%;
+    }
 @media(min-width: 992px){
     .button_row {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
     .mapRow {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 
@@ -257,6 +241,9 @@ h1{
 .btn-map{
     min-width: 20%;
     margin-bottom: 5px;
+}
+.mapInitalView{
+    min-height: 600px;
 }
 @media(min-width: 992px){
     .map-intro p{
