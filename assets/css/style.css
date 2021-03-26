@@ -170,7 +170,7 @@ h1{
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
-.destinationContainer{
+.destination{
     background: url(../images/kayaking_image.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -178,9 +178,11 @@ h1{
     min-height: 360px;
     min-width: 100%;
 }
+.destinationRow{
+    background-color: lightgray;
+}
 .destinationcol {
     padding-top: 10%;
-    color: white;
 }
 .destinationcol h3{
     text-align: center;
@@ -234,6 +236,7 @@ h1{
         margin-left: 5%;
         margin-right: 5%;
     }
+}
 
 .dropDown_col {
     padding-top: 2px;
