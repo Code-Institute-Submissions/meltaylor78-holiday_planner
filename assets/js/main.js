@@ -41,8 +41,6 @@ window.onload = function () {
         option.value = accommodation_type[i];
         select.add(option)
     };
-    document.getElementById("formSection").style.display = "none" // Hide the form section on load.
-
 };
 /* -_-_-_-_-_-_-_-_-_-_ Covid Section _-_-_-_-_-_-_-_-_-_- */
 function functionHideCovidInfo(){
@@ -169,8 +167,10 @@ function functionRenderMap(){
                 icon: iconColour,
             });
             const infowindow = new google.maps.InfoWindow({
-                content: "<h5>" + selectedData[m].name + "</h5> Address: "  + selectedData[m].address +
-                '<br><Button id="moreInfo" class="btn btn-primary" onclick="functionMoreInfo()">More Info</button>' + '<p id="arrayNum" class="hide">' + m + "</p>"
+                content: "<h5>" + selectedData[m].name +'<a href="' + selectedData[m].website + 
+                '" target="_blank"><i class="fas fa-external-link-alt popup_link_icon" aria-hidden="true"></i></a>' + "</h5>" 
+                + '<i class="fas fa-phone popup_icon_gen"></i>' + selectedData[m].phone + '<br>' +
+                '<i class="fas fa-map-marker-alt popup_icon_gen"></i>' + selectedData[m].address + '<br>' + '<i class="fas fa-info popup_icon_gen"></i>' + selectedData[m].comments
             });
                  
             // Click event listner for marker
@@ -180,33 +180,6 @@ function functionRenderMap(){
     }
 }
 
-function functionMoreInfo(){
-    if ( viewer >= 992 ){
-        document.getElementById("map").classList.remove("col-md-12")
-        document.getElementById("map").classList.add("col-md-6")
-        var num = document.getElementById("arrayNum").innerHTML
-        document.getElementById("map_addtional_info").classList.remove("hide")
-        document.getElementById("moreInfoHeader").classList.remove("hide")
-        document.getElementById("nameMoreInfo").innerHTML = selectedData[num].name
-        document.getElementById("nameMoreInfo1").innerHTML = selectedData[num].name
-        document.getElementById("accMoreInfo").innerHTML = selectedData[num].acc_type
-        document.getElementById("addressMoreInfo").innerHTML = selectedData[num].address
-        document.getElementById("phoneMoreInfo").innerHTML = selectedData[num].phone
-        document.getElementById("commentsMoreInfo").innerHTML = selectedData[num].comments
-        document.getElementById("websiteMoreInfo").setAttribute("href", "https://" + selectedData[num].website);
-    }
-    else if (viewer < 992) {
-        var num = document.getElementById("arrayNum").innerHTML
-        document.getElementById("accMoreInfo-Mobile").innerHTML = selectedData[num].acc_type
-        document.getElementById("nameMoreInfo-Mobile").innerHTML = selectedData[num].name
-        document.getElementById("nameMoreInfo1-Mobile").innerHTML = selectedData[num].name
-        document.getElementById("phoneMoreInfo-Mobile").innerHTML = selectedData[num].phone
-        document.getElementById("commentsMoreInfo-Mobile").innerHTML = selectedData[num].comments
-        document.getElementById("websiteMoreInfo-Mobile").setAttribute("href", "https://" + selectedData[num].website);
-        document.getElementById("popup").classList.remove("hide")
-        document.getElementById("popup").classList.add("show")
-    }
-}
 function functionClosePopup(){
     document.getElementById("popup").classList.remove("show")
     document.getElementById("popup").classList.add("hide")
