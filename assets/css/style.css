@@ -204,24 +204,12 @@ h1{
 .button_row {
     background-color: lightgray;
 }
-
 .mapSelectionError{
     color: red;
 }
 .mapRow {
         padding-bottom: 2%;
     }
-@media(min-width: 992px){
-    .button_row {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-    .mapRow {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-}
-
 .dropDown_col {
     padding-top: 2px;
     padding-bottom: 5px;
@@ -238,8 +226,11 @@ h1{
     text-align: center;
     padding-top: 5px;
 }
+.dropdown-toggle {
+    min-width: 80%;
+}
 .btn-map{
-    min-width: 20%;
+    min-width: 80%;
     margin-bottom: 5px;
 }
 .mapInitalView{
@@ -252,6 +243,17 @@ h1{
     .mapInitalView{
         min-height: 800px;
     }
+    .button_row {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .mapRow {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .btn-map{
+    margin-top: 15px;
+}
 }
 /* -_-_-_-_-_-_-_-_-_-_ Map Pop-up Box _-_-_-_-_-_-_-_-_-_- */
 .popup_link_icon {
