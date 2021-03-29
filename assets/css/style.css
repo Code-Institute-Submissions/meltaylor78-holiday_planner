@@ -149,6 +149,10 @@ h1{
     padding-top: 10px;
     text-align: justify;
 }
+.highlight_into {
+    color: blue;
+    font-weight: 700;
+}
 .irelandVideo {
     visibility: hidden;
     display: none;
