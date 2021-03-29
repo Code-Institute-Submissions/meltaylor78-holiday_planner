@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holiday Planner</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -13,26 +14,29 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#topAnchor">Irish Staycations</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" aria-current="page" href="#mapAnchor">Interactive Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinationAnchor">Destination</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <a class="anchor" id="topAnchor"></a>
     <div class="container-fluid jumbotron">
         <h1>Irish Staycations</h1>
         <p>
@@ -40,6 +44,7 @@
             Enjoy Ireland as a holiday destination.
         </p>
     </div>
+    <a id="home"></a>
     <div class="container-fluid">
         <div class="row intro_row">
             <div class="col-md-6 intro_text">
@@ -68,6 +73,8 @@
             </div>
         </div>
     </div>
+    <!--interactive Map section-->
+    <a class="anchor" id="mapAnchor"></a>
     <div class="container-fluid">
         <div class="row mapOptionsCentre button_row">
             <div class="col-md-2 dropDown_col">
@@ -100,6 +107,7 @@
         </div>
     </div>
     <!-- Addtional Info - Cards-->
+    <a id="destinationAnchor"></a>
     <div class="container-fluid">
         <div class="row destinationRow">
             <div class="col-md-4 card">
@@ -164,8 +172,6 @@
             </div>
         </div>
     </div>
-
-
     <footer class="container-fluid footer">
         <!-- Page footer section-->
         <div class="row footerRow">
