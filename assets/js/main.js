@@ -186,31 +186,40 @@ function functionClosePopup(){
 }
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
 function functionOpenExtraText1(){
-    document.getElementById("destinationTextExtra1").classList.add("show")
-    document.getElementById("destinationText1").classList.add("hide")
+    document.getElementById("wild_atlantic_info").style.display = "block";
+    document.getElementById("wild_atlantic_info").style.visibility = "visible";
+    document.getElementById("wild_atlantic_down_arrows").style.display = "none";
+    document.getElementById("wild_atlantic_down_arrows").style.visibility = "hidden";
 }
-
 function functionCloseExtraText1() {
-    document.getElementById("destinationTextExtra1").classList.remove("show")
-    document.getElementById("destinationText1").classList.remove("hide")
+    document.getElementById("wild_atlantic_info").style.display = "none";
+    document.getElementById("wild_atlantic_info").style.visibility = "hidden";
+    document.getElementById("wild_atlantic_down_arrows").style.display = "block";
+    document.getElementById("wild_atlantic_down_arrows").style.visibility = "visible";
 }
-
 function functionOpenExtraText2(){
-    document.getElementById("destinationTextExtra2").classList.add("show")
-    document.getElementById("destinationText2").classList.add("hide")
+    document.getElementById("hidden_heartland_info").style.display = "block";
+    document.getElementById("hidden_heartland_info").style.visibility = "visible";
+    document.getElementById("hidden_heartland_down_arrows").style.display = "none";
+    document.getElementById("hidden_heartland_down_arrows").style.visibility = "hidden";
 }
 function functionCloseExtraText2() {
-    document.getElementById("destinationTextExtra2").classList.remove("show")
-    document.getElementById("destinationText2").classList.remove("hide")
+    document.getElementById("hidden_heartland_info").style.display = "none";
+    document.getElementById("hidden_heartland_info").style.visibility = "hidden";
+    document.getElementById("hidden_heartland_down_arrows").style.display = "block";
+    document.getElementById("hidden_heartland_down_arrows").style.visibility = "visible";
 }
-
 function functionOpenExtraText3(){
-    document.getElementById("destinationTextExtra3").classList.add("show")
-    document.getElementById("destinationText3").classList.add("hide")
+    document.getElementById("ancient_east_info").style.display = "block";
+    document.getElementById("ancient_east_info").style.visibility = "visible";
+    document.getElementById("ancient_east_down_arrows").style.display = "none";
+    document.getElementById("ancient_east_down_arrows").style.visibility = "hidden";
 }
 function functionCloseExtraText3() {
-    document.getElementById("destinationTextExtra3").classList.remove("show")
-    document.getElementById("destinationText3").classList.remove("hide")
+   document.getElementById("ancient_east_info").style.display = "none";
+    document.getElementById("ancient_east_info").style.visibility = "hidden";
+    document.getElementById("ancient_east_down_arrows").style.display = "block";
+    document.getElementById("ancient_east_down_arrows").style.visibility = "visible";
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */

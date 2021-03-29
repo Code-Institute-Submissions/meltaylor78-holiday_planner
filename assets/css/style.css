@@ -142,21 +142,35 @@ h1{
 }
 .intro_text {
     margin: auto;
+    margin-left: 8px;
+    margin-right: 10px;
 }
 .intro_text p {
     padding-top: 10px;
     text-align: justify;
 }
-
+.irelandVideo {
+    visibility: hidden;
+    display: none;
+}
 @media(min-width: 992px){
     .irelandVideo{
         background-size: cover;
-        height: 600px;
+        height: 400px;
     }
     .intro_row {
         margin-left: 2%;
         margin-right: 2%;
     }
+    .irelandVideo {
+        visibility: visible;
+        display: block;
+    }
+    .intro_text {
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+}
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
@@ -173,16 +187,20 @@ h1{
 }
 .fa-angle-double-down{
     color: green;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 30px;
+    padding-left: 10px;
+    font-size: 20px;
 }
 .fa-angle-double-up{
     color: red;
-    padding-left: 50px;
-    padding-right: 20px;
-    font-size: 30px;
+    padding-left: 10px;
+    font-size: 20px;
 }
+#wild_atlantic_info, #hidden_heartland_info,
+#ancient_east_info{
+        visibility: hidden;
+        display: none;
+    }
+
 @media(min-width: 992px){
     .destinationContainer{
         height: 600px;
@@ -195,10 +213,19 @@ h1{
         display: block;
     }
     .destinationRow{
-    background-color: lightgray;
-    margin-right: 2%;
-    margin-left: 2%;
-}
+        background-color: lightgray;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .more_info {
+        visibility: hidden;
+        display: none;
+    }
+    #wild_atlantic_info, #hidden_heartland_info,
+    #ancient_east_info{
+        visibility: visible;
+        display: block;
+    }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
 .button_row {
@@ -301,7 +328,7 @@ h1{
 .down_arrow{
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 20px;
+    font-size: 10px;
 }
 .form-control{
     border: 1px solid grey;
