@@ -225,33 +225,3 @@ function functionCloseExtraText3() {
     document.getElementById("ancient_east_down_arrows").style.display = "block";
     document.getElementById("ancient_east_down_arrows").style.visibility = "visible";
 }
-
-/* -_-_-_-_-_-_-_-_-_-_ Form Section _-_-_-_-_-_-_-_-_-_- */
-
-function functionShowHide() {
-  var x = document.getElementById("formSection");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-function functionShowForm() {
-    var x = document.getElementById("formSection");
-    x.style.display = "block";
-  }
-function functionHideForm(){
-    var x = document.getElementById("formSection");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    }
-}
-
-// Submit form.
-function submitForm(){
-    console.log("For not active at this time");
-}
-// hide underconstruction popup.
-function functionHideFormInfo(){
-    document.getElementById("formNoteId").classList.add("hide");
-}
