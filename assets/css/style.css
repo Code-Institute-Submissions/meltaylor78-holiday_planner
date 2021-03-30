@@ -119,12 +119,6 @@ h1{
     }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Intro Section _-_-_-_-_-_-_-_-_-_- */
-.irelandVideo{
-    background-size: cover;
-    width: 100%;
-    height: 360px;
-    padding-bottom: 5px;
-}
 .intro_text {
     margin: auto;
     margin-left: 8px;
@@ -145,7 +139,8 @@ h1{
 @media(min-width: 992px){
     .irelandVideo{
         background-size: cover;
-        height: 400px;
+        height: 460px;
+        width: 100%;
     }
     .intro_row {
         margin-left: 2%;
