@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 var locations = []; // decalre locations, imported from locations.js
 /* -_-_-_-_-_-_-_-_-_-_ Draw Blank Map _-_-_-_-_-_-_-_-_-_- */
 function initMap() {
