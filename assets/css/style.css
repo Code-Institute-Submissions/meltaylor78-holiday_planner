@@ -80,7 +80,7 @@ h1{
         font-size: 15px;
     }
 }
-/* -_-_-_-_-_-_-_-_-_-_ Nav Links _-_-_-_-_-_-_-_-_-_- */
+
 
 /* -_-_-_-_-_-_-_-_-_-_ Covid-19 Section _-_-_-_-_-_-_-_-_-_- */
 #hideCovid{
@@ -132,19 +132,16 @@ h1{
     color: blue;
     font-weight: 700;
 }
-.irelandVideo {
+.trimCastleMeath {
     visibility: hidden;
     display: none;
 }
+
 @media(min-width: 992px){
-    .irelandVideo{
-        background-size: cover;
-        height: 460px;
-        width: 100%;
-    }
     .intro_row {
         margin-left: 2%;
         margin-right: 2%;
+        margin-bottom: 10px;
     }
     .irelandVideo {
         visibility: visible;
@@ -154,7 +151,19 @@ h1{
     margin: auto;
     margin-left: 0px;
     margin-right: 0px;
-}
+    }
+    .intro_text p {
+    padding-right: 10px;    
+    }
+    .trimCastleMeath{
+    background: url(../images/trimCastleMeath.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 460px;
+    visibility: visible;
+    display: block;
+    }  
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
