@@ -189,39 +189,23 @@ function functionClosePopup(){
     document.getElementById("popup").classList.add("hide");
 }
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
-function functionOpenExtraText1(){
-    document.getElementById("wild_atlantic_info").style.display = "block";
-    document.getElementById("wild_atlantic_info").style.visibility = "visible";
-    document.getElementById("wild_atlantic_down_arrows").style.display = "none";
-    document.getElementById("wild_atlantic_down_arrows").style.visibility = "hidden";
-}
-function functionCloseExtraText1() {
-    document.getElementById("wild_atlantic_info").style.display = "none";
-    document.getElementById("wild_atlantic_info").style.visibility = "hidden";
-    document.getElementById("wild_atlantic_down_arrows").style.display = "block";
-    document.getElementById("wild_atlantic_down_arrows").style.visibility = "visible";
-}
-function functionOpenExtraText2(){
-    document.getElementById("hidden_heartland_info").style.display = "block";
-    document.getElementById("hidden_heartland_info").style.visibility = "visible";
-    document.getElementById("hidden_heartland_down_arrows").style.display = "none";
-    document.getElementById("hidden_heartland_down_arrows").style.visibility = "hidden";
-}
-function functionCloseExtraText2() {
-    document.getElementById("hidden_heartland_info").style.display = "none";
-    document.getElementById("hidden_heartland_info").style.visibility = "hidden";
-    document.getElementById("hidden_heartland_down_arrows").style.display = "block";
-    document.getElementById("hidden_heartland_down_arrows").style.visibility = "visible";
-}
-function functionOpenExtraText3(){
-    document.getElementById("ancient_east_info").style.display = "block";
-    document.getElementById("ancient_east_info").style.visibility = "visible";
-    document.getElementById("ancient_east_down_arrows").style.display = "none";
-    document.getElementById("ancient_east_down_arrows").style.visibility = "hidden";
-}
-function functionCloseExtraText3() {
-   document.getElementById("ancient_east_info").style.display = "none";
-    document.getElementById("ancient_east_info").style.visibility = "hidden";
-    document.getElementById("ancient_east_down_arrows").style.display = "block";
-    document.getElementById("ancient_east_down_arrows").style.visibility = "visible";
+function functionExpandText(instruction, textID, iconID){
+    let action = instruction
+    let textElm = document.getElementById(textID)
+    let iconElm = document.getElementById(iconID)
+    if (action == "expand") {
+        textElm.style.display = "block";
+        textElm.style.visibility = "visible";
+        iconElm.style.display = "none";
+       iconElm.style.visibility = "hidden";
+    }
+    else if (action == "minimise") {
+        textElm.style.display = "none";
+        textElm.style.visibility = "hidden";
+        iconElm.style.display = "block";
+        iconElm.style.visibility = "visible";
+    }
+    else {
+        console.log("error: page not reading the action type")
+    }
 }
