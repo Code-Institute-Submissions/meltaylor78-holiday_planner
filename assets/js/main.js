@@ -23,7 +23,6 @@ var counties = {
 /* -_-_-_- onLoad Function _-_-_-_ */
 
     // Loads the first menu for map search section and hides query form.
-
 window.onload = function () {
     for (var y = 0; y < locations.length; y++){
         if (accommodation_type.includes(locations[y].acc_type)== false){
@@ -45,6 +44,7 @@ window.onload = function () {
         select.add(option);
     }
 };
+
 /* -_-_-_-_-_-_-_-_-_-_ Covid Section _-_-_-_-_-_-_-_-_-_- */
 function functionHideCovidInfo(){
     document.getElementById("hideCovid").classList.add("hide");
@@ -184,10 +184,6 @@ function functionRenderMap(){
     }
 }
 
-function functionClosePopup(){
-    document.getElementById("popup").classList.remove("show");
-    document.getElementById("popup").classList.add("hide");
-}
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
 function functionExpandText(instruction, textID, iconID){
     let action = instruction;
