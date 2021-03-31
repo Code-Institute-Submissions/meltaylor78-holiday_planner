@@ -190,9 +190,9 @@ function functionClosePopup(){
 }
 /* -_-_-_-_-_-_-_-_-_-_ Destinatins Section _-_-_-_-_-_-_-_-_-_- */
 function functionExpandText(instruction, textID, iconID){
-    let action = instruction
-    let textElm = document.getElementById(textID)
-    let iconElm = document.getElementById(iconID)
+    let action = instruction;
+    let textElm = document.getElementById(textID);
+    let iconElm = document.getElementById(iconID);
     if (action == "expand") {
         textElm.style.display = "block";
         textElm.style.visibility = "visible";
@@ -206,6 +206,6 @@ function functionExpandText(instruction, textID, iconID){
         iconElm.style.visibility = "visible";
     }
     else {
-        console.log("error: page not reading the action type")
+        console.log("error: page not reading the action type");
     }
 }
