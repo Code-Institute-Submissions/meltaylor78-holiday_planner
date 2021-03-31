@@ -374,13 +374,14 @@ h1{
     overflow: hidden;
 }
 .footerRow{
-    max-height: 20px;
+    max-height: 50px;
 }
 .footericons{
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     margin-right: 3px;
 }
+
 .footericons:hover{
     color: grey;
 }
@@ -393,10 +394,11 @@ h1{
 .right-footer-col{
     color: white;
     font-size: 10px;
-    padding-top: 2px;
+    padding-top: 5px;
 }
 .copyright{
-    font-size: 7px;
+    font-size: 10px;
+    padding-top: 5px;
 }  
 @media(min-width: 992px){
     .footericons{
