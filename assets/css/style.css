@@ -80,13 +80,11 @@ h1{
         font-size: 15px;
     }
 }
-
-
 /* -_-_-_-_-_-_-_-_-_-_ Covid-19 Section _-_-_-_-_-_-_-_-_-_- */
 #hideCovid{
     opacity: 0.9;
     position: fixed;
-    top: 35px;
+    top: 60px;
     z-index: 2;
     max-width: 80%;
     margin-left: 10%;
