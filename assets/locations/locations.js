@@ -20,7 +20,7 @@ var locations = [
    "lat" : 54.1666489,
    "lng" : -8.062045099999999,
    "name" : "Pink Apple Orchard - Yurt Glamping",
-   "website" : "www.irelandglamping.com/",
+   "website" : "http://www.irelandglamping.com/",
    "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
    "comments" : "The Pink Apple Orchard offers a fantastic location for your holiday. The Yurts make for a lovely place to stay. Close to amenities, and a perfect place to explore Leitrim from"},
    {
@@ -32,7 +32,7 @@ var locations = [
    "lat" : 53.995661,
    "lng" : -8.080700999999999,
    "name" : "Battlebridge Caravan & Camping Park",
-   "website" : "www.battlebridgecaravanandcamping.ie/",
+   "website" : "http://www.battlebridgecaravanandcamping.ie/",
    "place_id" : "ChIJizDXUFyPXkgRo6fPXPx4FIo",
    "comments" : "Battlebridge offers it all, camping or caravan. Close to Leitrim village for access to some night life. Worth a visit to explore the area."},
    {
@@ -44,7 +44,7 @@ var locations = [
    "lat" : 53.93724049999999,
    "lng" : -8.086846,
    "name" : "Carrick Camping",
-   "website" : "www.facebook.com/carrickboatbike/",
+   "website" : "http://www.facebook.com/carrickboatbike/",
    "place_id" : "ChIJGeglitL0XkgR-d7H9pnHdW0",
    "comments" : "The ideal place for a camping holiday. Close to Carrick on Shannon, close to all the wonderful activites on the Shannon river. "},
    {
@@ -56,7 +56,7 @@ var locations = [
    "lat" : 53.8994642,
    "lng" : -7.8550134,
    "name" : "Sligo Park Hotel",
-   "website" : "www.sligoparkhotel.com/",
+   "website" : "http://www.sligoparkhotel.com/",
    "place_id" : "",
    "comments" : "Sligo park, is a wonderful place to take a holiday. Close to the town and lots of facilities on site for you to enjoy. If you want to explore Sligo and the surrounding country side, this is a great place to base yourself."}
 ]
