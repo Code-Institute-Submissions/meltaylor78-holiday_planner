@@ -52,6 +52,7 @@ function functionHideCovidInfo(){
 /* -_-_-_- Drop Down Lists _-_-_-_ */
 
 document.getElementById("accommodation").addEventListener("change", function(){
+    window.location.hash = 'mapAnchor';
     document.getElementById("province").innerHTML = "";
     var region_lst = document.getElementById("province");  // populate the list of provinces
     for(var x = 0; x < region.length;++x){  
@@ -93,7 +94,10 @@ document.getElementById("province").addEventListener("change", function(){
 let selectedData = [];
 var viewer = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
-function functionRenderMap(){  
+function functionRenderMap(){ 
+    if (viewer < 992) {
+        window.location.hash = 'mapAnchorMobile';
+    }
     let acc_type_selected = document.getElementById("accommodation").value;
     let province_selected = document.getElementById("province").value; 
     let county_selected = document.getElementById("county").value; 
