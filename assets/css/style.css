@@ -129,6 +129,7 @@ h1{
 .highlight_into {
     color: blue;
     font-weight: 700;
+    background-color: lightgray;
 }
 .trimCastleMeath {
     visibility: hidden;
@@ -151,7 +152,8 @@ h1{
     margin-right: 0px;
     }
     .intro_text p {
-    padding-right: 10px;    
+    padding-right: 10px;
+    background-color: white;    
     }
     .trimCastleMeath{
     background: url(../images/rockocashel.jpg);
