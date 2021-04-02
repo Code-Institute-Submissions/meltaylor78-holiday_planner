@@ -1,14 +1,36 @@
 # **Holiday Planner** 
 <img src="/assets/readmeAssets/holiday_planer_ami_image.jpg">
 
-## Version Control
+## Index
+
+- [Version Control](#Version_Control)
+- [Change Log](#Change_Log)
+- 
+- [Introduction](#Introduction)
+- [Project Motivation](#Project_Motivation)
+- [UX](#UX) 
+    - [User Stories](#User_Stories)
+    - [Wireframes](#Wireframes)
+- [Features](#Features)
+    - [Existing Features](#Existing_Features)
+    - [Future Enhancements](#Future_Enhancements)
+- [Technologies Used](#Technologies_Used)
+- [Testing](#Testing)
+- [Deployment](#Deployment)
+- [Credits](#Credits)
+    - [Content](#Content)
+    - [Media](#Media)
+    - [Acknowledgements](#Acknowledgements)
+
+- - - -
+### <ins>Version_Control</ins>
 
 |Version|Date|Author|Comments|
 | --- | --- | --- | --- |
 | V1 | 5 Feb, 2021 | Mel Taylor | Initial Version |
 | V2 | 2 Apr, 2021 | Mel Taylor | Revised project, failed grading. Updated UX & improved and tested JS more information on testing|
 
-## Change Log
+### <ins>Change_Log</ins>
 The project was initially submitted on the 05th of Feb 2021, it received a failing grade with the following feedback
 related to areas where the project did not meet the required criteria;
 
@@ -53,25 +75,7 @@ From a functional view, one main issue was the lack of testing and validation on
 was extensively rewritten to both remove duplicate functions and ones no longer needed after site redesign. The code was extensively tested and 
 validated on JSHInt. Further details are detailed in the testing section of the file.
 
-## Index
 
-- [Introduction](#Introduction)
-- [Project Motivation](#Project_Motivation)
-- [UX](#UX) 
-    - [User Stories](#User_Stories)
-    - [Wireframes](#Wireframes)
-- [Features](#Features)
-    - [Existing Features](#Existing_Features)
-    - [Future Enhancements](#Future_Enhancements)
-- [Technologies Used](#Technologies_Used)
-- [Testing](#Testing)
-- [Deployment](#Deployment)
-- [Credits](#Credits)
-    - [Content](#Content)
-    - [Media](#Media)
-    - [Acknowledgements](#Acknowledgements)
-
-- - - -
 ## **<ins>Introduction</ins>**
 This is my milestone 2 project for the Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/). The project is not complete 
 due to time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
@@ -93,10 +97,6 @@ The ability to add new locations quickly was achieved by placing all the locatio
 new location, the site picks up the new location on the next load of the page. As all the information is dynamically pick up from this file no further updates are needed. 
 To make the site easy to use, the user required inputs are presented sequentially to make it easy to follow and let the user know what information they need to provide. The menus are populated 
 from the locations file so only contain options when there is supporting data in the locations file. 
-
-<img src="/assets/readmeAssets/menuView.jpg">
-
-As parto 
 
 ## **<ins>UX</ins>**
 Once the concept of the site was developed, as part of the UX design phase I decided to make the site a one page site with distinctive containers for each 
