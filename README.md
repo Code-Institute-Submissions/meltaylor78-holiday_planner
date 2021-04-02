@@ -14,7 +14,7 @@
     - [Existing Features](#Existing_Features)
     - [Future Enhancements](#Future_Enhancements)
 - [Technologies Used](#Technologies_Used)
-- [JavaScript Redevelopment](#JavaScript_Redevelopment)
+- [JavaScript Redevelopment & Validation](#JJavaScript_Redevelopment_&_Validation)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
 - [Credits](#Credits)
@@ -23,7 +23,7 @@
     - [Acknowledgements](#Acknowledgements)
 
 - - - -
-### <ins>Version_Control</ins>
+## **<ins>Version_Control</ins>**
 
 |Version|Date|Author|Comments|
 | --- | --- | --- | --- |
@@ -33,11 +33,11 @@
 [Index](#Index)
 
 - - - -
-### <ins>Change_Log</ins>
+## **<ins>Change_Log</ins>**
 The project was initially submitted on the 05th of Feb 2021, it received a failing grade with the following feedback
 related to areas where the project did not meet the required criteria;
 
-## Pass Criteria:
+### Pass Criteria:
 
 |Criterion|Meets Criterion|Reason|
 | --- | --- | --- |
@@ -47,7 +47,7 @@ related to areas where the project did not meet the required criteria;
 3.1|No|Testing steps are missing / incom|prehensible against the user stories, leading to many open bugs.|
 3.4|No|Missing documentation for manual and automated testing|
 
-## Merit Criteria:
+### Merit Criteria:
 
 |Criterion|Meets Criterion|Reason|
 | --- | --- | --- |
@@ -57,7 +57,7 @@ related to areas where the project did not meet the required criteria;
 |5.3|No|Testing steps or guidelines are missing / incomprehensible|
 |5.4|No|Missing or incomplete deployment instructions in the README file|
 
-## Updates
+### Updates
 To address the areas where the project failed, I had a review with my mentor to review the UX of the 
 site and establish areas where it could be improved, following that I had a on-line chat with one of the 
 code institute tutors to review the fails on JS testing and documentation of testing and other areas where it 
@@ -146,7 +146,7 @@ Due to the fact that the form was not functional and feedback that it would be b
 for the time. It can be reintroduced once I have he time to add the functionality to the back end of the form.  
 
 - - - -
-### <ins>User_Stories</ins>
+## **<ins>User_Stories</ins>**
 
 **Site User;**
 - I want to find somewhere in Ireland, where I can go for my holidays. 
@@ -160,7 +160,7 @@ for the time. It can be reintroduced once I have he time to add the functionalit
 - Become a trusted source for reviews of accommodation
 
 - - - -
-### <ins>Wireframes</ins>
+## **<ins>Wireframes</ins>**
 Once the site concept and userstories were worked out, a wireframe was built to use as a reference guide as elements were added.
 Providing a quick reference for the construction of the site during development.
 
@@ -193,7 +193,7 @@ were not included due to time constraints.
 
 [Index](#Index)
 - - - -
-## <ins>Technologies_Used</ins>
+## **<ins>Technologies_Used</ins>
 **Balsamiq**    https://balsamiq.com/wireframes/
 - Basamiq was used in the design phase to create wireframes of the proposed web site.
 
@@ -235,38 +235,91 @@ were not included due to time constraints.
 
 [Index](#Index)
 - - - -
-
-## <ins>JavaScript Redevelopment</ins>
-AS part of the project update, there was extensive rewrite and testing of the JavaScript. To help improve the preformance of the site, 
+## **<ins>JavaScript_Redevelopment_&_Validation</ins>**
+AS part of the project update, there was extensive rewrite and testing of the JavaScript. To help improve the performance of the site, 
 the JS was reduces in size by removing some unused script and reducing the number of functions. For example, in the previous version the 
-exapand / collapse of text was driven by functions that were repeated (with a different name) each time they were used, in this Version the
+expand / collapse of text was driven by functions that were repeated (with a different name) each time they were used, in this Version the
 six functions were reduced to one function that used parameters that came from the HTML file with if / else if statement to provide the same
 level of functionality with the reduced number of functions. 
 
-As aprt of the cycle of development, the JS was regularly passed through JSHint, where last time it was not used which resulted in many errors, 
-some very basic syntacs erros and others more functions. 
+As part of the cycle of development, the JS was regularly passed through JSHint, where last time it was not used which resulted in many errors, 
+some very basic syntax errors and others more functions. 
 
 <img src="/assets/readmeAssets/JSHint_Report.jpg">
+
+Above is the report from JSHint on the current version of the JS file. There are two warnings, 
+1. "eval can be harmful." eval is used in the script, to pull the list of counties and I needed to pull the value as the name of the counties. I could not find an alternate.
+2. "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (map, marker)", this part of the google maps API set-up.
+
+google did show as an un defined variable, this again was part of the google maps API set-up. 
+
+The five functions, were listed as unused variables, these are used and called by the index.html file as required.
+
 
 [Index](#Index)
 - - - -
 
-## <ins>Testing</ins>
-As with the previous project, I applied a DevOps type process towards development and testing. In addtiona to regular testing as features are added
-and updated using, the Github http server and the responcive design mode in Firefox to simulate multiple devices. The projects was deployed to Github and 
-tested on mobile devices from the github pages site. 
+## **<ins>Testing</ins>**
+One of the main drivers for the redevelopment of the project was failure to implement sufficent testing on the previous version. 
+This time around, it has been addressed with more extensive testing of the site and the JS script driving the functionality of the site. 
 
-In addtion the following testing was carried out;
-
-**Functional Testig**
-The html codes was passed through automated code validators;
+### Automated Testing;
+The HTML, CSS and JavaScript code were validate using the following on-line tools. 
 | Code | Testing | Tool | Link |
 | --- | --- | --- | --- |
+|JS| Validate JS code| JSHint - Static Code Analysis Tool|https://jshint.com/|
 |HTML| Validate HTML code|W3C - Markup Validation Service|https://validator.w3.org/|
 |CSS| Validate CSS code| W3C - CSS Validation Service|https://jigsaw.w3.org/css-validator/|
 
-The inital test of the HTMl code presented erros due to the use of name tages in Anchor links, I replaced with ID tags. 
-After the HTML fixes, the both the CSS and HTML code passed with no issues. 
+***Further details on the results from the JSHint results are documented in the [JavaScript Redevelopment & Validation](#JJavaScript_Redevelopment_&_Validation) section above ***
+The CSS code passed with-out issue.
+When the HTML code was validated, two issues were identified.
+1. A p tag, within a span was flagged. Upon investigation the span was no longer required.
+2. An out of sequence H tag (not in descending order), this was updated with an appropriate H tag.
+Issues were resolved and updated code committed to the project. 
+
+### Manual Functional Testing;
+The site was manualy tested to ensure that all the functionality was workign and the site was responsive accross the device types.
+Through the developmen cycle the site was tested on firefox using "Responsive Design Mode" to ensure that lay-out and features were responsive to different
+device types. 
+
+** Navbar: **
+The nav bar was a standard bootstrap navbar, when tetsing on desktop no issues was identified. When tetsing on a mobile devices, the expected function was once the 
+user touched the three bar ICON the nav bar would pop out and then collapse once the link was selected. 
+During testing, a bug was identifed, where the nav bar on mobile functioned as far as it opened and took the user to the clicked anchor point, but it did not collapse after 
+the link was clicked. 
+The issue was missing classes, the data toggle class was missing from the navbar button. Once added the retest of the function passed. 
+No other issues were found on the nav bar.
+
+** Interactive Map  **
+
+** Page Layout & Responsiveness **
+Testing of the lay-out was tested on a large screen (21" widescreen), mobile device (Huawei P20 lite) and tablet Amazon Kindle. 
+
+A issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
+is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This 
+caused the text to be on the right column with white space on the left. 
+To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it,
+This issue only happened on tablets in portrait. 
+
+Footer: On mobile devices, the footer was too small and hard to read or click on the social icons. I implemented a media query in the CSS file to allow me to 
+apply sizing of the footer to have a proper scale on all devices. 
+
+Selector menus for map. When testing the drop down menus, on tablet devices the menus were not spaced and some went over their column. The render map button was 
+wrapping the text in the button causing the row to expand. 
+To resolve, I added SM columns in the html file and applied an max with 100% to prevent them from going out of their designated column. 
+
+Selector menus on mobile, during testing, I found that on mobile if the user starts to use the menu when close to the bottom of the screen, the next menu displayed off 
+the screen and the user had to scroll down to find it. This was a poor user experience. 
+To resolve the issue, I added some JS;
+1. When the user changes the first menu, there was already JS to populate and unhide the second menu, I added some JS to move the menu to the top of the screen.
+This was also implemented for larger devices as it gives a better user experience.
+2. I also added the JS to the render map button to move the map to the top of the screen. This was not implemented for larger screens as there was sufficient place to 
+display as is.
+
+
+
+_____ Previous version --- 
 
 **User Acceptance Testing**
 user acceptance tesing was completed by users manually interacting with the site and checking expected functioinality vs site responce, 
@@ -298,7 +351,7 @@ I should have engaged the Lighhouse tool earlier in the development cycle.
 [Index](#Index)
 - - - -
 
-## <ins>Deployment</ins>
+## **<ins>Deployment</ins>**
 The project was developed using GitHub as the repository and I choose to deploy the live project on GitHub Pages,
 The live site can be accessed at https://meltaylor78.github.io/holiday_planner/
 
@@ -323,7 +376,7 @@ repository on GitHub Docs [Cloning a repository](https://docs.github.com/en/gith
 
 [Index](#Index)
 - - - -
-## <ins>Credits</ins>
+## **<ins>Credits</ins>**
 The developers of the Holiday Planner site would like to thank all those who contributed directly or indirectly to the development of the site, or 
 through providing media and content for the site.
 
@@ -339,7 +392,7 @@ to extend our thanks and apperication to.
 [Index](#Index)
 - - - -
 
-### <ins>Media</ins>
+## **<ins>Media</ins>**
 
 | Details | Site | Link |
 | --- | --- | --- |
@@ -350,7 +403,7 @@ to extend our thanks and apperication to.
 [Index](#Index)
 - - - -
 
-### <ins>Acknowledgements</ins>
+## **<ins>Acknowledgements</ins>**
 | Name | Acknowledgement | Acknowledgement |
 | --- | --- | --- |
 | Rahul Lakhanpal | Project Mentor | Rahul provided the advice & input needed to develop the site. He also guided me with the layout and ascetics to ensure a modern look and feel. |
