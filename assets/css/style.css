@@ -135,7 +135,17 @@ h1{
     visibility: hidden;
     display: none;
 }
-
+@media(min-width: 481px){
+    .trimCastleMeath{
+    background: url(../images/rockocashel.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 460px;
+    visibility: visible;
+    display: block;
+    }  
+}
 @media(min-width: 992px){
     .intro_row {
         margin-left: 2%;
@@ -155,15 +165,6 @@ h1{
     padding-right: 10px;
     background-color: white;    
     }
-    .trimCastleMeath{
-    background: url(../images/rockocashel.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 460px;
-    visibility: visible;
-    display: block;
-    }  
 }
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
