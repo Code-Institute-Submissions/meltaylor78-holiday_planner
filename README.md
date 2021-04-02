@@ -1,6 +1,45 @@
 # **Holiday Planner** 
 <img src="/assets/readmeAssets/holiday_planer_ami_image.jpg">
 
+## Version Control
+
+|Version|Date|Author|Comments|
+| --- | --- | --- | --- |
+| V1 | 5 Feb, 2021 | Mel Taylor | Initial Version |
+| V2 | 2 Apr, 2021 | Mel Taylor | Revised project, failed grading. Updated UX & improved and tested JS more information on testing|
+
+## Change Log
+The project was initially submitted on the 05th of Feb 2021, it received a failing grade with the following feedback
+related to areas where the project did not meet the required criteria;
+
+### Pass Criteria:
+
+|Criterion|Meets Criterion|Reason|
+| --- | --- | --- |
+1.1|No|Principles of UX design no adhered to|
+1.5|No|Inconsistent graphics colour in the layout|
+2.1|No|JavaScript code fails validation|
+3.1|No|Testing steps are missing / incom|prehensible against the user stories, leading to many open bugs.|
+3.4|No|Missing documentation for manual and automated testing|
+
+### Merit Criteria:
+
+|Criterion|Meets Criterion|Reason|
+| --- | --- | --- |
+|1.1|No|Lacks a proper layout and ambiguous idea that is not put to proper implementation|
+|1.3|No|Web application does not provides a good solution to the end user’s expectations|
+|4.1|No|Commits are regular but description is not clear in some cases|
+|5.3|No|Testing steps or guidelines are missing / incomprehensible|
+|5.4|No|Missing or incomplete deployment instructions in the README file|
+
+### updates
+To address the areas where the project failed, I had a review with my mentor to review the UX of the 
+site and establish areas where it could be improved, following that I had a on-line chat with one of the 
+code institute tutors to review the fails on JS testing and documentation of testing and other areas where it 
+needed to be improved. This version of the remadme file is now updated to document the updates, revised design 
+elements and additional testing and validation that was done.
+
+
 ## Index
 
 - [Introduction](#Introduction)
