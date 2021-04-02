@@ -14,7 +14,7 @@
     - [Existing Features](#Existing_Features)
     - [Future Enhancements](#Future_Enhancements)
 - [Technologies Used](#Technologies_Used)
-- [JavaScript Redevelopment & Validation](#JJavaScript_Redevelopment_&_Validation)
+- [JavaScript Redevelopment & Validation](#JavaScript_Redevelopment_&_Validation)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
 - [Credits](#Credits)
@@ -286,12 +286,15 @@ In the previous version of the site, the results achieved were;
 - Accessibility > 89
 - Best Practice > 93
 - SEO > 83
+
 In the current version, there have been some major improvements;
+
 - Performance > 60 (+ 27pts)
 - Accessibility > 97 (+ 8 pts)
 - Best Practice > 93 (same)
 - SEO > 83 (+ same)
 <img src="/assets/readmeAssets/Lighthouse Test V1.jpg">
+
 The improvements were down to the cleaning of the JS file and reduction in number of functions (as described in the JS section).
 In addition, the YouTube embedded video was causing a lot of issues with performance so I decided to replace with a 
 static image.
@@ -311,7 +314,7 @@ the link was clicked.
 The issue was missing classes, the data toggle class was missing from the navbar button. Once added the retest of the function passed. 
 No other issues were found on the nav bar.
 
-**Interactive Map**
+**Interactive Map:**
 
 **Page Layout & Responsiveness**
 
