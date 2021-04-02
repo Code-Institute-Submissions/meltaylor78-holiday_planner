@@ -166,6 +166,70 @@ h1{
         margin-right: 0px;
     }  
 }
+/* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
+.button_row {
+    background-color: lightgray;
+}
+.mapSelectionError{
+    color: red;
+}
+.mapRow {
+        padding-bottom: 2%;
+    }
+.dropDown_col {
+    padding-top: 2px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.errorDropdown_col {
+    border: 2px solid red;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #E8E8E8;
+}
+.button_col{
+    text-align: center;
+    padding-top: 5px;
+}
+.dropdown-toggle {
+    min-width: 100%;
+    max-width: 100%;
+}
+.btn-map{
+    min-width: 80%;
+    margin-bottom: 5px;
+}
+.mapInitalView{
+    min-height: 600px;
+}
+@media(min-width: 500px){
+    .map-intro p{
+        text-align: center;
+    }
+    .mapInitalView{
+        min-height: 800px;
+    }
+    .button_row {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .mapRow {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .btn-map{
+        margin-top: 15px;
+}
+}
+/* -_-_-_-_-_-_-_-_-_-_ Map Pop-up Box _-_-_-_-_-_-_-_-_-_- */
+.popup_link_icon {
+    padding-left: 5px;
+}
+.popup_icon_gen {
+    padding-right: 5px;
+    color: green;
+}
 
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
 .destinationcol h3{
@@ -219,162 +283,6 @@ h1{
     #ancient_east_info{
         visibility: visible;
         display: block;
-    }
-}
-/* -_-_-_-_-_-_-_-_-_-_ Map Section _-_-_-_-_-_-_-_-_-_- */
-.button_row {
-    background-color: lightgray;
-}
-.mapSelectionError{
-    color: red;
-}
-.mapRow {
-        padding-bottom: 2%;
-    }
-.dropDown_col {
-    padding-top: 2px;
-    padding-bottom: 5px;
-    text-align: center;
-}
-.errorDropdown_col {
-    border: 2px solid red;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    text-align: center;
-    background-color: #E8E8E8;
-}
-.button_col{
-    text-align: center;
-    padding-top: 5px;
-}
-.dropdown-toggle {
-    min-width: 80%;
-}
-.btn-map{
-    min-width: 80%;
-    margin-bottom: 5px;
-}
-.mapInitalView{
-    min-height: 600px;
-}
-@media(min-width: 992px){
-    .map-intro p{
-        text-align: center;
-    }
-    .mapInitalView{
-        min-height: 800px;
-    }
-    .button_row {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-    .mapRow {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-    .btn-map{
-    margin-top: 15px;
-}
-}
-/* -_-_-_-_-_-_-_-_-_-_ Map Pop-up Box _-_-_-_-_-_-_-_-_-_- */
-.popup_link_icon {
-    padding-left: 5px;
-}
-.popup_icon_gen {
-    padding-right: 5px;
-    color: green;
-}
-
-/* -_-_-_-_-_-_-_-_-_-_ Inquiry Form _-_-_-_-_-_-_-_-_-_- */
-.formContainer{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: lightgrey;
-}
-.inquirytext {
-    background-color: white;
-    padding-bottom: 10px;
-    border: 1px solid grey;
-}
-.inquirytext p {
-    text-align: center;
-    font-size: 12px;
-}
-.inquirytext span {
-    font-weight: bold;
-    color: navy;
-}
-.formCollapse{
-    background-color: grey;
-    width: 100%;
-}
-.formCollapse{
-    font-size: 20px;
-}
-.formCollapse:hover {
-    background-color:black;
-    color: white;
-}
-.btn-form{
-  background-color: blue;
-  min-width: 100%;
-}
-.down_arrow{
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 10px;
-}
-.form-control{
-    border: 1px solid grey;
-}
-.formNote{
-    opacity: 0.9;
-    position: absolute;
-    z-index: 2;
-    max-width: 90%;
-    margin-left: 5%;
-    background-color: lightgrey;
-    border-radius: 25px;
-}
-.formNote h3{
-    text-align: center;
-}
-.formNote h6{
-    text-align: right;
-    padding-right: 30px;
-    color: blue;
-}
-.formNote p{
-    text-align: center;
-}
-.formNote i{
-    color: blue;
-    padding-right: 5px;
-    padding-left: 5px;
-    font-size: 18px;
-}
-@media(min-width: 992px){
-    .formrow {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    .formCollapse {
-        margin-left: 20%;
-        margin-right: 20%;
-        width: 60%;
-    }
-    .formCollapse {
-        font-size: 30px;
-    }
-    .inquirytext p {
-    font-size: 18px;
-    }
-    .down_arrow{
-        font-size: 30px;
-    }
-    .formNote{
-        width: 60%;
-        margin-left: 20%;
     }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Footer _-_-_-_-_-_-_-_-_-_- */
