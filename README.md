@@ -5,7 +5,6 @@
 
 - [Version Control](#Version_Control)
 - [Change Log](#Change_Log)
-- 
 - [Introduction](#Introduction)
 - [Project Motivation](#Project_Motivation)
 - [UX](#UX) 
@@ -15,6 +14,7 @@
     - [Existing Features](#Existing_Features)
     - [Future Enhancements](#Future_Enhancements)
 - [Technologies Used](#Technologies_Used)
+- [JavaScript Redevelopment](#JavaScript_Redevelopment)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
 - [Credits](#Credits)
@@ -30,11 +30,14 @@
 | V1 | 5 Feb, 2021 | Mel Taylor | Initial Version |
 | V2 | 2 Apr, 2021 | Mel Taylor | Revised project, failed grading. Updated UX & improved and tested JS more information on testing|
 
+[Index](#Index)
+
+- - - -
 ### <ins>Change_Log</ins>
 The project was initially submitted on the 05th of Feb 2021, it received a failing grade with the following feedback
 related to areas where the project did not meet the required criteria;
 
-### Pass Criteria:
+## Pass Criteria:
 
 |Criterion|Meets Criterion|Reason|
 | --- | --- | --- |
@@ -44,7 +47,7 @@ related to areas where the project did not meet the required criteria;
 3.1|No|Testing steps are missing / incom|prehensible against the user stories, leading to many open bugs.|
 3.4|No|Missing documentation for manual and automated testing|
 
-### Merit Criteria:
+## Merit Criteria:
 
 |Criterion|Meets Criterion|Reason|
 | --- | --- | --- |
@@ -54,7 +57,7 @@ related to areas where the project did not meet the required criteria;
 |5.3|No|Testing steps or guidelines are missing / incomprehensible|
 |5.4|No|Missing or incomplete deployment instructions in the README file|
 
-### Updates
+## Updates
 To address the areas where the project failed, I had a review with my mentor to review the UX of the 
 site and establish areas where it could be improved, following that I had a on-line chat with one of the 
 code institute tutors to review the fails on JS testing and documentation of testing and other areas where it 
@@ -74,8 +77,9 @@ displaying the info with.
 From a functional view, one main issue was the lack of testing and validation on the JS, to address this the main.js file 
 was extensively rewritten to both remove duplicate functions and ones no longer needed after site redesign. The code was extensively tested and 
 validated on JSHInt. Further details are detailed in the testing section of the file.
+[Index](#Index)
 
-
+- - - -
 ## **<ins>Introduction</ins>**
 This is my milestone 2 project for the Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/). The project is not complete 
 due to time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
@@ -85,6 +89,7 @@ as such this is considered a deployment of the Minimum Viable Product (MVP), the
 included in subsequent deployments. I will outline in the [Future Enhancements](#Future_Enhancements) sections details of the additional features 
 that will be considered for future iterations.
 
+- - - -
 ## **<ins>Project_Motivation</ins>**
 The main driver behind the development of this site was to create a holiday planner, that would become a trusted site for reviews and information on 
 sites around Ireland for staycations. The site is limited Ireland, but the scope could be expanded when Covid-19 travel restrictions are eased and 
@@ -98,6 +103,7 @@ new location, the site picks up the new location on the next load of the page. A
 To make the site easy to use, the user required inputs are presented sequentially to make it easy to follow and let the user know what information they need to provide. The menus are populated 
 from the locations file so only contain options when there is supporting data in the locations file. 
 
+- - - -
 ## **<ins>UX</ins>**
 Once the concept of the site was developed, as part of the UX design phase I decided to make the site a one page site with distinctive containers for each 
 section. The site would have 6 major components,
@@ -139,7 +145,7 @@ some of the information is hidden with JS driving a show / hide option for the u
 Due to the fact that the form was not functional and feedback that it would be better to leave it out if not working, it has been removed from the site
 for the time. It can be reintroduced once I have he time to add the functionality to the back end of the form.  
 
-
+- - - -
 ### <ins>User_Stories</ins>
 
 **Site User;**
@@ -153,7 +159,7 @@ for the time. It can be reintroduced once I have he time to add the functionalit
 - I want to get input from users, where do they suggest that we review and include in the site.
 - Become a trusted source for reviews of accommodation
 
-
+- - - -
 ### <ins>Wireframes</ins>
 Once the site concept and userstories were worked out, a wireframe was built to use as a reference guide as elements were added.
 Providing a quick reference for the construction of the site during development.
@@ -227,9 +233,24 @@ were not included due to time constraints.
 **w3schools** https://www.w3schools.com
 - For addtional code explanations & features to use.
 
+[Index](#Index)
+- - - -
+
+## <ins>JavaScript Redevelopment</ins>
+AS part of the project update, there was extensive rewrite and testing of the JavaScript. To help improve the preformance of the site, 
+the JS was reduces in size by removing some unused script and reducing the number of functions. For example, in the previous version the 
+exapand / collapse of text was driven by functions that were repeated (with a different name) each time they were used, in this Version the
+six functions were reduced to one function that used parameters that came from the HTML file with if / else if statement to provide the same
+level of functionality with the reduced number of functions. 
+
+As aprt of the cycle of development, the JS was regularly passed through JSHint, where last time it was not used which resulted in many errors, 
+some very basic syntacs erros and others more functions. 
+
+<img src="/assets/readmeAssets/JSHint_Report.jpg">
 
 [Index](#Index)
 - - - -
+
 ## <ins>Testing</ins>
 As with the previous project, I applied a DevOps type process towards development and testing. In addtiona to regular testing as features are added
 and updated using, the Github http server and the responcive design mode in Firefox to simulate multiple devices. The projects was deployed to Github and 
@@ -300,10 +321,8 @@ GitHub also provides the option to clone the repository, cloning allows you to m
 You can complete this using the code drop down menu to get details to clone the repositor. You can find more information on how to clone a 
 repository on GitHub Docs [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-
 [Index](#Index)
 - - - -
-
 ## <ins>Credits</ins>
 The developers of the Holiday Planner site would like to thank all those who contributed directly or indirectly to the development of the site, or 
 through providing media and content for the site.
@@ -327,7 +346,6 @@ to extend our thanks and apperication to.
 | Google Maps | Google Maps API | https://cloud.google.com/maps-platform/ |
 | Video - Ireland – a luxury destination |  Discover Ireland - YouTube | https://www.youtube.com/watch?v=rvSdyIhpdrM&feature=youtu.be |
 | Images | Discover Ireland | https://www.discoverireland.ie/ |
-
 
 [Index](#Index)
 - - - -
