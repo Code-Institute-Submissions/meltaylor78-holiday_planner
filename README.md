@@ -280,6 +280,23 @@ When the HTML code was validated, two issues were identified.
 2. An out of sequence H tag (not in descending order), this was updated with an appropriate H tag.
 Issues were resolved and updated code committed to the project. 
 
+The final automated functional testing was carried out on Lighthouse (plugin on Firefox)
+In the previous version of the site, the results achieved were;
+- Performance > 33
+- Accessibility > 89
+- Best Practice > 93
+- SEO > 83
+In the current version, there have been some major improvements;
+- Performance > 60 (+ 27pts)
+- Accessibility > 97 (+ 8 pts)
+- Best Practice > 93 (same)
+- SEO > 83 (+ same)
+<img src="/assets/readmeAssets/Lighthouse Test V1.jpg">
+The improvements were down to the cleaning of the JS file and reduction in number of functions (as described in the JS section).
+In addition, the YouTube embedded video was causing a lot of issues with performance so I decided to replace with a 
+static image.
+
+
 ### Manual Functional Testing;
 The site was manualy tested to ensure that all the functionality was workign and the site was responsive accross the device types.
 Through the developmen cycle the site was tested on firefox using "Responsive Design Mode" to ensure that lay-out and features were responsive to different
@@ -321,36 +338,6 @@ This was also implemented for larger devices as it gives a better user experienc
 2. I also added the JS to the render map button to move the map to the top of the screen. This was not implemented for larger screens as there was sufficient place to 
 display as is.
 
-
-
-_____ Previous version --- 
-
-**User Acceptance Testing**
-user acceptance tesing was completed by users manually interacting with the site and checking expected functioinality vs site responce, 
-in addtion the users were looking at the useability and the look and feel of the site. 
-
-Testing was conducted on;
-    Fire Fox, Safri & Chrome on Mac.
-    Mobile devices, Samsung Galaxy S7 & Huawei P20 Lite.
-
-During the course of the testing, the following bugs were found
-
-Details of bugs found during testing
-| Bug | Fix |
-| --- | --- |
-|White margin below footer on mobile|Issue was fixed by removing margin to the bottom of the row that was causing the white space|
-|Horizontal scroll on site (both mobile & desktop|After fixing all containers and their childern to ensure that no part ran over, issue presisted. I added a section in the CSS file for body & html section to remove the overflow |
-|Map menus differnt sizes on mobile|One issue reported on mobile, the menus for the map were different sizes, on desk top they were side by side and it was not an issue that they were the size of the content. Set a fixed value to improve look on mobile, where they were in a vertical row.|
-|Hero image, low quality|Hero image was oigainlly added as palce holder but was not removed, testers raised issue. New image added.|
-|Too much white space on the site|Users reported that there was too much white space, this was resolved by reducing the number of rows and using images as background images|
-|Nav link to form lead to collapsed form|When using the nav link to jump to the form section, it was collapsed. I added JS onclick to the nav link to expand the section, nav link now takes user to the form section and its expanded.|
-
-Time for testing was limited, to meet deployment schedule so testing was focused on testing that the website functions and that the users were not having any issues. 
-The site was tested with Lighthouse on Chorme Dev tools. 
-
-The site, did not score very highy, I did fix some issues highlighted, such as unused JS and CSS. 
-I should have engaged the Lighhouse tool earlier in the development cycle.
-<img src="/assets/readmeAssets/Lighthouse Test.jpg">
 
 [Index](#Index)
 - - - -
