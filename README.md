@@ -32,13 +32,26 @@ related to areas where the project did not meet the required criteria;
 |5.3|No|Testing steps or guidelines are missing / incomprehensible|
 |5.4|No|Missing or incomplete deployment instructions in the README file|
 
-### updates
+### Updates
 To address the areas where the project failed, I had a review with my mentor to review the UX of the 
 site and establish areas where it could be improved, following that I had a on-line chat with one of the 
 code institute tutors to review the fails on JS testing and documentation of testing and other areas where it 
-needed to be improved. This version of the remadme file is now updated to document the updates, revised design 
+needed to be improved. This version of the readme file is now updated to document the updates, revised design 
 elements and additional testing and validation that was done.
 
+The overall theme of the site, the functionality and information largely remains the same, with an over all of the UX,
+to improve the visual appeal of the site and improve responsiveness on mobile devices. This addresses the main UX issues raised. 
+The site was redesigned in a clean Minimalist way, using white space and light back ground colours to create breaks. Background images 
+were removed where text was overlaid and only used as accent pieces. Some elements are removed for viewing on mobile and expand / collapse
+features are used on mobile to minimise scrolling. On the map section, the additional information presented when clicking on the map popup no longer 
+adds additional sections to the page, it is all now simplified and displayed directly in the map pop-up. This has allowed us make the Map more prominent
+on the site. As the map search function is the primary focus of the site, it has been moved up the page. A shot intro followed by the interactive map. 
+The addition information on destinations in Ireland has been moved to the bottom, background pictures removed and simplified card 
+displaying the info with. 
+
+From a functional view, one main issue was the lack of testing and validation on the JS, to address this the main.js file 
+was extensively rewritten to both remove duplicate functions and ones no longer needed after site redesign. The code was extensively tested and 
+validated on JSHInt. Further details are detailed in the testing section of the file.
 
 ## Index
 
@@ -83,6 +96,7 @@ from the locations file so only contain options when there is supporting data in
 
 <img src="/assets/readmeAssets/menuView.jpg">
 
+As parto 
 
 ## **<ins>UX</ins>**
 Once the concept of the site was developed, as part of the UX design phase I decided to make the site a one page site with distinctive containers for each 
@@ -99,29 +113,31 @@ Bootstrap was chosen as the main library for the major design elements, it provi
 across all device sizes. On top of bootstrap, custom CSS was used to provide a unique look and feel and set the site apart. 
 
 **Header**
-The header consists of a nav bar, locked to the top of the screen as the page is long the user always has access to the nav bar to jump to the desired 
-location. Under that I included a hero image with crisp white text to capture the users attention. 
+The navbar is now a standard Bootstrap navbar, with a drop down for mobile. Uses navbar dark bootstrap theme.
 
 **Introduction**
-Consists of a short introduction to the site, some information on staycations in Ireland and a video that gives the users some media content to show case 
-Ireland and holiday locations. The video is embedded as I don’t want users to leave the page at such and early stage. I decided that in this section, the 
-information would be limited to generate interest but ensure the user does not get over whelmed with information and leave the site before exploring further down the page. 
- 
-**Destination**
-To provide some more value to the users, I have included a section with some cards on major destinations and locations in Ireland. The idea here was to provide 
-some information to the user if they are still deciding on the type of holiday or location within Ireland. 
+A short into section, intoducing the site and what is avaliable, the embeded video has been replaced with an image. The image only displays on larger devices,
+while on mobiles to remove to much scrolling the picture us removed getting the user to the main section quicker.
 
 **Interactive Map**
-The map section is the main part of the site and as I have described above in the introduction section, this map is driven by a file with the reviewed locations 
-the menus are dynamic in such that they only populate type, province & county where information to support the search is contain in the file. The file will continue 
-to grow with locations. The design of the menus for the map section was set-up to guide the user through the required selections, the menus are shown when the user 
-makes the previous selection and when all selections are made the button to render the map is shown. This was a design feature to make it institutive for the user. Once 
-the map is rendered the user can click on the map pin, which will provide additional useful information related to the selected pin as well as the review information that is 
-unique to the site.
+As the primary function and main user feature of the site, some extensive redesign has happened. In the previous version, the map was half the width (large screens) of the 
+screen with additional information displayed in a table to the left or on a phone on additional section below the map. In  the new design, the additional information has all be 
+incorporated in the map pop-up, now making the map full width. The same information is presented to the user but in a more simplified way. 
+The drop down selectors used were also updated, using bootstrap selector classes and removing some of the borders.
+<img src="/assets/readmeAssets/menuView V1.jpg">
+
+The overall functionality of the map remains the same, with some improvements on the rendering of the map. Discussed further in the JS & testing Section.
+
+**Destination**
+One of the main changes in the destination section, it has been moved to the bottom of the page so it does not distract the user from the interactive map section
+which is the main function of the site. 
+This section still has the same information, providing information on Ireland's destinations. The section has been improved, by removing the background image and adding
+the content to a bootstrap card with a small image on top of the card. For desktops the text is displayed in 3 cards and link to the external site. For mobile / tablets,
+some of the information is hidden with JS driving a show / hide option for the user.
 
 **Form**
-The form section, was included to allow site users to submit locations that they would like to have reviewed and added to the site. The thinking behind including the 
-form was, two fold, first get location information to grow the site location data quickly and second, allow the user have input to the site and get invested in the sites success. 
+Due to the fact that the form was not functional and feedback that it would be better to leave it out if not working, it has been removed from the site
+for the time. It can be reintroduced once I have he time to add the functionality to the back end of the form.  
 
 
 ### <ins>User_Stories</ins>
@@ -156,11 +172,10 @@ Outside the drafted wireframe but necessary in the current Covid-19 environment.
 The following section, details the existing features on the site followed, followed by a list of features to be added as enhacments or features that 
 were not included due to time constraints.
 ### <ins>Existing_Features</ins>
-- A colour palette of Black / white & Grey was used foras the prominent colours on the site with blue being used where users attention was needed for an action.
-- The basic colour palette was off set with constrasting coulourfull images.
-- Nav bar & footer. Minimalist design in black & white. Functional but not distracting from the site.
-- Nav bar is locaked to the top of the site to give users continuious access to the links to move through the site quickly.
-- Images were included as background with overlaid text, to reduce the size of the page and create visual appeal.
+- Standar boot strap nav bar with exapanding nav bar on mobile/ 
+- Interactine map driven by JS and populated with pre-reviwed destinations loaded from a locations.js file.
+- Addtional information and links to some of Irelands destinations/
+- Reduced images and text over images, to make the map the primary feature. 
 
 - Interactive Map;
     - The map is the main appeal and function of the site. 
@@ -168,26 +183,7 @@ were not included due to time constraints.
     - The menus are intuitive and appear in sequence after selection to guide the user.
     - The map draws on the google maps api to populate the data based on the user selections. 
     - Pins are clickable and provide name & address data with a button for more info to click on.
-    - The more info button draws data from the locations file and presents it to the user.
-        - The more info functions differentiates between larger screens sizes and mobile.
-        - There was place on larger screens to present the data side by side with the map, once clicked the map moves to the left
-            and a table with the addtional info is presented. 
-        - For mobiles, as the more info data section would be included below the map, it was decided to instead use a popup div that overlays
-            the map and presents the same information but in a more mobile user friendly way.
-    - The site also includes a form, this is still under construction but when completed would allow users of the site to suggest locations
-        that could be reviewed and included on the site.
-
-### <ins>Future_Enhancements</ins>
-As described above in the [Introduction](#Introduction) section, there was a shorter that expected lead time to deployment.
-The site was deployed and included here are a list of addtional features that were being considered if time permitted.
- - A carousel of images in the hero image section to improve visual effects on loading the page.
- - Interactive Map;
-    - Upon clicking the pin, the map would zoom to the location of the selected pin.
-    
- - Form Section;
-    - add email service to send e-mails
-    - include an responce on screen when mail is sent.
-    - include a confirmation e-mail to the submitter.
+ 
 
 [Index](#Index)
 - - - -
@@ -217,6 +213,9 @@ The site was deployed and included here are a list of addtional features that we
 
 **W3C Validation Service** https://validator.w3.org/
 - HTML & CSS code was checked on W3C validator at the end of the project.
+
+**JSHint Static Code Analysis Tool for JavaScript** https://jshint.com/
+- Validation of JS code used in the project.
 
 **HTML Formatter** https://webformatter.com/html
 - HTML code was run through HTML formatter to fix any indentation issues.
