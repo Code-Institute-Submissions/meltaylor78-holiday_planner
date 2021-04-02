@@ -271,8 +271,10 @@ The HTML, CSS and JavaScript code were validate using the following on-line tool
 |HTML| Validate HTML code|W3C - Markup Validation Service|https://validator.w3.org/|
 |CSS| Validate CSS code| W3C - CSS Validation Service|https://jigsaw.w3.org/css-validator/|
 
-***Further details on the results from the JSHint results are documented in the [JavaScript Redevelopment & Validation](#JJavaScript_Redevelopment_&_Validation) section above ***
+***Further details on the results from the JSHint results are documented in the [JavaScript Redevelopment & Validation](#JJavaScript_Redevelopment_&_Validation) section above.***
+
 The CSS code passed with-out issue.
+
 When the HTML code was validated, two issues were identified.
 1. A p tag, within a span was flagged. Upon investigation the span was no longer required.
 2. An out of sequence H tag (not in descending order), this was updated with an appropriate H tag.
@@ -283,7 +285,8 @@ The site was manualy tested to ensure that all the functionality was workign and
 Through the developmen cycle the site was tested on firefox using "Responsive Design Mode" to ensure that lay-out and features were responsive to different
 device types. 
 
-** Navbar: **
+**Navbar:**
+
 The nav bar was a standard bootstrap navbar, when tetsing on desktop no issues was identified. When tetsing on a mobile devices, the expected function was once the 
 user touched the three bar ICON the nav bar would pop out and then collapse once the link was selected. 
 During testing, a bug was identifed, where the nav bar on mobile functioned as far as it opened and took the user to the clicked anchor point, but it did not collapse after 
@@ -291,9 +294,10 @@ the link was clicked.
 The issue was missing classes, the data toggle class was missing from the navbar button. Once added the retest of the function passed. 
 No other issues were found on the nav bar.
 
-** Interactive Map  **
+**Interactive Map**
 
-** Page Layout & Responsiveness **
+**Page Layout & Responsiveness**
+
 Testing of the lay-out was tested on a large screen (21" widescreen), mobile device (Huawei P20 lite) and tablet Amazon Kindle. 
 
 A issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
