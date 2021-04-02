@@ -193,8 +193,7 @@ h1{
     padding-top: 5px;
 }
 .dropdown-toggle {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 80%;
 }
 .btn-map{
     min-width: 80%;
@@ -220,7 +219,11 @@ h1{
     }
     .btn-map{
         margin-top: 15px;
-}
+    }
+    .dropdown-toggle {
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 /* -_-_-_-_-_-_-_-_-_-_ Map Pop-up Box _-_-_-_-_-_-_-_-_-_- */
 .popup_link_icon {

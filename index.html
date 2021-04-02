@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Holiday Planner</title>
 </head>
@@ -14,8 +16,8 @@
     <!-- Nav bar code-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <a href="#topAnchor">Irish Staycations</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" data-toggle="collapse" data-target="#menu" id="menu">
@@ -34,19 +36,21 @@
     </nav>
     <!-- Covid-19 Message -->
     <div class="container-fluid" id="hideCovid">
-                <div class="row covidAlert no-gutters">
-                    <div class="col">
-                        <h3>Covid-19 Information</h3>
-                        <p>
-                            Our site is set-up for you to find destinations to visit in Ireland, as we are still in the midst of the Covid19 pandemic please follow all guidelines and advice before booking and traveling. <br />
-                            For more information on updates & restrictions, visit  <a href="https://www.gov.ie/en/press-release/066ce-ireland-placed-on-full-level-5-restrictions-of-the-plan-for-living-with-covid-19/">gov.ie</a> 
-                            or <a href="https://www2.hse.ie/coronavirus/">HSE.ie/coronavirus</a> 
-                        </p>
-                        <h6>Stay safe & protect each other.</h6>
-                        <h5 onclick="functionHideCovidInfo()">Dismiss</h5>
-                    </div>
-                </div>
+        <div class="row covidAlert no-gutters">
+            <div class="col">
+                <h3>Covid-19 Information</h3>
+                <p>
+                    Our site is set-up for you to find destinations to visit in Ireland, as we are still in the midst of
+                    the Covid19 pandemic please follow all guidelines and advice before booking and traveling. <br />
+                    For more information on updates & restrictions, visit <a
+                        href="https://www.gov.ie/en/press-release/066ce-ireland-placed-on-full-level-5-restrictions-of-the-plan-for-living-with-covid-19/">gov.ie</a>
+                    or <a href="https://www2.hse.ie/coronavirus/">HSE.ie/coronavirus</a>
+                </p>
+                <h6>Stay safe & protect each other.</h6>
+                <h5 onclick="functionHideCovidInfo()">Dismiss</h5>
             </div>
+        </div>
+    </div>
     <!-- Intro Section -->
     <a class="anchor" id="topAnchor"></a>
     <div class="container-fluid jumbotron">
@@ -67,14 +71,13 @@
                     for those already living in Ireland. The tourist sector in Ireland has so much to offer, with
                     holidays destination ranging from 5 star castles to adventure camping.
                 </p>
-                    <span class="highlighted_text">
-                    <p class="highlight_into">
-                        Our ambition is to review these locations and provide you with detailed information so you can
-                        choose what you want from a holiday regardless if that is two weeks in the summer or weekend away in
-                        the midst of the
-                        Irish winter.
-                    </p>
-                </span>
+                <p class="highlight_into">
+                    Our ambition is to review these locations and provide you with detailed information so you can
+                    choose what you want from a holiday regardless if that is two weeks in the summer or weekend
+                    away in
+                    the midst of the
+                    Irish winter.
+                </p>
                 <p>
                     Use our interactive map below to start your search, what type of accommodation are you looking for,
                     where do you want to go. Find the details you need and the review information to help you make the
@@ -109,7 +112,8 @@
                 </select>
             </div>
             <div class="col-sm-3 button_col no-gutters">
-                <p id="mapSelectionError" class="mapSelectionError hide">Error! : You must make a valid selection <br/></p>
+                <p id="mapSelectionError" class="mapSelectionError hide">Error! : You must make a valid selection <br />
+                </p>
                 <button id="mapButton" class="btn btn-success btn-map hide" onclick="functionRenderMap()">
                     Update Map</button>
             </div>
@@ -130,16 +134,18 @@
                     <h5 class="card-title">Explore the epic Wild Atlantic Way</h5>
                     <p class="card-text">
                         Discover the Wild Atlantic Way where 2,500km of spectacular coastline with white sands and
-                        glittering waves awaits you. 
-                        <i class="fas fa-angle-double-down more_info" id="wild_atlantic_down_arrows" aria-hidden="true" onclick="functionExpandText('expand', 'wild_atlantic_info', 'wild_atlantic_down_arrows')"></i>
-                        <span id="wild_atlantic_info"> 
+                        glittering waves awaits you.
+                        <i class="fas fa-angle-double-down more_info" id="wild_atlantic_down_arrows" aria-hidden="true"
+                            onclick="functionExpandText('expand', 'wild_atlantic_info', 'wild_atlantic_down_arrows')"></i>
+                        <span id="wild_atlantic_info">
                             Head inland to experience some of the signature discovery points
                             and amazing activities in this incredible region. Feel the power of the Atlantic Ocean as it
                             crashes into the base of towering sea cliffs, wander down vast beaches and watch flocks of
-                            birds dance in pastel skies as the sun sets on another magical day                        
+                            birds dance in pastel skies as the sun sets on another magical day
                             <a href="https://www.discoverireland.ie/wild-atlantic-way" target="_blank"> <i
                                     class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <i class="fas fa-angle-double-up more_info" aria-hidden="true" onclick="functionExpandText('minimise', 'wild_atlantic_info', 'wild_atlantic_down_arrows')"></i>
+                            <i class="fas fa-angle-double-up more_info" aria-hidden="true"
+                                onclick="functionExpandText('minimise', 'wild_atlantic_info', 'wild_atlantic_down_arrows')"></i>
                         </span>
                     </p>
                 </div>
@@ -150,17 +156,22 @@
                     <h5 class="card-title">Discover Ireland's Hidden Heartlands</h5>
                     <p class="card-text">
                         Experience Ireland’s Hidden Heartlands, a beautifully unspoiled part of Ireland where life moves
-                        at its own pace. 
-                        <i class="fas fa-angle-double-down more_info" id="hidden_heartland_down_arrows" aria-hidden="true" onclick="functionExpandText('expand', 'hidden_heartland_info', 'hidden_heartland_down_arrows')"></i>
-                        <span id="hidden_heartland_info"> 
+                        at its own pace.
+                        <i class="fas fa-angle-double-down more_info" id="hidden_heartland_down_arrows"
+                            aria-hidden="true"
+                            onclick="functionExpandText('expand', 'hidden_heartland_info', 'hidden_heartland_down_arrows')"></i>
+                        <span id="hidden_heartland_info">
                             Listen to the ebb and flow of trickling streams, kayak across wonderful
                             waterways and explore magical forest treks and trails. Meander across expansive boglands,
-                            majestic mountains and open valleys. Visit the riverside towns and villages dotted throughout
-                            this enchanting region. Make sure to stop and soak up the peaceful atmosphere, there's nowhere
+                            majestic mountains and open valleys. Visit the riverside towns and villages dotted
+                            throughout
+                            this enchanting region. Make sure to stop and soak up the peaceful atmosphere, there's
+                            nowhere
                             quite like it.
                             <a href="https://www.discoverireland.ie/irelands-hidden-heartlands" target="_blank"> <i
-                                class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <i class="fas fa-angle-double-up more_info" aria-hidden="true" onclick="functionExpandText('minimise', 'hidden_heartland_info', 'hidden_heartland_down_arrows')"></i>
+                                    class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                            <i class="fas fa-angle-double-up more_info" aria-hidden="true"
+                                onclick="functionExpandText('minimise', 'hidden_heartland_info', 'hidden_heartland_down_arrows')"></i>
                         </span>
                     </p>
                 </div>
@@ -170,16 +181,21 @@
                 <div class="card-body">
                     <h5 class="card-title">Uncover Ireland's Ancient East</h5>
                     <p class="card-text">
-                        Experience Ireland’s Ancient East where vibrant history and modern life meet. 
-                        <i class="fas fa-angle-double-down more_info" id="ancient_east_down_arrows" aria-hidden="true" onclick="functionExpandText('expand', 'ancient_east_info', 'ancient_east_down_arrows')"></i>
+                        Experience Ireland’s Ancient East where vibrant history and modern life meet.
+                        <i class="fas fa-angle-double-down more_info" id="ancient_east_down_arrows" aria-hidden="true"
+                            onclick="functionExpandText('expand', 'ancient_east_info', 'ancient_east_down_arrows')"></i>
                         <span id="ancient_east_info">
-                            Enjoy memorable food experiences, wander down the cobbled streets of medieval towns and explore the 
-                            gorgeous gardens of this scenic region. Hear local legends and mythical tales on a lively walking tour or
-                            travel back in time at an ancient monastic site. Head on an epic mountain hike and afterwards,
+                            Enjoy memorable food experiences, wander down the cobbled streets of medieval towns and
+                            explore the
+                            gorgeous gardens of this scenic region. Hear local legends and mythical tales on a lively
+                            walking tour or
+                            travel back in time at an ancient monastic site. Head on an epic mountain hike and
+                            afterwards,
                             experience the buzzing nightlife in the contemporary cities.
                             <a href="https://www.discoverireland.ie/irelands-hidden-heartlands" target="_blank"> <i
-                                class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <i class="fas fa-angle-double-up more_info" aria-hidden="true" onclick="functionExpandText('minimise', 'ancient_east_info', 'ancient_east_down_arrows')"></i>
+                                    class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                            <i class="fas fa-angle-double-up more_info" aria-hidden="true"
+                                onclick="functionExpandText('minimise', 'ancient_east_info', 'ancient_east_down_arrows')"></i>
                         </span>
                     </p>
                 </div>
@@ -215,10 +231,17 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrogvfgKkWKgEjOYF_WxDn9PfzWts7Vss&libraries=places&callback=initMap"></script>
     <script src="assets/js/main.js"></script>
