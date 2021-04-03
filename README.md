@@ -59,24 +59,25 @@ related to areas where the project did not meet the required criteria;
 
 ### Updates
 To address the areas where the project failed, I had a review with my mentor to review the UX of the 
-site and establish areas where it could be improved, following that I had a on-line chat with one of the 
+site and establish areas where it could be improved, following that I had an on-line chat with one of the 
 code institute tutors to review the fails on JS testing and documentation of testing and other areas where it 
 needed to be improved. This version of the readme file is now updated to document the updates, revised design 
 elements and additional testing and validation that was done.
 
-The overall theme of the site, the functionality and information largely remains the same, with an over all of the UX,
+The overall theme of the site, the functionality and information largely remains the same, with an overhaul of the UX,
 to improve the visual appeal of the site and improve responsiveness on mobile devices. This addresses the main UX issues raised. 
 The site was redesigned in a clean Minimalist way, using white space and light back ground colours to create breaks. Background images 
 were removed where text was overlaid and only used as accent pieces. Some elements are removed for viewing on mobile and expand / collapse
 features are used on mobile to minimise scrolling. On the map section, the additional information presented when clicking on the map popup no longer 
 adds additional sections to the page, it is all now simplified and displayed directly in the map pop-up. This has allowed us make the Map more prominent
-on the site. As the map search function is the primary focus of the site, it has been moved up the page. A shot intro followed by the interactive map. 
-The addition information on destinations in Ireland has been moved to the bottom, background pictures removed and simplified card 
-displaying the info with. 
+on the site. As the map search function is the primary focus of the site, it has been moved up the page. A short intro followed by the interactive map. 
+The addition information on destinations in Ireland has been moved to the bottom, background pictures removed and simplified cards
+displaying the info. 
 
 From a functional view, one main issue was the lack of testing and validation on the JS, to address this the main.js file 
 was extensively rewritten to both remove duplicate functions and ones no longer needed after site redesign. The code was extensively tested and 
-validated on JSHInt. Further details are detailed in the testing section of the file.
+validated on JSHInt. Further details are explained in the testing section of the file.
+
 [Index](#Index)
 
 - - - -
@@ -92,7 +93,7 @@ that will be considered for future iterations.
 - - - -
 ## **<ins>Project_Motivation</ins>**
 The main driver behind the development of this site was to create a holiday planner, that would become a trusted site for reviews and information on 
-sites around Ireland for staycations. The site is limited Ireland, but the scope could be expanded when Covid-19 travel restrictions are eased and 
+sites around Ireland for staycations. The site is limited to Ireland, but the scope could be expanded when Covid-19 travel restrictions are eased and 
 travel abroad to complete reviews is again possible. The reviews are individual and only added by the site owners so all reviews can be stood over by the
 site owner, with no anonymous review information included.
 
@@ -110,9 +111,8 @@ section. The site would have 6 major components,
 
    - Header
    - Introduction
-   - Destinations Information. 
    - Interactive Map
-   - Form
+   - Destinations Information. 
    - Footer
 
 Bootstrap was chosen as the main library for the major design elements, it provides the responsiveness required to ensure the site looks good and works well 
@@ -122,12 +122,12 @@ across all device sizes. On top of bootstrap, custom CSS was used to provide a u
 The navbar is now a standard Bootstrap navbar, with a drop down for mobile. Uses navbar dark bootstrap theme.
 
 **Introduction**
-A short into section, intoducing the site and what is avaliable, the embeded video has been replaced with an image. The image only displays on larger devices,
-while on mobiles to remove to much scrolling the picture us removed getting the user to the main section quicker.
+A short intro section, intoducing the site and what is avaliable, the embeded video has been replaced with an image. The image only displays on larger devices,
+while on mobiles to remove to much scrolling the picture is removed getting the user to the main section quicker.
 
 **Interactive Map**
 As the primary function and main user feature of the site, some extensive redesign has happened. In the previous version, the map was half the width (large screens) of the 
-screen with additional information displayed in a table to the left or on a phone on additional section below the map. In  the new design, the additional information has all be 
+screen with additional information displayed in a table to the left or on a phone an additional section below the map. In the new design, the additional information has all been 
 incorporated in the map pop-up, now making the map full width. The same information is presented to the user but in a more simplified way. 
 The drop down selectors used were also updated, using bootstrap selector classes and removing some of the borders.
 <img src="/assets/readmeAssets/menuView V1.jpg">
@@ -135,7 +135,7 @@ The drop down selectors used were also updated, using bootstrap selector classes
 The overall functionality of the map remains the same, with some improvements on the rendering of the map. Discussed further in the JS & testing Section.
 
 **Destination**
-One of the main changes in the destination section, it has been moved to the bottom of the page so it does not distract the user from the interactive map section
+One of the main changes in the destination section, is it has been moved to the bottom of the page so it does not distract the user from the interactive map section
 which is the main function of the site. 
 This section still has the same information, providing information on Ireland's destinations. The section has been improved, by removing the background image and adding
 the content to a bootstrap card with a small image on top of the card. For desktops the text is displayed in 3 cards and link to the external site. For mobile / tablets,
@@ -175,12 +175,12 @@ Outside the drafted wireframe but necessary in the current Covid-19 environment.
 [Index](#Index)
 - - - -
 ## **<ins>Features</ins>**
-The following section, details the existing features on the site followed, followed by a list of features to be added as enhacments or features that 
+The following section, details the existing features on the site, followed by a list of features to be added as enhacments or features that 
 were not included due to time constraints.
 ### <ins>Existing_Features</ins>
-- Standar boot strap nav bar with exapanding nav bar on mobile/ 
+- Standard boot strap nav bar with exapanding nav bar on mobile
 - Interactine map driven by JS and populated with pre-reviwed destinations loaded from a locations.js file.
-- Addtional information and links to some of Irelands destinations/
+- Addtional information and links to some of Irelands destinations
 - Reduced images and text over images, to make the map the primary feature. 
 
 - Interactive Map;
@@ -193,7 +193,7 @@ were not included due to time constraints.
 
 [Index](#Index)
 - - - -
-## **<ins>Technologies_Used</ins>
+## **<ins>Technologies_Used</ins>**
 **Balsamiq**    https://balsamiq.com/wireframes/
 - Basamiq was used in the design phase to create wireframes of the proposed web site.
 
@@ -236,14 +236,14 @@ were not included due to time constraints.
 [Index](#Index)
 - - - -
 ## **<ins>JavaScript_Redevelopment_&_Validation</ins>**
-AS part of the project update, there was extensive rewrite and testing of the JavaScript. To help improve the performance of the site, 
-the JS was reduces in size by removing some unused script and reducing the number of functions. For example, in the previous version the 
+As part of the project update, there was extensive rewrite and testing of the JavaScript. To help improve the performance of the site, 
+the JS was reduced in size by removing some unused script and reducing the number of functions. For example, in the previous version the 
 expand / collapse of text was driven by functions that were repeated (with a different name) each time they were used, in this Version the
 six functions were reduced to one function that used parameters that came from the HTML file with if / else if statement to provide the same
 level of functionality with the reduced number of functions. 
 
-As part of the cycle of development, the JS was regularly passed through JSHint, where last time it was not used which resulted in many errors, 
-some very basic syntax errors and others more functions. 
+As part of the cycle of development, the JS was regularly passed through JSHint, where as last time it was not used which resulted in many errors, 
+some very basic syntax errors and others more functional. 
 
 <img src="/assets/readmeAssets/JSHint_Report.jpg">
 
@@ -251,7 +251,7 @@ Above is the report from JSHint on the current version of the JS file. There are
 1. "eval can be harmful." eval is used in the script, to pull the list of counties and I needed to pull the value as the name of the counties. I could not find an alternate.
 2. "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (map, marker)", this part of the google maps API set-up.
 
-google did show as an un defined variable, this again was part of the google maps API set-up. 
+Google did show as an undefined variable, this again was part of the google maps API set-up. 
 
 The five functions, were listed as unused variables, these are used and called by the index.html file as required.
 
@@ -301,13 +301,13 @@ static image.
 
 
 ### Manual Functional Testing;
-The site was manualy tested to ensure that all the functionality was workign and the site was responsive accross the device types.
-Through the developmen cycle the site was tested on firefox using "Responsive Design Mode" to ensure that lay-out and features were responsive to different
+The site was manualy tested to ensure that all the functionality was working and the site was responsive accross the device types.
+Through the development cycle the site was tested on firefox using "Responsive Design Mode" to ensure that lay-out and features were responsive to different
 device types. 
 
 **Navbar:**
 
-The nav bar was a standard bootstrap navbar, when tetsing on desktop no issues was identified. When tetsing on a mobile devices, the expected function was once the 
+The nav bar was a standard bootstrap navbar, when testing on desktop no issues were identified. When tetsing on a mobile devices, the expected function was once the 
 user touched the three bar ICON the nav bar would pop out and then collapse once the link was selected. 
 During testing, a bug was identifed, where the nav bar on mobile functioned as far as it opened and took the user to the clicked anchor point, but it did not collapse after 
 the link was clicked. 
@@ -318,15 +318,21 @@ No other issues were found on the nav bar.
 
 **Page Layout & Responsiveness**
 
-Testing of the lay-out was tested on a large screen (21" widescreen), mobile device (Huawei P20 lite) and tablet Amazon Kindle. 
+Testing of the lay-out was done on a large screen (21" widescreen), mobile device (Huawei P20 lite) and tablet Amazon Kindle. 
+| Area |Bug | Resolution |
+| --- | --- | --- |
+| Intro Section | An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
+is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This 
+caused the text to be on the right column with white space on the left. | To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it,
+This issue only happened on tablets in portrait.  |
 
-A issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
+An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
 is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This 
 caused the text to be on the right column with white space on the left. 
 To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it,
 This issue only happened on tablets in portrait. 
 
-Footer: On mobile devices, the footer was too small and hard to read or click on the social icons. I implemented a media query in the CSS file to allow me to 
+Footer: On mobile devices, the footer was too small and hard to read and click on the social icons. I implemented a media query in the CSS file to allow me to 
 apply sizing of the footer to have a proper scale on all devices. 
 
 Selector menus for map. When testing the drop down menus, on tablet devices the menus were not spaced and some went over their column. The render map button was 
