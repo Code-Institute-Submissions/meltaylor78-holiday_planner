@@ -14,7 +14,7 @@
     - [Existing Features](#Existing_Features)
     - [Future Enhancements](#Future_Enhancements)
 - [Technologies Used](#Technologies_Used)
-- [JavaScript Redevelopment & Validation](#JavaScript_Redevelopment_&_Validation)
+- [JavaScript Redevelopment & Validation](#JavaScript_Redevelopment_and_Validation)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
 - [Credits](#Credits)
@@ -235,7 +235,7 @@ were not included due to time constraints.
 
 [Index](#Index)
 - - - -
-## **<ins>JavaScript_Redevelopment_&_Validation</ins>**
+## **<ins>JavaScript_Redevelopment_and_Validation</ins>**
 As part of the project update, there was extensive rewrite and testing of the JavaScript. To help improve the performance of the site, 
 the JS was reduced in size by removing some unused script and reducing the number of functions. For example, in the previous version the 
 expand / collapse of text was driven by functions that were repeated (with a different name) each time they were used, in this Version the
@@ -271,7 +271,7 @@ The HTML, CSS and JavaScript code were validate using the following on-line tool
 |HTML| Validate HTML code|W3C - Markup Validation Service|https://validator.w3.org/|
 |CSS| Validate CSS code| W3C - CSS Validation Service|https://jigsaw.w3.org/css-validator/|
 
-***Further details on the results from the JSHint results are documented in the [JavaScript Redevelopment & Validation](#JJavaScript_Redevelopment_&_Validation) section above.***
+***Further details on the results from the JSHint results are documented in the [JavaScript Redevelopment & Validation](#JavaScript_Redevelopment_and_Validation) section above.***
 
 The CSS code passed with-out issue.
 
