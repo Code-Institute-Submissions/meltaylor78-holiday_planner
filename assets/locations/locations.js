@@ -60,4 +60,3 @@ var locations = [
    "place_id" : "",
    "comments" : "Sligo park, is a wonderful place to take a holiday. Close to the town and lots of facilities on site for you to enjoy. If you want to explore Sligo and the surrounding country side, this is a great place to base yourself."}
 ]
-

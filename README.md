@@ -82,13 +82,11 @@ validated on JSHInt. Further details are explained in the testing section of the
 
 - - - -
 ## **<ins>Introduction</ins>**
-This is my milestone 2 project for the Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/). The project is not complete 
-due to time constraints and the need to deploy the final version earlier than expected. I was working towards a date of the 
-14th of March as per the Schedule Generator but the due date is the 05th of February. None the less the site is functional and 
-has 90+% of the functions and layout envisaged at concept stage. As with my prior project I have tried to use a Agile methodology on the project and 
-as such this is considered a deployment of the Minimum Viable Product (MVP), the site has the required functionality but is missing some other features that would be 
-included in subsequent deployments. I will outline in the [Future Enhancements](#Future_Enhancements) sections details of the additional features 
-that will be considered for future iterations.
+As detailed above in the version control and change log, this is the second iteration of the project to be deployed. The project was my milestone 2 project for the 
+Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/), the project received a failing mark  (for the reasons documented above).
+The project, underwent a larger redevelopment in the last 10 days to address the areas raised and implement fixes and improvements. This is the new version 
+that will be resubmitted for grading. The readme has been updated with details on what was changed and the additional development and testing that 
+was carried out.
 
 - - - -
 ## **<ins>Project_Motivation</ins>**
@@ -171,6 +169,11 @@ Providing a quick reference for the construction of the site during development.
 **Note:** There was one element added to the site that was not included in the wireframe.
 A covid banner was added to the site, as the site is dedicated to travel & staycations, the banner was added as reminder to follow all current restrictions and advice.
 Outside the drafted wireframe but necessary in the current Covid-19 environment.
+
+Update : A the above is the original wireframe, the project has under gone redevelopment since. 
+1. remove the video and replaced with picture
+2. move the destination section below the map and removed the background image and added content to cards. 
+3. remove the non-functioning form section. 
 
 [Index](#Index)
 - - - -
@@ -312,6 +315,7 @@ device types.
 | Nav Bar |The nav bar was a standard bootstrap navbar, when testing on desktop no issues were identified. When testing on a mobile devices, the expected function was once the user touched the three bar ICON the nav bar would pop out and then collapse once the link was selected. During testing, a bug was identified, where the nav bar on mobile functioned as far as it opened and took the user to the clicked anchor point, but it did not collapse after the link was clicked.  | The issue was missing classes, the data toggle class was missing from the navbar button. Once added the retest of the function passed. No other issues were found on the nav bar. |
 
 **Interactive Map:**
+
 Testing of the Map section was complete on both mobile and laptop.
 The expected performance was, the initial "accommodation” menu loads as a default when the page loads. Upon making a selection in the first menu, the second “province” menu is populated and displayed, and a change to this menu will populate and display the final menu “county”. A selection of the third menu will show the “render map button”. The button has an on-click function in JS that will pull the data from all 3 menus, create an array from the locations.js file data with the relevant items, which will then be drawn on the map with a pin for each location. The pin on the map also has an on-click function that will display a pop-up with information for that location, including a link (as icon) that will launch a new tab with the locations website.
 

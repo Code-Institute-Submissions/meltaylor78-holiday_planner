@@ -8,7 +8,6 @@ h1{
 p {
     font-family: "serrat", sans-serif;
 }
-
 /* -_-_-_-_-_-_-_-_-_-_ containers _-_-_-_-_-_-_-_-_-_- */
 html,body
 {
@@ -40,7 +39,6 @@ a.anchor {
     top: -70px;
     visibility: hidden;
 }
-
 /* -_-_-_-_-_-_-_-_-_-_ Headings _-_-_-_-_-_-_-_-_-_- */
 h1{
     text-transform: uppercase;
@@ -233,7 +231,6 @@ h1{
     padding-right: 5px;
     color: green;
 }
-
 /* -_-_-_-_-_-_-_-_-_-_ Destination Section _-_-_-_-_-_-_-_-_-_- */
 .destinationcol h3{
     text-align: center;
@@ -261,7 +258,6 @@ h1{
         visibility: hidden;
         display: none;
     }
-
 @media(min-width: 992px){
     .destinationContainer{
         height: 600px;
@@ -302,7 +298,6 @@ h1{
     color: white;
     margin-right: 3px;
 }
-
 .footericons:hover{
     color: grey;
 }
