@@ -307,14 +307,19 @@ device types.
 
 **Navbar:**
 
-The nav bar was a standard bootstrap navbar, when testing on desktop no issues were identified. When tetsing on a mobile devices, the expected function was once the 
-user touched the three bar ICON the nav bar would pop out and then collapse once the link was selected. 
-During testing, a bug was identifed, where the nav bar on mobile functioned as far as it opened and took the user to the clicked anchor point, but it did not collapse after 
-the link was clicked. 
-The issue was missing classes, the data toggle class was missing from the navbar button. Once added the retest of the function passed. 
-No other issues were found on the nav bar.
+| Area |Bug | Resolution |
+| --- | --- | --- |
+| Nav Bar |The nav bar was a standard bootstrap navbar, when testing on desktop no issues were identified. When testing on a mobile devices, the expected function was once the user touched the three bar ICON the nav bar would pop out and then collapse once the link was selected. During testing, a bug was identified, where the nav bar on mobile functioned as far as it opened and took the user to the clicked anchor point, but it did not collapse after the link was clicked.  | The issue was missing classes, the data toggle class was missing from the navbar button. Once added the retest of the function passed. No other issues were found on the nav bar. |
 
 **Interactive Map:**
+Testing of the Map section was complete on both mobile and laptop.
+The expected performance was, the initial "accommodation” menu loads as a default when the page loads. Upon making a selection in the first menu, the second “province” menu is populated and displayed, and a change to this menu will populate and display the final menu “county”. A selection of the third menu will show the “render map button”. The button has an on-click function in JS that will pull the data from all 3 menus, create an array from the locations.js file data with the relevant items, which will then be drawn on the map with a pin for each location. The pin on the map also has an on-click function that will display a pop-up with information for that location, including a link (as icon) that will launch a new tab with the locations website.
+
+| Area |Bug | Resolution |
+| --- | --- | --- |
+|Map Popup| When clicking on the pin for a location, the pop-up always points to the last pin added to the map rather than the pin clicked. |Upon investigation, the issue was a result of using var in the loop to create the markers and in the marker section of this function. When the var (*2) was updated to let, which resolved the issue.|
+|Map Popup Info|During testing, it was found that the URL for the locations was not opening. Clicking on the link icon opened a url with a Git web Url followed by the location address. | This issue was a legacy of the previous version of the page and the way the info was displayed in a table. The JS code to add the url to the popup, was updated and some urls in the locations file were missing http:// which was also added.|
+
 
 **Page Layout & Responsiveness**
 
@@ -322,28 +327,12 @@ Testing of the lay-out was done on a large screen (21" widescreen), mobile devic
 | Area |Bug | Resolution |
 | --- | --- | --- |
 | Intro Section | An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This caused the text to be on the right column with white space on the left. | To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it, This issue only happened on tablets in portrait. |
+| Footer | On mobile devices, the footer was too small and hard to read and click on the social icons. | I implemented a media query in the CSS file to allow me to apply sizing of the footer to have a proper scale on all devices.  | 
+| Selector menus for map |When testing the drop down menus, on tablet devices the menus were not spaced and some went over their column. The render map button was 
+wrapping the text in the button causing the row to expand.  | To resolve, I added SM columns in the html file and applied an max with 100% to prevent them from going out of their designated column.  |
+| Selector menus on mobile | during testing, I found that on mobile if the user starts to use the menu when close to the bottom of the screen, the next menu displayed off 
+the screen and the user had to scroll down to find it. This was a poor user experience.  | To resolve the issue, I added some JS; 1. When the user changes the first menu, there was already JS to populate and unhide the second menu, I added some JS to move the menu to the top of the screen. This was also implemented for larger devices as it gives a better user experience. 2. I also added the JS to the render map button to move the map to the top of the screen. This was not implemented for larger screens as there was sufficient place to as is. |
 
-
-An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
-is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This 
-caused the text to be on the right column with white space on the left. 
-To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it,
-This issue only happened on tablets in portrait. 
-
-Footer: On mobile devices, the footer was too small and hard to read and click on the social icons. I implemented a media query in the CSS file to allow me to 
-apply sizing of the footer to have a proper scale on all devices. 
-
-Selector menus for map. When testing the drop down menus, on tablet devices the menus were not spaced and some went over their column. The render map button was 
-wrapping the text in the button causing the row to expand. 
-To resolve, I added SM columns in the html file and applied an max with 100% to prevent them from going out of their designated column. 
-
-Selector menus on mobile, during testing, I found that on mobile if the user starts to use the menu when close to the bottom of the screen, the next menu displayed off 
-the screen and the user had to scroll down to find it. This was a poor user experience. 
-To resolve the issue, I added some JS;
-1. When the user changes the first menu, there was already JS to populate and unhide the second menu, I added some JS to move the menu to the top of the screen.
-This was also implemented for larger devices as it gives a better user experience.
-2. I also added the JS to the render map button to move the map to the top of the screen. This was not implemented for larger screens as there was sufficient place to 
-display as is.
 
 
 [Index](#Index)
