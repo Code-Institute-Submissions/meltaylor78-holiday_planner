@@ -321,10 +321,8 @@ No other issues were found on the nav bar.
 Testing of the lay-out was done on a large screen (21" widescreen), mobile device (Huawei P20 lite) and tablet Amazon Kindle. 
 | Area |Bug | Resolution |
 | --- | --- | --- |
-| Intro Section | An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
-is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This 
-caused the text to be on the right column with white space on the left. | To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it,
-This issue only happened on tablets in portrait.  |
+| Intro Section | An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This caused the text to be on the right column with white space on the left. | To fix the issue, I changed the media query controlling the picture display and reduced it to show on tablet devices as there was sufficient space for it, This issue only happened on tablets in portrait. |
+
 
 An issue was identified on the tablet size, the intro section shows text on the right and a picture on the left for larger devices, and on mobile the picture 
 is hidden. However, when tested on a table the text was on the right column and the picture was hidden but the space block for the picture was still there. This 
