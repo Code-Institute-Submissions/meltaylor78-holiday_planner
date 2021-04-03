@@ -82,8 +82,8 @@ validated on JSHInt. Further details are explained in the testing section of the
 
 - - - -
 ## **<ins>Introduction</ins>**
-As detailed above in the version control and change log, this is the second iteration of the project to be deployed. The project was my milestone 2 project for the 
-Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/), the project received a failing mark  (for the reasons documented above).
+As detailed above in the version control and change log, this is the second iteration of this project to be deployed. The project was my milestone 2 project for the 
+Fullstack Web Developer course with the [Codeinistitute](https://codeinstitute.net/), the project originally received a failing mark  (for the reasons documented above).
 The project, underwent a larger redevelopment in the last 10 days to address the areas raised and implement fixes and improvements. This is the new version 
 that will be resubmitted for grading. The readme has been updated with details on what was changed and the additional development and testing that 
 was carried out.
@@ -170,10 +170,10 @@ Providing a quick reference for the construction of the site during development.
 A covid banner was added to the site, as the site is dedicated to travel & staycations, the banner was added as reminder to follow all current restrictions and advice.
 Outside the drafted wireframe but necessary in the current Covid-19 environment.
 
-Update : A the above is the original wireframe, the project has under gone redevelopment since. 
-1. remove the video and replaced with picture
-2. move the destination section below the map and removed the background image and added content to cards. 
-3. remove the non-functioning form section. 
+Update : The above link is to the original wireframe, the project has under gone redevelopment since. 
+1. Removed the video and replaced it with an image
+2. Moved the destination section below the map and removed the background image and added content to cards. 
+3. Removed the non-functioning form section. 
 
 [Index](#Index)
 - - - -
@@ -192,7 +192,7 @@ were not included due to time constraints.
     - The menus are intuitive and appear in sequence after selection to guide the user.
     - The map draws on the google maps api to populate the data based on the user selections. 
     - Pins are clickable and provide name & address data with a button for more info to click on.
- 
+
 
 [Index](#Index)
 - - - -
@@ -292,13 +292,13 @@ In the previous version of the site, the results achieved were;
 
 In the current version, there have been some major improvements;
 
-- Performance > 60 (+ 27pts)
+- Performance > 67 (+ 34pts)
 - Accessibility > 97 (+ 8 pts)
 - Best Practice > 93 (same)
 - SEO > 83 (+ same)
 <img src="/assets/readmeAssets/Lighthouse Test V1.jpg">
 
-The improvements were down to the cleaning of the JS file and reduction in number of functions (as described in the JS section).
+The improvements were down to the cleaning of the JS file and reduction in the number of functions (as described in the JS section).
 In addition, the YouTube embedded video was causing a lot of issues with performance so I decided to replace with a 
 static image.
 
@@ -316,7 +316,7 @@ device types.
 
 **Interactive Map:**
 
-Testing of the Map section was complete on both mobile and laptop.
+Testing of the Map section was completed on both mobile and laptop.
 The expected performance was, the initial "accommodation” menu loads as a default when the page loads. Upon making a selection in the first menu, the second “province” menu is populated and displayed, and a change to this menu will populate and display the final menu “county”. A selection of the third menu will show the “render map button”. The button has an on-click function in JS that will pull the data from all 3 menus, create an array from the locations.js file data with the relevant items, which will then be drawn on the map with a pin for each location. The pin on the map also has an on-click function that will display a pop-up with information for that location, including a link (as icon) that will launch a new tab with the locations website.
 
 | Area |Bug | Resolution |
